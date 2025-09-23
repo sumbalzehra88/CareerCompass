@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internships - CareerCompass</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #CDFCFF;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo span {
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo i.fa-briefcase {
+      color: #007bff;
+      font-size: 20px;
+    }
+
+    .logo i.fa-compass {
+      color: white;
+      font-size: 10px;
+      position: absolute;
+      left: 6px;
+      top: 5px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    select, input[type="text"] {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      min-width: 240px;
+      box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+      background: linear-gradient(90deg, #00D0FF, #007D99);
+      color: white;
+      font-size: 14px;
+    }
+
+    input[type="text"]::placeholder {
+      color: white;
+    }
+
+    select option {
+      color: black;
+    }
+
+    /* Page Heading */
+    .page-heading {
+      text-align: center;  /* left karna ho to 'left' kar dena */
+      color: black;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0 0;
+    }
+
+    /* Internship Grid */
+    .internships {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Desktop: 3 per row */
+      gap: 20px;
+      padding: 30px;
+    }
+
+    @media (max-width: 992px) {
+      .internships {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 per row */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .internships {
+        grid-template-columns: 1fr; /* Mobile: 1 per row */
+      }
+    }
+
+    .card {
+      background: #A1F9FF;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .company {
+      font-weight: bold;
+      margin: 5px 0 10px;
+    }
+
+    .tags span {
+      background: #fff;
+      border-radius: 5px;
+      padding: 3px 8px;
+      margin: 3px;
+      display: inline-block;
+      font-size: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .deadline {
+      color: red;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #00D0FF, #007D99);
+      color: white;
+      padding: 8px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    footer {
+      background: #006064;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+      CareerCompass 
+      <span>
+        <img src="Screenshot 2025-09-21 235428.png" 
+           alt="CareerCompass Logo" 
+           style="width:28px; height:28px; vertical-align:middle;">
+    </span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Contact us</a>
+      <a href="#">About us</a>
+    </nav>
+  </header>
+
+  <!-- Page Heading -->
+  <h2 class="page-heading">Internships</h2>
+
+  <!-- Filters -->
+  <div class="filters">
+    <select id="locationFilter">
+      <option value="">Select Location</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+      <option value="Remote">Remote</option>
+      <option value="Canada">Canada</option>
+      <option value="Germany">Germany</option>
+    </select>
+
+    <select id="stipendFilter">
+      <option value="">Select Stipend</option>
+      <option value="500-800">500-800</option>
+      <option value="800-1200">800-1200</option>
+      <option value="1200+">1200+</option>
+    </select>
+
+    <input type="text" id="searchInput" placeholder="Search by skills or company">
+  </div>
+
+  <!-- Internships Grid -->
+  <div class="internships" id="internshipList">
+    <!-- (same internship cards as before, unchanged) -->
+    <div class="card" data-location="USA" data-stipend="1200" data-tags="React JavaScript Microsoft Frontend">
+      <h3>Frontend Developer Intern</h3>
+      <p class="company">Microsoft <i class="fa-brands fa-microsoft" style="color:#0078d7;"></i></p>
+      <div class="tags"><span>React</span><span>JavaScript</span></div>
+      <p>USA &nbsp; | &nbsp; $1200/month</p>
+      <p class="deadline">Deadline: 25 Sep 2025</p>
+      <a href="microsoft.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card" data-location="Remote" data-stipend="1000" data-tags="Python AI Google Data Science">
+      <h3>Data Science Intern</h3>
+      <p class="company">Google <i class="fa-brands fa-google" style="color:#ea4335;"></i></p>
+      <div class="tags"><span>Python</span><span>AI</span></div>
+      <p>Remote &nbsp; | &nbsp; $1000/month</p>
+      <p class="deadline">Deadline: 30 Sep 2025</p>
+      <a href="google.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card" data-location="UK" data-stipend="900" data-tags="AWS Cloud Amazon">
+      <h3>Cloud Engineering Intern</h3>
+      <p class="company">Amazon <i class="fa-brands fa-aws" style="color:#ff9900;"></i></p>
+      <div class="tags"><span>AWS</span><span>Cloud</span></div>
+      <p>UK &nbsp; | &nbsp; $900/month</p>
+      <p class="deadline">Deadline: 28 Sep 2025</p>
+      <a href="amazon.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card" data-location="Remote" data-stipend="800" data-tags="Figma Design UI UX">
+      <h3>UI/UX Designer Intern</h3>
+      <p class="company">Figma <i class="fa-brands fa-figma" style="color:#a259ff;"></i></p>
+      <div class="tags"><span>Figma</span><span>Design</span></div>
+      <p>Remote &nbsp; | &nbsp; $800/month</p>
+      <p class="deadline">Deadline: 22 Sep 2025</p>
+      <a href="figma.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card" data-location="Canada" data-stipend="1100" data-tags="ML TensorFlow IBM Machine Learning">
+      <h3>Machine Learning Intern</h3>
+      <p class="company">IBM <i class="fa-solid fa-microchip" style="color:#00bcd4;"></i></p>
+      <div class="tags"><span>ML</span><span>TensorFlow</span></div>
+      <p>Canada &nbsp; | &nbsp; $1100/month</p>
+      <p class="deadline">Deadline: 27 Sep 2025</p>
+      <a href="ibm.html" class="btn">View Details</a>
+    </div>
+
+    <div class="card" data-location="Germany" data-stipend="950" data-tags="Networking Security Cisco Cybersecurity">
+      <h3>Cybersecurity Intern</h3>
+      <p class="company">Cisco <i class="fa-solid fa-shield-halved" style="color:#4caf50;"></i></p>
+      <div class="tags"><span>Networking</span><span>Security</span></div>
+      <p>Germany &nbsp; | &nbsp; $950/month</p>
+      <p class="deadline">Deadline: 29 Sep 2025</p>
+      <a href="cisco.html" class="btn">View Details</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 CareerCompass. All rights reserved.
+  </footer>
+
+  <!-- JS for filtering -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const locationFilter = document.getElementById("locationFilter");
+    const stipendFilter = document.getElementById("stipendFilter");
+    const cards = document.querySelectorAll(".card");
+
+    function filterInternships() {
+      const searchValue = searchInput.value.toLowerCase();
+      const locationValue = locationFilter.value;
+      const stipendValue = stipendFilter.value;
+
+      cards.forEach(card => {
+        const tags = card.getAttribute("data-tags").toLowerCase();
+        const location = card.getAttribute("data-location");
+        const stipend = parseInt(card.getAttribute("data-stipend"));
+
+        let match = true;
+
+        if (locationValue && location !== locationValue) match = false;
+
+        if (stipendValue) {
+          if (stipendValue === "500-800" && !(stipend >= 500 && stipend <= 800)) match = false;
+          if (stipendValue === "800-1200" && !(stipend >= 800 && stipend <= 1200)) match = false;
+          if (stipendValue === "1200+" && stipend < 1200) match = false;
+        }
+
+        if (searchValue && !tags.includes(searchValue)) match = false;
+
+        card.style.display = match ? "block" : "none";
+      });
+    }
+
+    searchInput.addEventListener("input", filterInternships);
+    locationFilter.addEventListener("change", filterInternships);
+    stipendFilter.addEventListener("change", filterInternships);
+  </script>
+</body>
+</html>
