@@ -1,0 +1,60 @@
+# =====================================
+# Django standard ignores
+# =====================================
+*.pyc
+__pycache__/
+db.sqlite3
+*.log
+*.pot
+*.py[co]
+*.mo
+*.swp
+.DS_Store
+
+# =====================================
+# Virtual environments and environment files
+# =====================================
+.env
+venv/
+env/
+*.sqlite3
+
+# =====================================
+# IDE & system
+# =====================================
+.vscode/
+.idea/
+*.code-workspace
+*.bak
+*.tmp
+*~
+
+# =====================================
+# Static and media (optional)
+# =====================================
+media/
+staticfiles/
+
+# =====================================
+# Custom ignored files you requested
+# =====================================
+
+# Ignore specific templates
+templates/CareerCompassapp/homie.html
+templates/CareerCompassapp/sample.html
+templates/homie.html
+templates/sample.html
+
+# Ignore specific JS
+static/CareerCompassapp/js/roadmapsform.js
+static/CareerCompassapp/js/roadmap.js
+static/CareerCompassapp/js/optionroadmaps.js
+CareerCompassapp/js/CareerCompassapp/roadmapsform.js
+CareerCompassapp/js/CareerCompassapp/roadmap.js
+CareerCompassapp/js/CareerCompassapp/optionroadmaps.js
+
+# Ignore specific CSS
+static/CareerCompassapp/css/roadmapsform.css
+static/CareerCompassapp/css/roadmaps.css
+static/CareerCompassapp/css/optionroadmaps.css
+

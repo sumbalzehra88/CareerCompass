@@ -1,0 +1,385 @@
+/* =========================
+   UNIFIED BASE STYLES
+   ========================= */
+
+/* CSS Variables for Color Palette */
+:root {
+    --primary-blue: #00b4d8;
+    --primary-dark: #0077b6;
+    --primary-darker: #005577;
+    --accent-blue: #014970;
+    --background-light: #CDFCFF;
+    --background-medium: #B2FAFF;
+    --text-dark: #1a202c;
+    --text-medium: #2d3748;
+    --text-light: #4a5568;
+    --white: #ffffff;
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+    --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+    --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+    --shadow-blue: 0 8px 25px rgba(0,180,216,0.3);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--background-light) 0%, var(--background-medium) 100%);
+    min-height: 100vh;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================
+   HEADER STYLES (UNIFIED)
+   ========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    background: rgba(0, 180, 216, 0.1);
+    color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-menu a:hover::after {
+    width: 80%;
+}
+
+/* =========================
+   MAIN CONTENT CONTAINER
+   ========================= */
+.main-content {
+    background: rgba(178, 250, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow-lg), 
+                0 0 0 1px rgba(255,255,255,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.4);
+    border: 1px solid rgba(0, 180, 216, 0.2);
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 40px;
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark), var(--primary-darker));
+    border-radius: 24px 24px 0 0;
+}
+
+/* =========================
+   SECTION TITLES
+   ========================= */
+.section-title {
+    font-size: 32px;
+    color: var(--text-dark);
+    margin-bottom: 35px;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark));
+    border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+/* =========================
+   BUTTONS (UNIFIED)
+   ========================= */
+.action-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.action-button.primary {
+    background: var(--accent-blue);
+    color: var(--white);
+}
+
+.action-button.primary:hover {
+    background: linear-gradient(135deg, #0096c7 0%, var(--primary-darker) 100%);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-blue);
+}
+
+.action-button.secondary {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--text-medium);
+    border: 2px solid rgba(0, 180, 216, 0.3);
+}
+
+.action-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
+    border-color: var(--primary-blue);
+}
+
+.action-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   FOOTER (UNIFIED)
+   ========================= */
+.footer {
+    background: var(--accent-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .main-content {
+        padding: 25px 20px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action-button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .action-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    .hero-section {
+    text-align: center;
+    padding: 80px 20px 100px;
+    background: linear-gradient(135deg, rgba(205, 252, 255, 0.8) 0%, rgba(178, 250, 255, 0.6) 100%);
+    border-radius: 24px;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out;
+}
+}
+
+
+
+/* Keep the rest of your CSS exactly as it is */

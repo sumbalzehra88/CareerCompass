@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerCompass - {{ page_title }}</title>
+  <link rel="stylesheet" href="{% static 'CareerCompassapp/css/roadmaps.css' %}" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">CC</div>
+        CareerCompass
+      </div>
+      <nav class="nav-menu">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 class="section-title">{{ page_title }}</h1>
+
+      <!-- Roadmap Timeline -->
+      <div class="roadmap-slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <div class="timeline-line" id="timelineLine"></div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="slider-nav prev" onclick="previousSlide()">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="slider-nav next" onclick="nextSlide()">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+
+        <!-- Progress Dots -->
+        <div class="slider-progress" id="sliderProgress"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <a href="{% url 'roadmap' %}" class="action-button primary">Download Roadmap</a>
+        <button class="action-button secondary" onclick="customizeRoadmap()">Customize</button>
+        <button class="action-button secondary" onclick="shareRoadmap()">Share</button>
+        <button class="action-button primary" onclick="startJourney()">Start Journey</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 CareerCompass. All rights reserved.
+  </footer>
+
+  <!-- Django data passed to JS -->
+  {{ roadmap_steps|json_script:"roadmapStepsData" }}
+
+  <script>
+    // Parse Django data
+    const roadmapSteps = JSON.parse(document.getElementById('roadmapStepsData').textContent);
+    const customizeUrl = "{% url 'roadmap' %}";
+    const csrfToken = "{{ csrf_token }}";
+  </script>
+
+  <script src="{% static 'CareerCompassapp/js/roadmap.js' %}"></script>
+</body>
+</html>

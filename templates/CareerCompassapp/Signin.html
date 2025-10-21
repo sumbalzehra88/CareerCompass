@@ -1,0 +1,325 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - CareerCompass</title>
+    <style>
+        :root {
+            --primary-blue: #00b4d8;
+            --primary-dark: #0077b6;
+            --primary-darker: #005577;
+            --accent-blue: #014970;
+            --background-light: #CDFCFF;
+            --background-medium: #B2FAFF;
+            --text-dark: #1a202c;
+            --text-medium: #2d3748;
+            --text-light: #4a5568;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+            --shadow-blue: 0 8px 25px rgba(0,180,216,0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--background-medium) 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 30px;
+            padding: 50px 45px;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid rgba(0, 180, 216, 0.1);
+        }
+
+        .logo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+
+        .logo-icon img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+
+        .heading {
+            text-align: center;
+            font-weight: 800;
+            font-size: 36px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .subheading {
+            text-align: center;
+            font-size: 16px;
+            color: var(--text-medium);
+            margin-bottom: 30px;
+        }
+
+        .form .input {
+            width: 100%;
+            background: var(--white);
+            border: 2px solid rgba(0, 180, 216, 0.2);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .form .input::placeholder {
+            color: var(--text-light);
+        }
+
+        .form .input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.1);
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password a {
+            font-size: 14px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: var(--primary-dark);
+        }
+
+        .login-button {
+            display: block;
+            width: 100%;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            padding: 18px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-blue);
+            border: none;
+            font-size: 16px;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 180, 216, 0.4);
+        }
+
+        .login-button:active {
+            transform: translateY(0);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(0, 180, 216, 0.2);
+        }
+
+        .divider::before {
+            margin-right: 15px;
+        }
+
+        .divider::after {
+            margin-left: 15px;
+        }
+
+        .social-accounts {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(0, 180, 216, 0.2);
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-button:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .social-button svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-dark);
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 15px;
+            color: var(--text-medium);
+        }
+
+        .signup-link a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: var(--primary-dark);
+        }
+
+        .error-messages {
+            background: #fee2e2;
+            border: 2px solid #fecaca;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #dc2626;
+        }
+
+        .success-message {
+            background: #d1fae5;
+            border: 2px solid #a7f3d0;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #059669;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            .heading {
+                font-size: 28px;
+            }
+
+            .subheading {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            
+        </div>
+
+        <div class="heading">Welcome Back</div>
+        <div class="subheading">Sign in to continue your career journey</div>
+        
+        {% if messages %}
+            {% for message in messages %}
+                <div class="{% if message.tags == 'error' %}error-messages{% else %}success-message{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% if form.errors %}
+            <div class="error-messages">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        {{ error }}<br>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="POST" action="{% url 'signin' %}" class="form">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{% url 'home' %}">
+            
+            <input 
+                required 
+                class="input" 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="Email Address"
+                value="{{ form.email.value|default:'' }}"
+            >
+            
+            <input 
+                required 
+                class="input" 
+                type="password" 
+                name="password" 
+                id="password" 
+                placeholder="Password"
+            >
+            
+            <span class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </span>
+            
+            <button class="login-button" type="submit" aria-label="Sign In" onclick="this.disabled=true; this.form.submit();">Sign In</button>
+        </form>
+
+        <div class="signup-link">
+            Don't have an account? <a href="{% url 'signup' %}">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
