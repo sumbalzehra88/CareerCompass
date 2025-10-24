@@ -27,19 +27,7 @@ urlpatterns = [
 
     path('hackathon/', views.hackathon, name='hackathon'),
 
-    path('internships/', views.internships, name='internships'),
-    
-    path('microsoft/', views.frontend_intern, name='microsoft'),
-
-    path('google/', views.data_science_intern, name='google'),
-
-    path('amazon/', views.amazon_intern, name='amazon'),
-
-    path('figma/', views.figma_intern, name='figma'),
-
-    path('cisco/', views.cisco_intern, name='cisco'),
-
-    path('ibm/', views.ibm_intern, name='ibm'),
+    path('internships/', views.internships_view, name='internships'),
 
     path('contact/', views.contact, name='contact'),
 
