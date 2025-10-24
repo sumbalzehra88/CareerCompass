@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internships - CareerCompass</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-blue: #00b4d8;
+      --primary-dark: #0077b6;
+      --accent-blue: #014970;
+      --background-light: #CDFCFF;
+      --background-medium: #B2FAFF;
+      --text-dark: #1a202c;
+      --text-medium: #2d3748;
+      --text-light: #4a5568;
+      --white: #ffffff;
+      --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+      --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--background-light) 0%, var(--background-medium) 100%);
+    }
+
+    .container {
+      max-width: 1455px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navbar */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: var(--shadow-sm);
+      height: 70px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-icon {
+      width: 55px;
+      height: 55px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-menu a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    .nav-menu a:hover {
+      background: rgba(0, 180, 216, 0.1);
+      color: var(--primary-dark);
+    }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    select, input[type="text"] {
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 2px solid rgba(0, 180, 216, 0.2);
+      min-width: 240px;
+      box-shadow: var(--shadow-sm);
+      background: var(--white);
+      color: var(--text-dark);
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    select:focus, input[type="text"]:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.1);
+    }
+
+    input[type="text"]::placeholder {
+      color: var(--text-light);
+    }
+
+    /* Page Heading */
+    .page-heading {
+      text-align: center;
+      color: var(--text-dark);
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0 0;
+    }
+
+    /* Internship Grid */
+    .internships {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-blue);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: var(--text-dark);
+    }
+
+    .company {
+      font-weight: bold;
+      margin: 5px 0 10px;
+      color: var(--text-medium);
+    }
+
+    .tags span {
+      background: linear-gradient(135deg, rgba(0, 180, 216, 0.1), rgba(0, 180, 216, 0.05));
+      border: 1px solid rgba(0, 180, 216, 0.3);
+      border-radius: 20px;
+      padding: 6px 12px;
+      margin: 3px;
+      display: inline-block;
+      font-size: 12px;
+      color: var(--primary-dark);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .deadline {
+      color: #dc2626;
+      font-size: 14px;
+      margin: 10px 0;
+      font-weight: 600;
+    }
+
+    .footer {
+      background: var(--accent-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .footer-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--white);
+      text-decoration: none;
+      opacity: 0.9;
+      transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .no-internships {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-weight: 600;
+      color: var(--text-medium);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <header class="header">
+      <a href="{% url 'home' %}" class="logo">
+        <div class="logo-icon">
+          <img src="{% static 'CareerCompassapp/logo.png' %}" alt="CC Logo">
+        </div>
+        CareerCompass
+      </a>
+      <nav class="nav-menu">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Page Heading -->
+  <h2 class="page-heading">Internships</h2>
+
+  <!-- Filters -->
+  <div class="filters">
+    <select id="locationFilter">
+      <option value="">Select Location</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+      <option value="Remote">Remote</option>
+      <option value="Canada">Canada</option>
+      <option value="Germany">Germany</option>
+    </select>
+
+    <select id="stipendFilter">
+      <option value="">Select Stipend</option>
+      <option value="500-800">500-800</option>
+      <option value="800-1200">800-1200</option>
+      <option value="1200+">1200+</option>
+    </select>
+
+    <input type="text" id="searchInput" placeholder="Search by skills or company">
+  </div>
+
+  <!-- Internships Grid -->
+  <div class="internships" id="internshipList">
+    {% for internship in internships %}
+    <div class="card"
+         data-tags="{{ internship.skills_required|lower }}"
+         data-location="{{ internship.location }}"
+         data-stipend="{{ internship.stipend }}">
+      <h3>{{ internship.title }}</h3>
+      <p class="company">{{ internship.company.name }}</p>
+      <p>{{ internship.location }} &nbsp; | &nbsp; {{ internship.duration }}</p>
+      <p>Skills: {{ internship.skills_required }}</p>
+      <p class="deadline">Deadline: {{ internship.deadline }}</p>
+      <p>{{ internship.description }}</p>
+    </div>
+    {% empty %}
+    <p class="no-internships">No internships available at the moment.</p>
+    {% endfor %}
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CareerCompass. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'contact' %}">Contact</a>
+      <a href="{% url 'dashboard' %}">Dashboard</a>
+    </div>
+  </footer>
+
+  <!-- JS for Filtering -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const locationFilter = document.getElementById("locationFilter");
+    const stipendFilter = document.getElementById("stipendFilter");
+    const cards = document.querySelectorAll(".card");
+
+    function filterInternships() {
+      const searchValue = searchInput.value.toLowerCase();
+      const locationValue = locationFilter.value;
+      const stipendValue = stipendFilter.value;
+
+      cards.forEach(card => {
+        const tags = card.getAttribute("data-tags")?.toLowerCase() || "";
+        const location = card.getAttribute("data-location") || "";
+        const stipendAttr = card.getAttribute("data-stipend");
+        const stipend = stipendAttr ? parseInt(stipendAttr) : 0;
+
+        let match = true;
+
+        if (locationValue && location !== locationValue) match = false;
+
+        if (stipendValue) {
+          if (stipendValue === "500-800" && !(stipend >= 500 && stipend <= 800)) match = false;
+          if (stipendValue === "800-1200" && !(stipend >= 800 && stipend <= 1200)) match = false;
+          if (stipendValue === "1200+" && stipend < 1200) match = false;
+        }
+
+        if (searchValue && !tags.includes(searchValue)) match = false;
+
+        card.style.display = match ? "block" : "none";
+      });
+    }
+
+    searchInput.addEventListener("input", filterInternships);
+    locationFilter.addEventListener("change", filterInternships);
+    stipendFilter.addEventListener("change", filterInternships);
+  </script>
+</body>
+</html>
