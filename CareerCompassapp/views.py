@@ -518,3 +518,25 @@ def logout_view(request):
     logout(request)
     messages.success(request, 'Successfully logged out!')
     return redirect('home')
+
+import sqlite3
+def internships_view(request):
+    conn = sqlite3.connect("career_compass.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT title, company_id, location, duration, skills_required, deadline, description FROM internships")
+    rows = cursor.fetchall()
+    conn.close()
+
+    internships = [
+        {
+            "title": r[0],
+            "company_id": r[1],
+            "location": r[2],
+            "duration": r[3],
+            "skills_required": r[4],
+            "deadline": r[5],
+            "description": r[6],
+        }
+        for r in rows
+    ]
+    return render(request, "internships.html", {"internships": internships})
