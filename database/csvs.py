@@ -7,7 +7,12 @@ from sqlite3 import Connection
 # ─────────────────────────────────────────────────────────────
 # CONFIGURATION
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# ✅ Corrected line (use only one, prefer absolute path for clarity)
 DB_FILE = r"C:\Users\user\OneDrive\Desktop\CareerCompass\career_compass.db"
+
+DB_FILE = os.path.join(BASE_DIR, "..", "career_compass.db")
+DB_FILE = os.path.abspath(DB_FILE)  # recommended
 
 # CSV → Table mapping
 CSV_TABLE_MAP = [
