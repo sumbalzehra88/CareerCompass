@@ -1,1 +1,1 @@
-web: gunicorn CareerCompass.wsgi
+web: gunicorn CAREERCOMPASS.wsgi
