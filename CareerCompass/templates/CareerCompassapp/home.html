@@ -1,0 +1,952 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Navigate Your Professional Journey</title>
+    <style>
+        :root {
+            --primary-blue: #00b4d8;
+            --primary-dark: #0077b6;
+            --primary-darker: #005577;
+            --accent-blue: #014970;
+            --background-light: #CDFCFF;
+            --background-medium: #B2FAFF;
+            --text-dark: #1a202c;
+            --text-medium: #2d3748;
+            --text-light: #4a5568;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+            --shadow-blue: 0 8px 25px rgba(0,180,216,0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--background-medium) 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+     
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* smaller vertical padding to keep navbar slim */
+    margin-bottom: 0;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    height: 80px; /* fixed navbar height */
+    overflow: hidden; /* ensures no logo affects layout */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.logo-icon {
+    width: 300px;
+    height: 300px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 85px;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(0, 180, 216, 0.1);
+            color: var(--primary-dark);
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding: 100px 40px;
+            background: var(--white);
+            border-radius: 30px;
+            margin-top: 30px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,180,216,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text-medium);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hero-button {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-button.primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+        }
+
+        .hero-button.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .hero-button.secondary {
+            background: var(--white);
+            color: var(--text-medium);
+            border: 2px solid var(--text-dark);
+        }
+
+        .hero-button.secondary:hover {
+            background: var(--text-dark);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--background-light);
+            color: var(--text-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .quick-access-section {
+            padding: 100px 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-medium);
+            margin-bottom: 60px;
+        }
+
+        .quick-access-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .access-card {
+            background: var(--white);
+            padding: 50px 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .access-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .access-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
+        }
+
+        .access-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .access-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 24px;
+            transition: transform 0.4s ease;
+        }
+
+        .access-card:hover .access-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .access-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .access-description {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .access-arrow {
+            font-size: 24px;
+            color: var(--primary-blue);
+            font-weight: 700;
+            transition: transform 0.3s ease;
+            align-self: flex-end;
+        }
+
+        .access-card:hover .access-arrow {
+            transform: translateX(8px);
+        }
+
+        .mission-section {
+            padding: 100px 40px;
+            background: var(--white);
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+            margin: 60px 0;
+        }
+
+        .mission-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .mission-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .mission-description {
+            font-size: 20px;
+            color: var(--text-medium);
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .mission-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(0,180,216,0.05) 0%, rgba(0,180,216,0.02) 100%);
+            padding: 40px 30px;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            background: var(--white);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-blue);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        .feature-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .feature-text {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            padding: 100px 60px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 80px 0;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: var(--white);
+            color: var(--primary-dark);
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            letter-spacing: 0.3px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            background: var(--accent-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 1200px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+                padding: 80px 40px;
+                text-align: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-visual {
+                order: 1;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .quick-access-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mission-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .nav-menu {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .quick-access-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-features {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                gap: 40px;
+            }
+
+            .cta-section {
+                padding: 60px 30px;
+            }
+
+            .cta-title {
+                font-size: 36px;
+            }
+
+            .access-card {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-button {
+                padding: 16px 30px;
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .cta-title {
+                font-size: 28px;
+            }
+
+            .stat-number {
+                font-size: 42px;
+            }
+
+            .btn-outline {
+    padding: 10px 24px;
+    border: 2px solid var(--primary-blue);
+    border-radius: 25px;
+    background: transparent;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.btn-outline:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary {
+    padding: 10px 24px;
+    border: 2px solid var(--primary-blue);
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+    color: var(--white);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-blue);
+}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="logo">
+                <div class="logo-icon"><img src="{% static 'CareerCompassapp/logo.png' %}" alt="CC Logo"></div>
+            </a>
+            <nav class="nav-menu">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="#mission">Mission</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    
+    {% if user.is_authenticated %}
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'logout' %}" class="btn-outline">Logout</a>
+    {% else %}
+        <a href="{% url 'signin' %}" class="btn-outline">Sign In</a>
+        <a href="{% url 'signup' %}" class="btn-primary">Sign Up</a>
+    {% endif %}
+</nav>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Navigate Your Professional Journey</h1>
+                <p class="hero-subtitle">
+                    CareerCompass helps you chart your path to success with personalized roadmaps, 
+                    expert guidance, and actionable steps tailored to your unique goals and aspirations.
+                </p>
+                <div class="hero-cta">
+                    {% if user.is_authenticated %}
+                        {% if profile %}
+                            <a href="{% url 'roadmap_options_home' %}" class="hero-button primary">Start Your Journey</a>
+                        {% else %}
+                            <a href="{% url 'option_roadmaps' %}" class="hero-button primary">Complete Your Profile</a>
+                        {% endif %}
+                    {% else %}
+                        <a href="{% url 'signin' %}" class="hero-button primary">Start Your Journey</a>
+                    {% endif %}
+                    <a href="#mission" class="hero-button secondary">Learn More</a>
+                </div>
+
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img 
+                        src="{% static 'CareerCompassapp/landingpage.png' %}"
+                        alt="CareerCompass - Navigate Your Professional Journey" 
+                        class="hero-image"
+                        loading="eager"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-access-section">
+            <span class="section-label">Explore</span>
+            <h2 class="section-title">Explore Opportunities</h2>
+            <p class="section-subtitle">Choose your path to success</p>
+            
+            <div class="quick-access-grid">
+                <a href="{% url 'internships' %}" class="access-card">
+                    <svg class="access-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="16" width="48" height="36" rx="4" stroke="var(--primary-blue)" stroke-width="3" fill="var(--background-light)"/>
+                        <path d="M20 16V12C20 10.8954 20.8954 10 22 10H42C43.1046 10 44 10.8954 44 12V16" stroke="var(--primary-blue)" stroke-width="3"/>
+                        <line x1="8" y1="26" x2="56" y2="26" stroke="var(--primary-blue)" stroke-width="3"/>
+                        <circle cx="32" cy="36" r="4" fill="var(--primary-dark)"/>
+                    </svg>
+                    <h3 class="access-title">Internships</h3>
+                    <p class="access-description">
+                        Discover internship opportunities and gain hands-on experience in your field.
+                    </p>
+                    <span class="access-arrow">→</span>
+                </a>
+
+                <a href="{% url 'hackathon' %}" class="access-card">
+                    <svg class="access-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 8L38 24H54L41 34L46 50L32 40L18 50L23 34L10 24H26L32 8Z" fill="var(--background-light)" stroke="var(--primary-blue)" stroke-width="3" stroke-linejoin="round"/>
+                        <circle cx="32" cy="32" r="6" fill="var(--primary-dark)"/>
+                        <rect x="28" y="48" width="8" height="8" rx="2" fill="var(--primary-blue)"/>
+                    </svg>
+                    <h3 class="access-title">Hackathons</h3>
+                    <p class="access-description">
+                        Join exciting hackathons and showcase your skills through innovative projects.
+                    </p>
+                    <span class="access-arrow">→</span>
+                </a>
+
+                <a href="{% url 'dashboard' %}" class="access-card">
+                    <svg class="access-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="48" height="48" rx="4" stroke="var(--primary-blue)" stroke-width="3" fill="var(--background-light)"/>
+                        <rect x="16" y="36" width="8" height="12" rx="2" fill="var(--primary-blue)"/>
+                        <rect x="28" y="28" width="8" height="20" rx="2" fill="var(--primary-dark)"/>
+                        <rect x="40" y="20" width="8" height="28" rx="2" fill="var(--primary-blue)"/>
+                    </svg>
+                    <h3 class="access-title">Dashboard</h3>
+                    <p class="access-description">
+                        Track your progress, manage roadmaps, and view your career journey insights.
+                    </p>
+                    <span class="access-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="mission-section" id="mission">
+            <div class="mission-header">
+                <span class="section-label">Our Mission</span>
+                <h2 class="mission-title">Our Mission</h2>
+                <p class="mission-description">
+                    We believe everyone deserves a clear path to their dream career. CareerCompass 
+                    empowers professionals at every stage to make informed decisions, develop essential 
+                    skills, and achieve their career goals with confidence and clarity.
+                </p>
+            </div>
+
+            <div class="mission-features">
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="20" stroke="var(--primary-blue)" stroke-width="2.5" fill="var(--background-light)"/>
+                        <circle cx="24" cy="24" r="12" stroke="var(--primary-dark)" stroke-width="2.5" fill="var(--white)"/>
+                        <circle cx="24" cy="24" r="4" fill="var(--primary-blue)"/>
+                        <line x1="24" y1="4" x2="24" y2="12" stroke="var(--primary-blue)" stroke-width="2.5"/>
+                        <line x1="24" y1="36" x2="24" y2="44" stroke="var(--primary-blue)" stroke-width="2.5"/>
+                        <line x1="4" y1="24" x2="12" y2="24" stroke="var(--primary-blue)" stroke-width="2.5"/>
+                        <line x1="36" y1="24" x2="44" y2="24" stroke="var(--primary-blue)" stroke-width="2.5"/>
+                    </svg>
+                    <h3 class="feature-title">Personalized Roadmaps</h3>
+                    <p class="feature-text">
+                        Custom career paths designed specifically for your skills, experience, 
+                        and aspirations.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="10" width="36" height="32" rx="3" stroke="var(--primary-blue)" stroke-width="2.5" fill="var(--background-light)"/>
+                        <rect x="12" y="28" width="6" height="10" rx="1.5" fill="var(--primary-blue)"/>
+                        <rect x="21" y="22" width="6" height="16" rx="1.5" fill="var(--primary-dark)"/>
+                        <rect x="30" y="18" width="6" height="20" rx="1.5" fill="var(--primary-blue)"/>
+                    </svg>
+                    <h3 class="feature-title">Data-Driven Insights</h3>
+                    <p class="feature-text">
+                        Leverage industry trends and market analysis to make informed career decisions.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4L28 12L36 8L34 18L44 20L38 28L44 36L34 34L32 44L24 38L16 44L14 34L4 36L10 28L4 20L14 18L12 8L20 12L24 4Z" fill="var(--background-light)" stroke="var(--primary-blue)" stroke-width="2.5"/>
+                        <circle cx="24" cy="24" r="8" fill="var(--primary-dark)"/>
+                        <path d="M20 24L23 27L28 22" stroke="var(--white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3 class="feature-title">Accelerated Growth</h3>
+                    <p class="feature-text">
+                        Fast-track your career advancement with structured learning paths and milestones.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="18" fill="var(--background-light)" stroke="var(--primary-blue)" stroke-width="2.5"/>
+                        <path d="M24 10C24 10 18 16 18 24C18 28 20 32 24 32C28 32 30 28 30 24C30 16 24 10 24 10Z" fill="var(--primary-dark)"/>
+                        <circle cx="24" cy="26" r="3" fill="var(--white)"/>
+                        <path d="M16 38C16 38 18 36 24 36C30 36 32 38 32 38" stroke="var(--primary-blue)" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="feature-title">Expert Guidance</h3>
+                    <p class="feature-text">
+                        Benefit from curated resources and best practices from industry professionals.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="10" fill="var(--background-light)" stroke="var(--primary-blue)" stroke-width="2.5"/>
+                        <circle cx="32" cy="32" r="10" fill="var(--background-light)" stroke="var(--primary-blue)" stroke-width="2.5"/>
+                        <path d="M22 20L28 28" stroke="var(--primary-dark)" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="16" cy="16" r="4" fill="var(--primary-dark)"/>
+                        <circle cx="32" cy="32" r="4" fill="var(--primary-dark)"/>
+                    </svg>
+                    <h3 class="feature-title">Community Support</h3>
+                    <p class="feature-text">
+                        Connect with like-minded professionals and build your professional network.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 40L16 24L24 32L32 16L40 28L44 24" stroke="var(--primary-blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M8 40L16 24L24 32L32 16L40 28L44 24L44 40H8Z" fill="var(--background-light)" opacity="0.5"/>
+                        <circle cx="16" cy="24" r="3" fill="var(--primary-dark)"/>
+                        <circle cx="24" cy="32" r="3" fill="var(--primary-dark)"/>
+                        <circle cx="32" cy="16" r="3" fill="var(--primary-dark)"/>
+                        <circle cx="40" cy="28" r="3" fill="var(--primary-dark)"/>
+                    </svg>
+                    <h3 class="feature-title">Track Progress</h3>
+                    <p class="feature-text">
+                        Monitor your advancement and celebrate achievements along your journey.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="cta">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Career?</h2>
+                <p class="cta-subtitle">
+                    Join thousands of professionals who have successfully navigated their career 
+                    transitions with CareerCompass. Your dream career is just a roadmap away.
+                </p>
+                <a href="#" class="cta-button">Create Your Roadmap Now</a>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Roadmaps Created</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Career Paths</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer" id="contact">
+        <p>&copy; 2025 CareerCompass. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#mission">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="#">Home</a>
+            <a href="#cta">Get Started</a>
+        </div>
+    </footer>
+</body>
+</html>

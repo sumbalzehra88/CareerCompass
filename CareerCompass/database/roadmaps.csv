@@ -1,0 +1,279 @@
+roadmap_id,title,description,created_at,created_by
+1,Network Engineer Path,This roadmap guides learners through the Network skills and tools required for mastery.,2023-07-12 16:09:55,61
+2,IoT Beginner Track,This roadmap guides learners through the IoT skills and tools required for mastery.,2024-09-16 09:45:32,56
+3,Deep Learning Specialization,This roadmap guides learners through the Deep Learning skills and tools required for mastery.,2025-08-17 00:38:00,87
+4,DevOps Engineer Path,This roadmap guides learners through the DevOps skills and tools required for mastery.,2025-03-29 04:52:54,88
+5,Python Developer Roadmap,This roadmap guides learners through the Python skills and tools required for mastery.,2024-02-13 10:53:27,83
+6,Cybersecurity Foundations,This roadmap guides learners through the Cybersecurity skills and tools required for mastery.,2024-10-08 18:03:51,5
+7,Game Developer Journey,This roadmap guides learners through the Game Development skills and tools required for mastery.,2023-09-22 07:36:20,7
+8,AR/VR Developer Roadmap,This roadmap guides learners through the AR/VR skills and tools required for mastery.,2023-11-03 07:18:26,69
+9,Extended Reality (XR) Developer Path,This roadmap guides learners through the XR skills and tools required for mastery.,2025-10-06 13:11:42,1
+10,Data Science Journey,This roadmap guides learners through the Data Science skills and tools required for mastery.,2025-03-02 04:27:58,86
+11,Blockchain Developer Roadmap,This roadmap guides learners through the Blockchain skills and tools required for mastery.,2024-05-19 03:13:14,27
+12,Neural Networks Specialization,This roadmap guides learners through the Neural Networks skills and tools required for mastery.,2025-02-08 04:53:15,91
+13,Web Developer Blueprint,This roadmap guides learners through the Web Development skills and tools required for mastery.,2023-03-17 05:10:34,3
+14,Internet of Things Foundation,This roadmap guides learners through the IoT Foundation skills and tools required for mastery.,2024-03-11 13:37:13,51
+15,Database Administrator Roadmap,This roadmap guides learners through the Database Administration skills and tools required for mastery.,2025-10-09 17:01:27,45
+16,Smart Contract Developer Path,This roadmap guides learners through the Smart Contract skills and tools required for mastery.,2025-03-18 09:19:55,36
+17,Site Reliability Engineer Path,This roadmap guides learners through the SRE skills and tools required for mastery.,2024-05-09 12:49:10,29
+18,Data Engineer Track,This roadmap guides learners through the Data Engineering skills and tools required for mastery.,2025-05-02 21:56:14,27
+19,Big Data Engineer Track,This roadmap guides learners through the Big Data skills and tools required for mastery.,2025-10-15 13:22:24,92
+20,DeFi Developer Roadmap,This roadmap guides learners through the DeFi skills and tools required for mastery.,2025-09-04 07:30:21,85
+21,Python Full Stack Developer,This roadmap guides learners through the Python Full Stack skills and tools required for mastery.,2023-06-16 04:45:51,23
+22,Kubernetes Engineer Path,This roadmap guides learners through the Kubernetes skills and tools required for mastery.,2025-07-24 09:05:25,13
+23,Penetration Testing Foundations,This roadmap guides learners through the Penetration Testing skills and tools required for mastery.,2023-03-10 14:41:06,77
+24,Embedded Systems Roadmap,This roadmap guides learners through the Embedded Systems skills and tools required for mastery.,2023-04-20 23:31:34,49
+25,AI Engineer Path,This roadmap guides learners through the AI Engineering skills and tools required for mastery.,2024-08-03 07:08:57,94
+26,Machine Learning Engineer Path,This roadmap guides learners through the ML Engineering skills and tools required for mastery.,2024-03-09 16:48:38,4
+27,Cloud Engineer Essentials,This roadmap guides learners through the Cloud Engineering skills and tools required for mastery.,2024-09-27 13:18:28,65
+28,SQL Database Administrator Path,This roadmap guides learners through the SQL DBA skills and tools required for mastery.,2025-04-10 06:51:53,60
+29,Unity Game Developer Journey,This roadmap guides learners through the Unity Development skills and tools required for mastery.,2024-03-29 23:31:04,96
+30,Backend Developer Roadmap,This roadmap guides learners through the Backend Development skills and tools required for mastery.,2024-01-10 08:21:52,76
+31,AWS Cloud Engineer Essentials,This roadmap guides learners through the AWS skills and tools required for mastery.,2023-03-06 23:48:31,53
+32,Network Security Engineer Path,This roadmap guides learners through the Network Security skills and tools required for mastery.,2023-10-23 09:16:12,33
+33,Full Stack Web Developer Blueprint,This roadmap guides learners through the Full Stack Web skills and tools required for mastery.,2023-10-18 03:33:52,37
+34,NoSQL Database Administrator Path,This roadmap guides learners through the NoSQL DBA skills and tools required for mastery.,2025-03-12 20:33:09,85
+35,Machine Learning Roadmap,This roadmap guides learners through the Machine Learning skills and tools required for mastery.,2023-03-10 22:52:17,27
+36,Web3 Developer Roadmap,This roadmap guides learners through the Web3 skills and tools required for mastery.,2024-04-26 16:11:03,21
+37,Python Data Science Roadmap,This roadmap guides learners through the Python Data Science skills and tools required for mastery.,2025-04-13 12:09:04,83
+38,Frontend Web Developer Blueprint,This roadmap guides learners through the Frontend Web skills and tools required for mastery.,2025-09-03 00:15:12,21
+39,Mobile App Developer Roadmap,This roadmap guides learners through the Mobile App Development skills and tools required for mastery.,2025-09-11 06:11:30,51
+40,Ethereum Developer Roadmap,This roadmap guides learners through the Ethereum skills and tools required for mastery.,2023-01-26 00:18:05,63
+41,Frontend Developer Roadmap,This roadmap guides learners through the Frontend Development skills and tools required for mastery.,2023-07-27 20:25:13,55
+42,Computer Vision Engineer Path,This roadmap guides learners through the Computer Vision skills and tools required for mastery.,2023-06-04 00:51:02,65
+43,Data Analytics Journey,This roadmap guides learners through the Data Analytics skills and tools required for mastery.,2023-09-09 17:05:41,67
+44,Docker & DevOps Engineer Path,This roadmap guides learners through the Docker & DevOps skills and tools required for mastery.,2025-08-29 13:31:51,78
+45,CI/CD Engineer Path,This roadmap guides learners through the CI/CD skills and tools required for mastery.,2025-02-03 13:30:44,34
+46,Python Automation Developer,This roadmap guides learners through the Python Automation skills and tools required for mastery.,2024-11-17 05:20:11,97
+47,TensorFlow Deep Learning Specialization,This roadmap guides learners through the TensorFlow skills and tools required for mastery.,2023-06-29 19:28:27,30
+48,MLOps Roadmap,This roadmap guides learners through the MLOps skills and tools required for mastery.,2025-08-25 19:01:54,16
+49,API Developer Roadmap,This roadmap guides learners through the API Development skills and tools required for mastery.,2024-07-05 11:28:29,1
+50,Platform Engineer Path,This roadmap guides learners through the Platform Engineering skills and tools required for mastery.,2025-07-24 02:52:17,99
+51,Infrastructure Engineer Path,This roadmap guides learners through the Infrastructure Engineering skills and tools required for mastery.,2024-04-01 07:56:28,92
+52,iOS Developer Roadmap,This roadmap guides learners through the iOS Development skills and tools required for mastery.,2024-03-07 11:17:55,94
+53,Ethical Hacking Foundations,This roadmap guides learners through the Ethical Hacking skills and tools required for mastery.,2025-08-02 17:09:37,94
+54,Network Administration Path,This roadmap guides learners through the Network Administration skills and tools required for mastery.,2025-08-20 23:12:55,32
+55,Cloud Native DevOps Path,This roadmap guides learners through the Cloud Native skills and tools required for mastery.,2023-05-15 21:36:57,18
+56,Virtual Reality Developer Roadmap,This roadmap guides learners through the VR Development skills and tools required for mastery.,2023-06-11 02:32:54,19
+57,Terraform DevOps Engineer Path,This roadmap guides learners through the Terraform skills and tools required for mastery.,2024-04-10 00:30:47,50
+58,Natural Language Processing Engineer Path,This roadmap guides learners through the NLP skills and tools required for mastery.,2023-01-19 01:06:07,26
+59,React Frontend Developer Roadmap,This roadmap guides learners through the React Development skills and tools required for mastery.,2025-06-12 03:40:13,54
+60,Cloud Network Engineer Path,This roadmap guides learners through the Cloud Networking skills and tools required for mastery.,2024-03-05 06:25:46,55
+61,Business Intelligence Journey,This roadmap guides learners through the Business Intelligence skills and tools required for mastery.,2025-10-01 22:14:41,76
+62,Data Pipeline Engineer Track,This roadmap guides learners through the Data Pipeline skills and tools required for mastery.,2024-06-25 15:24:00,64
+63,Cloud Security Foundations,This roadmap guides learners through the Cloud Security skills and tools required for mastery.,2023-10-29 04:04:28,59
+64,Smart Home IoT Track,This roadmap guides learners through the Smart Home IoT skills and tools required for mastery.,2024-03-30 09:31:10,26
+65,NFT Developer Roadmap,This roadmap guides learners through the NFT Development skills and tools required for mastery.,2025-04-05 03:41:38,21
+66,Vue.js Frontend Developer Roadmap,This roadmap guides learners through the Vue.js skills and tools required for mastery.,2025-07-07 21:33:20,43
+67,Information Security Foundations,This roadmap guides learners through the Information Security skills and tools required for mastery.,2023-10-17 14:56:19,78
+68,Cisco Network Engineer Path,This roadmap guides learners through the Cisco Networking skills and tools required for mastery.,2025-06-06 14:43:51,8
+69,Industrial IoT Track,This roadmap guides learners through the Industrial IoT skills and tools required for mastery.,2024-06-11 07:47:43,35
+70,Edge Computing IoT Track,This roadmap guides learners through the Edge Computing IoT skills and tools required for mastery.,2023-12-07 20:39:46,63
+71,Node.js Backend Developer Roadmap,This roadmap guides learners through the Node.js Backend skills and tools required for mastery.,2024-06-15 12:46:21,97
+72,Django Python Developer Roadmap,This roadmap guides learners through the Django skills and tools required for mastery.,2025-06-04 22:53:48,32
+73,Angular Frontend Developer Roadmap,This roadmap guides learners through the Angular skills and tools required for mastery.,2024-05-20 19:10:49,7
+74,Predictive Analytics Journey,This roadmap guides learners through the Predictive Analytics skills and tools required for mastery.,2025-02-08 20:43:12,50
+75,RESTful API Developer Roadmap,This roadmap guides learners through the RESTful API skills and tools required for mastery.,2024-07-06 03:55:33,34
+76,PyTorch Deep Learning Specialization,This roadmap guides learners through the PyTorch skills and tools required for mastery.,2024-03-06 02:44:32,14
+77,Spark Data Engineer Track,This roadmap guides learners through the Apache Spark skills and tools required for mastery.,2024-05-27 22:53:49,78
+78,Computer Vision Deep Learning Specialization,This roadmap guides learners through the CV Deep Learning skills and tools required for mastery.,2025-01-25 01:25:43,25
+79,Real-Time Embedded Systems Roadmap,This roadmap guides learners through the RTOS skills and tools required for mastery.,2025-02-04 20:45:03,16
+80,IoT Security Track,This roadmap guides learners through the IoT Security skills and tools required for mastery.,2023-01-31 03:00:08,60
+81,Reinforcement Learning Specialization,This roadmap guides learners through the Reinforcement Learning skills and tools required for mastery.,2023-05-30 00:36:01,20
+82,Flask Python Developer Roadmap,This roadmap guides learners through the Flask skills and tools required for mastery.,2025-04-15 19:35:11,42
+83,JavaScript Frontend Developer Roadmap,This roadmap guides learners through the JavaScript Frontend skills and tools required for mastery.,2023-08-03 03:14:18,11
+84,Robotics AI Engineer Path,This roadmap guides learners through the Robotics AI skills and tools required for mastery.,2025-10-04 21:17:49,29
+85,Progressive Web App Developer Blueprint,This roadmap guides learners through the PWA skills and tools required for mastery.,2025-06-18 21:50:19,57
+86,Supervised Learning Roadmap,This roadmap guides learners through the Supervised Learning skills and tools required for mastery.,2025-02-13 23:09:34,35
+87,FastAPI Python Developer Roadmap,This roadmap guides learners through the FastAPI skills and tools required for mastery.,2024-03-13 07:43:48,73
+88,Deep Reinforcement Learning Engineer Path,This roadmap guides learners through the Deep RL skills and tools required for mastery.,2023-11-19 07:01:29,45
+89,Tableau Data Visualization Journey,This roadmap guides learners through the Tableau skills and tools required for mastery.,2023-04-18 00:39:06,35
+90,Kafka Data Engineer Track,This roadmap guides learners through the Apache Kafka skills and tools required for mastery.,2025-05-26 18:25:01,82
+91,GitOps DevOps Engineer Path,This roadmap guides learners through the GitOps skills and tools required for mastery.,2024-11-08 01:04:55,7
+92,Application Security Foundations,This roadmap guides learners through the AppSec skills and tools required for mastery.,2023-04-10 10:11:51,35
+93,Unreal Engine Game Developer Journey,This roadmap guides learners through the Unreal Engine skills and tools required for mastery.,2025-04-06 14:45:31,47
+94,Android Developer Roadmap,This roadmap guides learners through the Android Development skills and tools required for mastery.,2023-02-24 09:08:38,68
+95,Solidity Blockchain Developer Roadmap,This roadmap guides learners through the Solidity skills and tools required for mastery.,2025-08-21 07:31:42,20
+96,R Programming Data Science Journey,This roadmap guides learners through the R Programming skills and tools required for mastery.,2023-07-27 02:41:18,68
+97,Azure Cloud Engineer Essentials,This roadmap guides learners through the Azure skills and tools required for mastery.,2023-01-16 20:51:06,15
+98,Godot Game Developer Journey,This roadmap guides learners through the Godot Engine skills and tools required for mastery.,2023-02-21 09:28:48,75
+99,Power BI Data Science Journey,This roadmap guides learners through the Power BI skills and tools required for mastery.,2023-05-12 09:30:01,71
+100,ARM Embedded Systems Roadmap,This roadmap guides learners through the ARM Embedded skills and tools required for mastery.,2024-05-27 03:54:19,83
+101,Google Cloud Engineer Essentials,This roadmap guides learners through the GCP skills and tools required for mastery.,2024-02-23 21:50:10,43
+102,Pandas Python Developer Roadmap,This roadmap guides learners through the Pandas skills and tools required for mastery.,2023-07-12 19:58:52,8
+103,Augmented Reality Developer Roadmap,This roadmap guides learners through the AR Development skills and tools required for mastery.,2024-06-14 00:39:41,27
+104,Multi-Cloud Engineer Essentials,This roadmap guides learners through the Multi-Cloud skills and tools required for mastery.,2023-07-18 13:28:21,55
+105,Mixed Reality Developer Roadmap,This roadmap guides learners through the MR Development skills and tools required for mastery.,2025-09-06 03:32:47,14
+106,Jamstack Web Developer Blueprint,This roadmap guides learners through the Jamstack skills and tools required for mastery.,2025-03-27 14:51:12,14
+107,Polygon Blockchain Developer Roadmap,This roadmap guides learners through the Polygon skills and tools required for mastery.,2025-06-19 09:30:20,89
+108,Keras Deep Learning Specialization,This roadmap guides learners through the Keras skills and tools required for mastery.,2024-11-01 12:17:17,10
+109,SQL Data Science Journey,This roadmap guides learners through the SQL Data Science skills and tools required for mastery.,2023-11-12 01:59:25,4
+110,Arduino Embedded Systems Roadmap,This roadmap guides learners through the Arduino skills and tools required for mastery.,2023-08-18 06:03:03,66
+111,Express.js Backend Developer Roadmap,This roadmap guides learners through the Express.js skills and tools required for mastery.,2024-06-19 22:58:09,78
+112,Serverless Web Developer Blueprint,This roadmap guides learners through the Serverless skills and tools required for mastery.,2025-01-23 00:06:12,72
+113,Generative AI Deep Learning Specialization,This roadmap guides learners through the Generative AI skills and tools required for mastery.,2025-06-29 18:19:31,99
+114,NumPy Python Developer Roadmap,This roadmap guides learners through the NumPy skills and tools required for mastery.,2025-01-13 09:45:56,9
+115,SOC Analyst Cybersecurity Foundations,This roadmap guides learners through the SOC Analyst skills and tools required for mastery.,2023-08-02 21:01:38,14
+116,GraphQL Backend Developer Roadmap,This roadmap guides learners through the GraphQL skills and tools required for mastery.,2023-12-01 11:17:11,85
+117,Svelte Frontend Developer Roadmap,This roadmap guides learners through the Svelte skills and tools required for mastery.,2024-02-28 07:35:49,97
+118,Network Defense Cybersecurity Foundations,This roadmap guides learners through the Network Defense skills and tools required for mastery.,2024-02-24 06:31:56,31
+119,Statistical Analysis Data Science Journey,This roadmap guides learners through the Statistical Analysis skills and tools required for mastery.,2025-06-01 01:17:09,67
+120,Wireless IoT Track,This roadmap guides learners through the Wireless IoT skills and tools required for mastery.,2025-08-29 20:59:28,76
+121,Microservices Backend Developer Roadmap,This roadmap guides learners through the Microservices skills and tools required for mastery.,2024-05-10 14:30:32,49
+122,WebXR Developer Roadmap,This roadmap guides learners through the WebXR skills and tools required for mastery.,2024-06-20 05:24:04,37
+123,PostgreSQL Database Administrator Roadmap,This roadmap guides learners through the PostgreSQL skills and tools required for mastery.,2024-11-20 06:00:26,18
+124,Cardano Blockchain Developer Roadmap,This roadmap guides learners through the Cardano skills and tools required for mastery.,2024-06-23 21:27:54,94
+125,Serverless Cloud Engineer Essentials,This roadmap guides learners through the Serverless Cloud skills and tools required for mastery.,2024-02-09 05:45:09,65
+126,Ansible DevOps Engineer Path,This roadmap guides learners through the Ansible skills and tools required for mastery.,2025-02-13 06:42:34,44
+127,Binance Smart Chain Developer Roadmap,This roadmap guides learners through the BSC skills and tools required for mastery.,2025-04-02 17:49:50,24
+128,Avalanche Blockchain Developer Roadmap,This roadmap guides learners through the Avalanche skills and tools required for mastery.,2023-08-18 01:20:17,40
+129,Scikit-learn Python Developer Roadmap,This roadmap guides learners through the Scikit-learn skills and tools required for mastery.,2025-06-23 10:14:46,21
+130,Raspberry Pi Embedded Systems Roadmap,This roadmap guides learners through the Raspberry Pi skills and tools required for mastery.,2025-03-05 12:52:35,2
+131,Microcontroller Embedded Systems Roadmap,This roadmap guides learners through the Microcontroller skills and tools required for mastery.,2023-01-10 07:43:21,76
+132,Hybrid Cloud Engineer Essentials,This roadmap guides learners through the Hybrid Cloud skills and tools required for mastery.,2023-03-23 15:26:23,82
+133,React Native Mobile Developer Roadmap,This roadmap guides learners through the React Native skills and tools required for mastery.,2024-09-12 19:13:48,81
+134,Cloud Infrastructure Engineer Essentials,This roadmap guides learners through the Cloud Infrastructure skills and tools required for mastery.,2024-10-10 08:23:11,85
+135,MQTT IoT Track,This roadmap guides learners through the MQTT Protocol skills and tools required for mastery.,2023-02-16 08:56:10,38
+136,Spatial Computing Developer Roadmap,This roadmap guides learners through the Spatial Computing skills and tools required for mastery.,2025-03-15 00:39:54,7
+137,Unsupervised Learning Roadmap,This roadmap guides learners through the Unsupervised Learning skills and tools required for mastery.,2025-07-02 19:12:29,15
+138,Streamlit Python Developer Roadmap,This roadmap guides learners through the Streamlit skills and tools required for mastery.,2025-06-22 16:06:05,35
+139,Mobile Game Developer Journey,This roadmap guides learners through the Mobile Game Development skills and tools required for mastery.,2024-05-16 03:03:39,98
+140,Hyperledger Blockchain Developer Roadmap,This roadmap guides learners through the Hyperledger skills and tools required for mastery.,2023-12-30 17:49:56,82
+141,HoloLens AR Developer Roadmap,This roadmap guides learners through the HoloLens skills and tools required for mastery.,2025-04-10 08:43:12,81
+142,CloudFormation Cloud Engineer Essentials,This roadmap guides learners through the CloudFormation skills and tools required for mastery.,2023-04-04 14:44:41,36
+143,SIEM Cybersecurity Foundations,This roadmap guides learners through the SIEM skills and tools required for mastery.,2023-05-29 05:50:03,10
+144,Web Scraping Python Developer Roadmap,This roadmap guides learners through the Web Scraping skills and tools required for mastery.,2023-11-23 19:34:35,76
+145,Jupyter Python Developer Roadmap,This roadmap guides learners through the Jupyter skills and tools required for mastery.,2024-09-08 01:56:18,100
+146,Autonomous AI Engineer Path,This roadmap guides learners through the Autonomous Systems skills and tools required for mastery.,2024-09-16 15:36:11,42
+147,Zero Trust Cybersecurity Foundations,This roadmap guides learners through the Zero Trust skills and tools required for mastery.,2025-06-01 14:10:40,55
+148,TypeScript Frontend Developer Roadmap,This roadmap guides learners through the TypeScript skills and tools required for mastery.,2023-03-02 20:38:06,99
+149,Time Series Deep Learning Specialization,This roadmap guides learners through the Time Series Analysis skills and tools required for mastery.,2023-06-05 09:12:39,85
+150,Wireless Network Engineer Path,This roadmap guides learners through the Wireless Networking skills and tools required for mastery.,2024-01-07 18:45:10,59
+151,Serverless Backend Developer Roadmap,This roadmap guides learners through the Serverless Backend skills and tools required for mastery.,2023-12-30 15:42:41,88
+152,LoRaWAN IoT Track,This roadmap guides learners through the LoRaWAN skills and tools required for mastery.,2025-08-30 10:42:59,14
+153,Infrastructure as Code Cloud Engineer Essentials,This roadmap guides learners through the IaC skills and tools required for mastery.,2024-09-30 05:34:28,8
+154,Java Backend Developer Roadmap,This roadmap guides learners through the Java Backend skills and tools required for mastery.,2024-04-25 01:54:57,98
+155,Cloud Cost Optimization Engineer Essentials,This roadmap guides learners through the Cloud Cost Optimization skills and tools required for mastery.,2024-12-16 12:02:08,86
+156,ETL Data Science Journey,This roadmap guides learners through the ETL Pipeline skills and tools required for mastery.,2025-01-24 06:54:43,22
+157,Incident Response Cybersecurity Foundations,This roadmap guides learners through the Incident Response skills and tools required for mastery.,2024-01-22 05:34:45,75
+158,Deep Learning Computer Vision Roadmap,This roadmap guides learners through the DL Computer Vision skills and tools required for mastery.,2025-02-02 18:34:46,52
+159,Go Backend Developer Roadmap,This roadmap guides learners through the Golang Backend skills and tools required for mastery.,2023-09-06 11:22:35,41
+160,Static Site Web Developer Blueprint,This roadmap guides learners through the Static Site skills and tools required for mastery.,2024-07-23 12:44:33,15
+161,Meta Quest VR Developer Roadmap,This roadmap guides learners through the Meta Quest skills and tools required for mastery.,2025-10-08 07:46:26,44
+162,Bluetooth IoT Track,This roadmap guides learners through the Bluetooth IoT skills and tools required for mastery.,2025-07-08 12:34:56,20
+163,Cosmos Blockchain Developer Roadmap,This roadmap guides learners through the Cosmos skills and tools required for mastery.,2024-06-18 12:09:25,40
+164,FPGA Embedded Systems Roadmap,This roadmap guides learners through the FPGA skills and tools required for mastery.,2024-07-17 01:09:18,14
+165,SD-WAN Network Engineer Path,This roadmap guides learners through the SD-WAN skills and tools required for mastery.,2023-08-19 10:10:40,24
+166,Automotive Embedded Systems Roadmap,This roadmap guides learners through the Automotive Embedded skills and tools required for mastery.,2024-08-25 15:43:09,66
+167,Flutter Mobile Developer Roadmap,This roadmap guides learners through the Flutter Development skills and tools required for mastery.,2023-01-14 12:09:56,92
+168,Jenkins DevOps Engineer Path,This roadmap guides learners through the Jenkins skills and tools required for mastery.,2024-08-05 01:38:32,6
+169,Zigbee IoT Track,This roadmap guides learners through the Zigbee Protocol skills and tools required for mastery.,2025-04-01 22:20:33,8
+170,Tailwind CSS Frontend Developer Roadmap,This roadmap guides learners through the Tailwind CSS skills and tools required for mastery.,2023-10-22 07:26:43,53
+171,GANs Deep Learning Specialization,This roadmap guides learners through the Generative Adversarial Networks skills and tools required for mastery.,2025-07-22 02:55:13,5
+172,Next.js Web Developer Blueprint,This roadmap guides learners through the Next.js skills and tools required for mastery.,2023-03-08 08:33:31,48
+173,Rust Backend Developer Roadmap,This roadmap guides learners through the Rust Backend skills and tools required for mastery.,2023-12-15 03:37:38,71
+174,ArgoCD DevOps Engineer Path,This roadmap guides learners through the ArgoCD skills and tools required for mastery.,2023-04-26 05:35:12,72
+175,Feature Engineering Machine Learning Roadmap,This roadmap guides learners through the Feature Engineering skills and tools required for mastery.,2023-08-07 05:53:45,98
+176,Bootstrap Frontend Developer Roadmap,This roadmap guides learners through the Bootstrap skills and tools required for mastery.,2025-09-22 21:04:07,23
+177,NB-IoT Track,This roadmap guides learners through the Narrowband IoT skills and tools required for mastery.,2024-02-21 15:52:02,97
+178,Geospatial Data Science Journey,This roadmap guides learners through the Geospatial Analysis skills and tools required for mastery.,2025-05-09 03:03:34,85
+179,Swift Mobile Developer Roadmap,This roadmap guides learners through the Swift Development skills and tools required for mastery.,2025-02-18 14:59:19,22
+180,STM32 Embedded Systems Roadmap,This roadmap guides learners through the STM32 skills and tools required for mastery.,2023-03-11 22:11:37,27
+181,Cloud Architect Essentials,This roadmap guides learners through the Cloud Architecture skills and tools required for mastery.,2024-12-22 12:16:19,28
+182,Generative AI Engineer Path,This roadmap guides learners through the Generative AI skills and tools required for mastery.,2023-02-14 01:34:30,57
+183,Nuxt.js Web Developer Blueprint,This roadmap guides learners through the Nuxt.js skills and tools required for mastery.,2025-03-26 03:39:19,23
+184,Kubernetes Cloud Engineer Essentials,This roadmap guides learners through the Kubernetes Cloud skills and tools required for mastery.,2025-07-03 19:59:01,3
+185,Transformers Deep Learning Specialization,This roadmap guides learners through the Transformer Models skills and tools required for mastery.,2024-11-28 22:27:27,64
+186,Gatsby Web Developer Blueprint,This roadmap guides learners through the Gatsby skills and tools required for mastery.,2023-01-22 19:12:43,14
+187,ESP32 Embedded Systems Roadmap,This roadmap guides learners through the ESP32 skills and tools required for mastery.,2025-03-16 17:09:06,13
+188,Spring Boot Backend Developer Roadmap,This roadmap guides learners through the Spring Boot skills and tools required for mastery.,2025-09-08 06:20:12,27
+189,Cellular IoT Track,This roadmap guides learners through the Cellular IoT skills and tools required for mastery.,2024-10-18 10:49:01,46
+190,Cloud Migration Engineer Essentials,This roadmap guides learners through the Cloud Migration skills and tools required for mastery.,2024-12-16 11:28:44,3
+191,Cloud Automation Engineer Essentials,This roadmap guides learners through the Cloud Automation skills and tools required for mastery.,2025-10-11 16:15:13,31
+192,MongoDB Database Administrator Roadmap,This roadmap guides learners through the MongoDB skills and tools required for mastery.,2024-10-23 07:49:37,73
+193,Linux Embedded Systems Roadmap,This roadmap guides learners through the Linux Embedded skills and tools required for mastery.,2025-05-17 20:50:52,46
+194,6LoWPAN IoT Track,This roadmap guides learners through the 6LoWPAN Protocol skills and tools required for mastery.,2025-06-29 19:45:39,12
+195,Safety-Critical Embedded Systems Roadmap,This roadmap guides learners through the Safety-Critical Systems skills and tools required for mastery.,2024-09-08 17:48:35,63
+196,Material-UI Frontend Developer Roadmap,This roadmap guides learners through the Material-UI skills and tools required for mastery.,2025-08-18 10:23:18,85
+197,Malware Analysis Cybersecurity Foundations,This roadmap guides learners through the Malware Analysis skills and tools required for mastery.,2024-01-23 21:34:47,40
+198,AutoML Machine Learning Roadmap,This roadmap guides learners through the AutoML skills and tools required for mastery.,2023-06-23 15:51:51,3
+199,Apple Vision Pro AR/VR Developer Roadmap,This roadmap guides learners through the Vision Pro skills and tools required for mastery.,2025-10-10 14:48:20,88
+200,2D Game Developer Journey,This roadmap guides learners through the 2D Game Development skills and tools required for mastery.,2023-06-02 13:54:59,48
+201,MLflow AI Engineer Path,This roadmap guides learners through the MLflow skills and tools required for mastery.,2025-04-21 18:27:31,76
+202,Medical Device Embedded Systems Roadmap,This roadmap guides learners through the Medical Device Embedded skills and tools required for mastery.,2024-06-07 11:46:40,24
+203,Causal Inference Data Science Journey,This roadmap guides learners through the Causal Inference skills and tools required for mastery.,2024-02-17 06:28:17,23
+204,VHDL Embedded Systems Roadmap,This roadmap guides learners through the VHDL skills and tools required for mastery.,2025-06-04 13:40:55,74
+205,NLP Deep Learning Specialization,This roadmap guides learners through the NLP Deep Learning skills and tools required for mastery.,2023-09-07 20:11:32,66
+206,Digital Forensics Cybersecurity Foundations,This roadmap guides learners through the Digital Forensics skills and tools required for mastery.,2023-05-06 12:24:30,61
+207,Unity AR Foundation Developer Roadmap,This roadmap guides learners through the Unity AR Foundation skills and tools required for mastery.,2024-09-09 05:45:48,62
+208,Threat Intelligence Cybersecurity Foundations,This roadmap guides learners through the Threat Intelligence skills and tools required for mastery.,2023-06-18 02:17:20,74
+209,Edge AI Engineer Path,This roadmap guides learners through the Edge AI skills and tools required for mastery.,2023-04-19 13:50:56,77
+210,Airflow Data Engineer Track,This roadmap guides learners through the Apache Airflow skills and tools required for mastery.,2023-12-14 04:50:32,56
+211,Django REST Backend Developer Roadmap,This roadmap guides learners through the Django REST Framework skills and tools required for mastery.,2024-11-03 18:52:46,27
+212,Oracle Cloud Engineer Essentials,This roadmap guides learners through the Oracle Cloud skills and tools required for mastery.,2023-01-18 20:27:58,98
+213,ARKit Developer Roadmap,This roadmap guides learners through the ARKit skills and tools required for mastery.,2023-09-02 07:06:05,87
+214,Time Series Data Science Journey,This roadmap guides learners through the Time Series Forecasting skills and tools required for mastery.,2025-01-23 09:55:36,77
+215,5G Network Engineer Path,This roadmap guides learners through the 5G Networking skills and tools required for mastery.,2023-10-03 22:21:45,97
+216,Polkadot Blockchain Developer Roadmap,This roadmap guides learners through the Polkadot skills and tools required for mastery.,2024-07-01 06:39:21,97
+217,Vulnerability Management Cybersecurity Foundations,This roadmap guides learners through the Vulnerability Management skills and tools required for mastery.,2025-01-28 11:45:43,49
+218,Remix Web Developer Blueprint,This roadmap guides learners through the Remix skills and tools required for mastery.,2025-06-18 10:32:59,51
+219,Motor Control Embedded Systems Roadmap,This roadmap guides learners through the Motor Control skills and tools required for mastery.,2024-07-19 21:31:37,60
+220,Customer Analytics Data Science Journey,This roadmap guides learners through the Customer Analytics skills and tools required for mastery.,2024-01-10 13:31:34,60
+221,Tezos Blockchain Developer Roadmap,This roadmap guides learners through the Tezos skills and tools required for mastery.,2025-05-02 16:59:30,65
+222,LLM Deep Learning Specialization,This roadmap guides learners through the Large Language Models skills and tools required for mastery.,2023-11-22 10:31:21,25
+223,CoAP IoT Track,This roadmap guides learners through the CoAP Protocol skills and tools required for mastery.,2023-07-18 02:03:41,83
+224,BGP Network Engineer Path,This roadmap guides learners through the BGP Routing skills and tools required for mastery.,2024-09-24 14:20:32,46
+225,Astro Web Developer Blueprint,This roadmap guides learners through the Astro skills and tools required for mastery.,2024-02-08 19:35:21,16
+226,MySQL Database Administrator Roadmap,This roadmap guides learners through the MySQL skills and tools required for mastery.,2025-01-20 08:15:11,91
+227,Databricks Data Engineer Track,This roadmap guides learners through the Databricks skills and tools required for mastery.,2023-07-20 14:45:48,51
+228,Thread IoT Track,This roadmap guides learners through the Thread Protocol skills and tools required for mastery.,2024-03-24 02:57:36,76
+229,Compliance Cybersecurity Foundations,This roadmap guides learners through the Security Compliance skills and tools required for mastery.,2023-11-28 04:44:13,16
+230,Redis Database Administrator Roadmap,This roadmap guides learners through the Redis skills and tools required for mastery.,2025-03-01 21:08:44,88
+231,Matter IoT Track,This roadmap guides learners through the Matter Protocol skills and tools required for mastery.,2025-01-30 08:01:04,64
+232,BERT Deep Learning Specialization,This roadmap guides learners through the BERT Models skills and tools required for mastery.,2023-03-09 00:40:31,63
+233,SvelteKit Web Developer Blueprint,This roadmap guides learners through the SvelteKit skills and tools required for mastery.,2024-03-31 11:31:43,26
+234,Near Protocol Blockchain Developer Roadmap,This roadmap guides learners through the Near Protocol skills and tools required for mastery.,2025-07-16 01:37:19,94
+235,Indie Game Developer Journey,This roadmap guides learners through the Indie Game Development skills and tools required for mastery.,2024-01-12 02:14:45,14
+236,PyTorch Lightning Python Developer Roadmap,This roadmap guides learners through the PyTorch Lightning skills and tools required for mastery.,2025-06-28 22:54:47,28
+237,Sensor Networks IoT Track,This roadmap guides learners through the Sensor Networks skills and tools required for mastery.,2025-06-01 17:20:34,55
+238,Chakra UI Frontend Developer Roadmap,This roadmap guides learners through the Chakra UI skills and tools required for mastery.,2023-06-19 17:45:47,94
+239,Power Electronics Embedded Systems Roadmap,This roadmap guides learners through the Power Electronics skills and tools required for mastery.,2024-04-24 18:25:40,47
+240,Plotly Python Developer Roadmap,This roadmap guides learners through the Plotly Visualization skills and tools required for mastery.,2025-07-05 23:45:08,18
+241,Xamarin Mobile Developer Roadmap,This roadmap guides learners through the Xamarin Development skills and tools required for mastery.,2024-02-10 15:34:29,17
+242,Smart City IoT Track,This roadmap guides learners through the Smart City IoT skills and tools required for mastery.,2024-10-05 21:12:48,79
+243,Snowflake Data Engineer Track,This roadmap guides learners through the Snowflake skills and tools required for mastery.,2025-01-14 11:30:01,64
+244,Web Components Frontend Developer Roadmap,This roadmap guides learners through the Web Components skills and tools required for mastery.,2023-04-22 10:14:11,21
+245,Agriculture IoT Track,This roadmap guides learners through the Agriculture IoT skills and tools required for mastery.,2025-05-24 16:52:02,81
+246,FastAPI Backend Developer Roadmap,This roadmap guides learners through the FastAPI Backend skills and tools required for mastery.,2025-06-24 14:41:52,56
+247,Hugo Web Developer Blueprint,This roadmap guides learners through the Hugo Static Site skills and tools required for mastery.,2023-10-30 16:25:56,25
+248,Jekyll Web Developer Blueprint,This roadmap guides learners through the Jekyll skills and tools required for mastery.,2024-06-02 10:27:45,16
+249,Diffusion Models Deep Learning Specialization,This roadmap guides learners through the Diffusion Models skills and tools required for mastery.,2024-10-29 22:26:38,4
+250,Kotlin Mobile Developer Roadmap,This roadmap guides learners through the Kotlin Development skills and tools required for mastery.,2023-10-03 03:13:30,60
+251,Algorand Blockchain Developer Roadmap,This roadmap guides learners through the Algorand skills and tools required for mastery.,2025-04-25 03:32:01,98
+252,3D Game Developer Journey,This roadmap guides learners through the 3D Game Development skills and tools required for mastery.,2025-04-21 19:08:22,92
+253,Cassandra Database Administrator Roadmap,This roadmap guides learners through the Cassandra skills and tools required for mastery.,2023-09-22 23:31:19,100
+254,Kubeflow AI Engineer Path,This roadmap guides learners through the Kubeflow skills and tools required for mastery.,2024-10-31 17:02:21,15
+255,Stellar Blockchain Developer Roadmap,This roadmap guides learners through the Stellar skills and tools required for mastery.,2023-08-30 00:04:43,79
+256,FinOps Cloud Engineer Essentials,This roadmap guides learners through the FinOps skills and tools required for mastery.,2023-07-10 02:08:59,73
+257,DynamoDB Database Administrator Roadmap,This roadmap guides learners through the DynamoDB skills and tools required for mastery.,2025-10-18 13:07:19,31
+258,Koa.js Backend Developer Roadmap,This roadmap guides learners through the Koa.js skills and tools required for mastery.,2023-10-10 16:55:40,7
+259,NestJS Backend Developer Roadmap,This roadmap guides learners through the NestJS skills and tools required for mastery.,2024-11-21 04:03:07,3
+260,Flink Data Engineer Track,This roadmap guides learners through the Apache Flink skills and tools required for mastery.,2025-01-24 15:14:43,25
+261,Healthcare IoT Track,This roadmap guides learners through the Healthcare IoT skills and tools required for mastery.,2025-04-17 01:42:52,47
+262,Recommender Systems Data Science Journey,This roadmap guides learners through the Recommender Systems skills and tools required for mastery.,2025-04-27 18:16:31,29
+263,Pulumi Cloud Engineer Essentials,This roadmap guides learners through the Pulumi skills and tools required for mastery.,2024-01-02 03:37:50,28
+264,Eleventy Web Developer Blueprint,This roadmap guides learners through the Eleventy skills and tools required for mastery.,2023-12-05 20:39:27,33
+265,Laravel Backend Developer Roadmap,This roadmap guides learners through the Laravel skills and tools required for mastery.,2023-12-17 19:17:58,50
+266,Communication Protocols Embedded Systems Roadmap,This roadmap guides learners through the Communication Protocols skills and tools required for mastery.,2025-08-07 10:28:38,94
+267,MPLS Network Engineer Path,This roadmap guides learners through the MPLS skills and tools required for mastery.,2024-01-25 09:15:23,3
+268,PWA Mobile Developer Roadmap,This roadmap guides learners through the Progressive Web Apps skills and tools required for mastery.,2025-04-09 06:07:45,92
+269,Energy Management IoT Track,This roadmap guides learners through the Energy Management IoT skills and tools required for mastery.,2024-10-14 22:51:57,57
+270,ARCore Developer Roadmap,This roadmap guides learners through the ARCore skills and tools required for mastery.,2025-06-09 09:25:30,12
+271,Stable Diffusion Deep Learning Specialization,This roadmap guides learners through the Stable Diffusion skills and tools required for mastery.,2025-02-06 20:43:49,65
+272,IAM Cybersecurity Foundations,This roadmap guides learners through the Identity & Access Management skills and tools required for mastery.,2025-02-06 04:27:20,83
+273,Signal Processing Embedded Systems Roadmap,This roadmap guides learners through the Signal Processing skills and tools required for mastery.,2023-08-13 05:47:45,62
+274,Flow Blockchain Developer Roadmap,This roadmap guides learners through the Flow Blockchain skills and tools required for mastery.,2025-08-23 02:05:06,95
+275,Slim PHP Backend Developer Roadmap,This roadmap guides learners through the Slim PHP skills and tools required for mastery.,2023-09-01 16:31:28,97
+276,Qwik Web Developer Blueprint,This roadmap guides learners through the Qwik Framework skills and tools required for mastery.,2023-02-04 08:37:39,61
+277,Wearable IoT Track,This roadmap guides learners through the Wearable Technology IoT skills and tools required for mastery.,2024-06-16 23:47:50,78
+278,Preact Frontend Developer Roadmap,This roadmap guides learners through the Preact skills and tools required for mastery.,2023-08-22 15:30:20,45

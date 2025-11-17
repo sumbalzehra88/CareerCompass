@@ -1,0 +1,1957 @@
+step_id,roadmap_id,step_number,step_content
+1,1,1,Learn TCP/IP fundamentals and OSI model
+2,1,2,Configure routers and switches
+3,1,3,Master network protocols (DNS, DHCP, HTTP)
+4,1,4,Implement VLANs and subnetting
+5,1,5,Study network security basics
+6,1,6,Practice with Cisco/Juniper equipment
+7,1,7,Learn wireless networking standards
+8,1,8,Understand network troubleshooting tools
+9,2,1,Learn IoT architecture and protocols
+10,2,2,Work with sensors and actuators
+11,2,3,Set up Raspberry Pi or Arduino
+12,2,4,Practice MQTT and CoAP protocols
+13,2,5,Build simple IoT projects
+14,3,1,Master neural network architectures
+15,3,2,Learn TensorFlow and PyTorch
+16,3,3,Study CNNs and RNNs
+17,3,4,Implement transfer learning
+18,3,5,Work on image classification projects
+19,3,6,Explore sequence modeling
+20,3,7,Practice hyperparameter tuning
+21,3,8,Build end-to-end DL pipelines
+22,3,9,Deploy models in production
+23,4,1,Learn Linux command line basics
+24,4,2,Master Git version control
+25,4,3,Set up CI/CD pipelines
+26,4,4,Work with Docker containers
+27,5,1,Learn Python syntax and data types
+28,5,2,Master functions and OOP concepts
+29,5,3,Work with Python libraries (NumPy, Pandas)
+30,5,4,Practice file handling and exceptions
+31,5,5,Understand decorators and generators
+32,5,6,Build CLI applications
+33,5,7,Create Python packages
+34,5,8,Write unit tests with pytest
+35,6,1,Learn cybersecurity fundamentals
+36,6,2,Understand threat landscape
+37,6,3,Study encryption and cryptography
+38,6,4,Practice network security
+39,6,5,Learn penetration testing basics
+40,6,6,Explore security tools and frameworks
+41,7,1,Learn game design principles
+42,7,2,Master game engines (Unity/Unreal)
+43,7,3,Study game physics and mechanics
+44,7,4,Create 2D and 3D assets
+45,8,1,Learn AR/VR fundamentals
+46,8,2,Set up development environment
+47,8,3,Master 3D modeling basics
+48,8,4,Work with Unity AR Foundation
+49,8,5,Build simple AR applications
+50,8,6,Create VR experiences
+51,8,7,Study spatial computing
+52,8,8,Optimize for mobile platforms
+53,8,9,Understand user interaction design
+54,8,10,Deploy AR/VR applications
+55,9,1,Master spatial computing concepts
+56,9,2,Learn mixed reality development
+57,9,3,Work with Meta Quest SDK
+58,9,4,Build immersive experiences
+59,9,5,Study hand tracking
+60,9,6,Create multiplayer XR apps
+61,9,7,Optimize performance
+62,9,8,Implement haptic feedback
+63,9,9,Deploy to XR platforms
+64,10,1,Learn statistics and probability
+65,10,2,Master Python for data science
+66,10,3,Work with Pandas and NumPy
+67,10,4,Study data visualization
+68,11,1,Learn blockchain fundamentals
+69,11,2,Study smart contract development
+70,11,3,Master Solidity programming
+71,11,4,Work with Web3.js
+72,11,5,Deploy on Ethereum testnet
+73,12,1,Study convolutional neural networks
+74,12,2,Learn recurrent architectures
+75,12,3,Master backpropagation
+76,12,4,Implement attention mechanisms
+77,13,1,Learn HTML5 and CSS3
+78,13,2,Master JavaScript ES6+
+79,13,3,Study responsive design
+80,13,4,Work with CSS frameworks
+81,13,5,Build interactive websites
+82,13,6,Learn browser DevTools
+83,13,7,Deploy web applications
+84,14,1,Study IoT communication protocols
+85,14,2,Work with embedded systems
+86,14,3,Build sensor networks
+87,14,4,Practice edge computing
+88,15,1,Learn database design principles
+89,15,2,Master SQL queries
+90,15,3,Study indexing and optimization
+91,15,4,Work with backup and recovery
+92,16,1,Learn DeFi protocols
+93,16,2,Study decentralized exchanges
+94,16,3,Master liquidity pools
+95,16,4,Work with DeFi platforms
+96,16,5,Build DeFi applications
+97,16,6,Understand tokenomics
+98,16,7,Study yield farming
+99,16,8,Implement staking mechanisms
+100,16,9,Deploy DeFi smart contracts
+101,16,10,Audit smart contract security
+102,17,1,Learn infrastructure as code
+103,17,2,Master Kubernetes orchestration
+104,17,3,Study monitoring and logging
+105,17,4,Work with cloud platforms
+106,17,5,Implement automation scripts
+107,17,6,Build deployment pipelines
+108,17,7,Practice incident response
+109,17,8,Optimize system performance
+110,17,9,Manage configuration drift
+111,17,10,Scale applications effectively
+112,18,1,Learn ETL processes
+113,18,2,Master data pipeline design
+114,18,3,Study data warehousing
+115,18,4,Work with Apache Spark
+116,18,5,Build streaming pipelines
+117,19,1,Learn distributed computing
+118,19,2,Master Hadoop ecosystem
+119,19,3,Work with big data tools
+120,19,4,Study data lakes
+121,19,5,Build scalable pipelines
+122,19,6,Optimize query performance
+123,19,7,Implement data governance
+124,20,1,Study consensus mechanisms
+125,20,2,Learn smart contract security
+126,20,3,Build dApps
+127,20,4,Master crypto wallets
+128,20,5,Work with blockchain networks
+129,20,6,Deploy NFT contracts
+130,20,7,Understand gas optimization
+131,20,8,Test smart contracts
+132,21,1,Learn Django framework
+133,21,2,Master Flask development
+134,21,3,Study async programming
+135,21,4,Work with REST APIs
+136,21,5,Build web applications
+137,21,6,Deploy Python apps
+138,22,1,Learn Kubernetes architecture
+139,22,2,Master container orchestration
+140,22,3,Study service mesh
+141,22,4,Work with Helm charts
+142,22,5,Implement autoscaling
+143,22,6,Build operator patterns
+144,22,7,Monitor cluster health
+145,22,8,Optimize resource usage
+146,23,1,Learn threat modeling
+147,23,2,Study vulnerability assessment
+148,23,3,Master penetration testing
+149,23,4,Work with security tools
+150,23,5,Practice ethical hacking
+151,24,1,Learn microcontroller programming
+152,24,2,Study embedded C/C++
+153,24,3,Work with RTOS
+154,24,4,Master peripheral interfaces
+155,24,5,Build embedded projects
+156,24,6,Practice debugging techniques
+157,24,7,Optimize memory usage
+158,24,8,Implement communication protocols
+159,25,1,Learn machine learning basics
+160,25,2,Master deep learning frameworks
+161,25,3,Study model training
+162,25,4,Work with AI algorithms
+163,25,5,Build AI applications
+164,25,6,Implement NLP solutions
+165,25,7,Deploy AI models
+166,26,1,Study supervised learning
+167,26,2,Learn feature engineering
+168,26,3,Master model evaluation
+169,26,4,Work with scikit-learn
+170,26,5,Build ML pipelines
+171,26,6,Implement cross-validation
+172,26,7,Optimize hyperparameters
+173,26,8,Deploy ML models
+174,26,9,Monitor model performance
+175,26,10,Handle model drift
+176,27,1,Learn cloud architecture
+177,27,2,Master AWS services
+178,27,3,Study cloud security
+179,27,4,Work with serverless
+180,27,5,Build cloud-native apps
+181,27,6,Implement auto-scaling
+182,27,7,Optimize cloud costs
+183,27,8,Deploy multi-region apps
+184,28,1,Learn database normalization
+185,28,2,Master query optimization
+186,28,3,Study replication strategies
+187,28,4,Work with partitioning
+188,28,5,Implement backup solutions
+189,28,6,Monitor database performance
+190,28,7,Practice disaster recovery
+191,28,8,Tune database parameters
+192,29,1,Learn game engine architecture
+193,29,2,Master Unity development
+194,29,3,Study game AI
+195,29,4,Build multiplayer systems
+196,29,5,Implement game physics
+197,29,6,Create procedural content
+198,30,1,Learn RESTful API design
+199,30,2,Master database integration
+200,30,3,Study authentication methods
+201,30,4,Work with microservices
+202,30,5,Build scalable backends
+203,30,6,Implement caching strategies
+204,31,1,Learn AWS fundamentals
+205,31,2,Master EC2 and S3
+206,31,3,Study VPC networking
+207,31,4,Work with Lambda functions
+208,31,5,Build serverless architectures
+209,31,6,Implement CloudFormation
+210,31,7,Optimize AWS costs
+211,31,8,Deploy scalable solutions
+212,31,9,Monitor AWS resources
+213,32,1,Learn network security
+214,32,2,Master firewall configuration
+215,32,3,Study VPN technologies
+216,32,4,Work with IDS/IPS
+217,32,5,Implement security policies
+218,32,6,Build secure networks
+219,32,7,Monitor network traffic
+220,32,8,Practice threat detection
+221,33,1,Learn frontend frameworks
+222,33,2,Master React or Vue
+223,33,3,Study state management
+224,33,4,Build responsive layouts
+225,33,5,Implement API integration
+226,34,1,Learn NoSQL databases
+227,34,2,Master MongoDB
+228,34,3,Study document modeling
+229,34,4,Work with aggregation
+230,34,5,Build NoSQL schemas
+231,34,6,Optimize query performance
+232,34,7,Implement sharding
+233,34,8,Practice data migration
+234,34,9,Monitor database health
+235,34,10,Scale NoSQL clusters
+236,35,1,Learn ML algorithms
+237,35,2,Master model selection
+238,35,3,Study ensemble methods
+239,35,4,Work with neural networks
+240,35,5,Build predictive models
+241,35,6,Implement feature selection
+242,35,7,Optimize model accuracy
+243,35,8,Deploy ML solutions
+244,35,9,Evaluate model metrics
+245,35,10,Handle overfitting
+246,36,1,Learn Web3 fundamentals
+247,36,2,Master Ethereum development
+248,36,3,Study dApp architecture
+249,36,4,Work with MetaMask
+250,36,5,Build Web3 applications
+251,36,6,Implement wallet integration
+252,36,7,Deploy on blockchain
+253,37,1,Learn advanced Python
+254,37,2,Master async/await
+255,37,3,Study context managers
+256,37,4,Work with metaclasses
+257,37,5,Build data pipelines
+258,37,6,Implement concurrency
+259,37,7,Optimize Python code
+260,37,8,Create Python libraries
+261,37,9,Write comprehensive tests
+262,38,1,Learn modern web standards
+263,38,2,Master Progressive Web Apps
+264,38,3,Study Web Components
+265,38,4,Work with service workers
+266,38,5,Build offline-first apps
+267,38,6,Implement web performance
+268,38,7,Optimize bundle size
+269,38,8,Deploy web applications
+270,38,9,Monitor user experience
+271,38,10,Practice SEO techniques
+272,39,1,Learn mobile development
+273,39,2,Master UI/UX design
+274,39,3,Study native APIs
+275,39,4,Work with app lifecycle
+276,39,5,Build cross-platform apps
+277,39,6,Implement push notifications
+278,40,1,Learn Ethereum development
+279,40,2,Master Solidity advanced
+280,40,3,Study gas optimization
+281,40,4,Work with Hardhat
+282,40,5,Build DeFi protocols
+283,40,6,Implement security patterns
+284,41,1,Learn React fundamentals
+285,41,2,Master component lifecycle
+286,41,3,Study hooks and state
+287,41,4,Build reusable components
+288,42,1,Learn computer vision
+289,42,2,Master image processing
+290,42,3,Study object detection
+291,42,4,Work with OpenCV
+292,42,5,Build CV applications
+293,42,6,Implement image segmentation
+294,43,1,Learn data cleaning
+295,43,2,Master exploratory analysis
+296,43,3,Study statistical methods
+297,43,4,Work with visualization
+298,43,5,Build analytical reports
+299,43,6,Implement predictive analytics
+300,43,7,Create data dashboards
+301,43,8,Deploy analytics solutions
+302,43,9,Monitor data quality
+303,44,1,Learn Docker advanced
+304,44,2,Master Kubernetes
+305,44,3,Study GitOps
+306,44,4,Build automated pipelines
+307,45,1,Learn CI/CD principles
+308,45,2,Master Jenkins
+309,45,3,Study pipeline design
+310,45,4,Work with GitHub Actions
+311,45,5,Implement automated testing
+312,46,1,Learn Python automation
+313,46,2,Master scripting
+314,46,3,Study task scheduling
+315,46,4,Work with APIs
+316,46,5,Build automation tools
+317,46,6,Implement web scraping
+318,46,7,Create data workflows
+319,46,8,Deploy automation scripts
+320,46,9,Monitor script execution
+321,46,10,Optimize automation processes
+322,47,1,Learn TensorFlow basics
+323,47,2,Master model building
+324,47,3,Study training optimization
+325,47,4,Work with TensorBoard
+326,47,5,Build neural networks
+327,47,6,Implement custom layers
+328,47,7,Deploy TensorFlow models
+329,47,8,Optimize inference
+330,47,9,Practice model serving
+331,48,1,Learn MLOps principles
+332,48,2,Master model versioning
+333,48,3,Study experiment tracking
+334,48,4,Work with ML platforms
+335,48,5,Build ML pipelines
+336,48,6,Implement model monitoring
+337,48,7,Deploy ML systems
+338,48,8,Optimize model performance
+339,48,9,Practice model governance
+340,49,1,Learn API design patterns
+341,49,2,Master REST principles
+342,49,3,Study API documentation
+343,49,4,Work with GraphQL
+344,49,5,Build scalable APIs
+345,49,6,Implement rate limiting
+346,49,7,Deploy API gateways
+347,50,1,Learn platform engineering
+348,50,2,Master infrastructure automation
+349,50,3,Study platform architecture
+350,50,4,Build developer platforms
+351,50,5,Implement self-service tools
+352,51,1,Learn infrastructure design
+353,51,2,Master cloud architecture
+354,51,3,Study reliability patterns
+355,51,4,Build scalable systems
+356,51,5,Implement monitoring
+357,51,6,Optimize infrastructure
+358,51,7,Deploy infrastructure as code
+359,51,8,Practice disaster recovery
+360,51,9,Monitor system health
+361,52,1,Learn iOS development
+362,52,2,Master Swift language
+363,52,3,Study UIKit and SwiftUI
+364,52,4,Work with iOS frameworks
+365,52,5,Build iOS applications
+366,52,6,Deploy to App Store
+367,53,1,Learn ethical hacking
+368,53,2,Master vulnerability scanning
+369,53,3,Study exploitation techniques
+370,53,4,Work with Kali Linux
+371,53,5,Build security tools
+372,53,6,Practice penetration testing
+373,53,7,Report security findings
+374,53,8,Implement security fixes
+375,53,9,Conduct security audits
+376,54,1,Learn network administration
+377,54,2,Master network configuration
+378,54,3,Study network monitoring
+379,54,4,Work with network tools
+380,54,5,Implement network policies
+381,55,1,Learn cloud-native development
+382,55,2,Master Kubernetes
+383,55,3,Study service mesh
+384,55,4,Build microservices
+385,56,1,Learn VR development
+386,56,2,Master Unity for VR
+387,56,3,Study VR interactions
+388,56,4,Work with VR hardware
+389,56,5,Build VR experiences
+390,56,6,Implement VR locomotion
+391,56,7,Optimize VR performance
+392,56,8,Deploy VR applications
+393,57,1,Learn Terraform basics
+394,57,2,Master infrastructure provisioning
+395,57,3,Study Terraform modules
+396,57,4,Work with state management
+397,57,5,Build reusable infrastructure
+398,58,1,Learn NLP fundamentals
+399,58,2,Master text preprocessing
+400,58,3,Study language models
+401,58,4,Work with transformers
+402,58,5,Build NLP applications
+403,58,6,Implement sentiment analysis
+404,58,7,Deploy NLP models
+405,59,1,Learn React advanced
+406,59,2,Master performance optimization
+407,59,3,Study React patterns
+408,59,4,Work with Next.js
+409,59,5,Build production apps
+410,59,6,Implement SSR/SSG
+411,59,7,Deploy React applications
+412,59,8,Monitor app performance
+413,60,1,Learn cloud networking
+414,60,2,Master VPC design
+415,60,3,Study load balancing
+416,60,4,Work with CDN
+417,60,5,Implement network security
+418,60,6,Optimize network performance
+419,61,1,Learn business intelligence
+420,61,2,Master data warehousing
+421,61,3,Study BI tools
+422,61,4,Work with dashboards
+423,61,5,Build BI solutions
+424,61,6,Implement data modeling
+425,61,7,Create reports
+426,61,8,Deploy BI systems
+427,62,1,Learn data pipeline design
+428,62,2,Master ETL processes
+429,62,3,Study data orchestration
+430,62,4,Work with Airflow
+431,62,5,Build data workflows
+432,62,6,Implement data quality
+433,62,7,Monitor pipelines
+434,62,8,Optimize data processing
+435,63,1,Learn cloud security
+436,63,2,Master identity management
+437,63,3,Study encryption methods
+438,63,4,Work with security groups
+439,63,5,Implement compliance
+440,63,6,Build secure architectures
+441,64,1,Learn smart home automation
+442,64,2,Master IoT protocols
+443,64,3,Study home automation
+444,64,4,Work with smart devices
+445,64,5,Build IoT systems
+446,64,6,Implement device management
+447,65,1,Learn NFT development
+448,65,2,Master ERC-721 standard
+449,65,3,Study NFT marketplaces
+450,65,4,Build NFT platforms
+451,66,1,Learn Vue.js fundamentals
+452,66,2,Master Vue composition API
+453,66,3,Study Vuex state management
+454,66,4,Work with Vue Router
+455,66,5,Build Vue applications
+456,66,6,Implement Vue plugins
+457,66,7,Deploy Vue apps
+458,66,8,Optimize Vue performance
+459,67,1,Learn information security
+460,67,2,Master security frameworks
+461,67,3,Study risk assessment
+462,67,4,Work with security controls
+463,67,5,Implement security policies
+464,67,6,Build security programs
+465,67,7,Conduct security audits
+466,68,1,Learn Cisco networking
+467,68,2,Master Cisco IOS
+468,68,3,Study routing protocols
+469,68,4,Work with switches
+470,68,5,Implement Cisco security
+471,68,6,Build enterprise networks
+472,68,7,Optimize network performance
+473,68,8,Troubleshoot Cisco devices
+474,68,9,Deploy Cisco solutions
+475,68,10,Manage Cisco infrastructure
+476,69,1,Learn industrial IoT
+477,69,2,Master SCADA systems
+478,69,3,Study industrial protocols
+479,69,4,Work with PLCs
+480,69,5,Build IIoT solutions
+481,69,6,Implement predictive maintenance
+482,70,1,Learn edge computing
+483,70,2,Master edge architectures
+484,70,3,Study edge analytics
+485,70,4,Work with edge devices
+486,70,5,Build edge applications
+487,70,6,Implement edge AI
+488,70,7,Deploy edge solutions
+489,70,8,Optimize edge performance
+490,71,1,Learn Node.js backend
+491,71,2,Master Express.js
+492,71,3,Study async patterns
+493,71,4,Work with databases
+494,71,5,Build REST APIs
+495,71,6,Implement authentication
+496,71,7,Deploy Node.js apps
+497,71,8,Optimize server performance
+498,72,1,Learn Django advanced
+499,72,2,Master Django ORM
+500,72,3,Study Django REST framework
+501,72,4,Work with Django channels
+502,72,5,Build scalable apps
+503,72,6,Implement caching
+504,72,7,Deploy Django projects
+505,72,8,Optimize Django performance
+506,73,1,Learn Angular fundamentals
+507,73,2,Master Angular components
+508,73,3,Study RxJS
+509,73,4,Work with Angular services
+510,73,5,Build Angular apps
+511,73,6,Implement routing
+512,73,7,Deploy Angular projects
+513,74,1,Learn predictive modeling
+514,74,2,Master time series analysis
+515,74,3,Study forecasting methods
+516,74,4,Work with statistical models
+517,74,5,Build predictive systems
+518,74,6,Implement model validation
+519,74,7,Deploy forecasting models
+520,74,8,Monitor predictions
+521,74,9,Optimize forecast accuracy
+522,75,1,Learn RESTful design
+523,75,2,Master API versioning
+524,75,3,Study API security
+525,75,4,Work with authentication
+526,75,5,Build API documentation
+527,75,6,Implement rate limiting
+528,75,7,Deploy API services
+529,76,1,Learn PyTorch basics
+530,76,2,Master tensor operations
+531,76,3,Study autograd
+532,76,4,Work with neural networks
+533,76,5,Build PyTorch models
+534,76,6,Implement custom training
+535,76,7,Deploy PyTorch models
+536,76,8,Optimize model inference
+537,76,9,Practice distributed training
+538,77,1,Learn Apache Spark
+539,77,2,Master Spark SQL
+540,77,3,Study Spark streaming
+541,77,4,Work with DataFrames
+542,77,5,Build Spark pipelines
+543,78,1,Learn computer vision DL
+544,78,2,Master CNNs
+545,78,3,Study object detection
+546,78,4,Work with image segmentation
+547,78,5,Build CV models
+548,78,6,Implement transfer learning
+549,78,7,Deploy CV applications
+550,78,8,Optimize CV performance
+551,79,1,Learn real-time operating systems
+552,79,2,Master task scheduling
+553,79,3,Study interrupt handling
+554,79,4,Work with RTOS APIs
+555,79,5,Build real-time applications
+556,79,6,Implement synchronization
+557,79,7,Optimize RTOS performance
+558,79,8,Deploy embedded RTOS
+559,79,9,Debug real-time systems
+560,80,1,Learn IoT security
+561,80,2,Master device authentication
+562,80,3,Study secure communication
+563,80,4,Work with encryption
+564,80,5,Build secure IoT systems
+565,80,6,Implement security protocols
+566,81,1,Learn reinforcement learning
+567,81,2,Master Q-learning
+568,81,3,Study policy gradients
+569,81,4,Work with OpenAI Gym
+570,81,5,Build RL agents
+571,82,1,Learn Flask basics
+572,82,2,Master Flask blueprints
+573,82,3,Study Flask extensions
+574,82,4,Work with SQLAlchemy
+575,82,5,Build Flask APIs
+576,82,6,Implement authentication
+577,82,7,Deploy Flask apps
+578,82,8,Optimize Flask performance
+579,82,9,Test Flask applications
+580,82,10,Scale Flask services
+581,83,1,Learn JavaScript advanced
+582,83,2,Master ES6+ features
+583,83,3,Study async programming
+584,83,4,Work with DOM manipulation
+585,84,1,Learn robotics fundamentals
+586,84,2,Master ROS
+587,84,3,Study robot kinematics
+588,84,4,Work with sensors
+589,84,5,Build robotic systems
+590,84,6,Implement path planning
+591,84,7,Deploy robotic applications
+592,84,8,Optimize robot performance
+593,85,1,Learn PWA development
+594,85,2,Master service workers
+595,85,3,Study offline strategies
+596,85,4,Work with manifest files
+597,85,5,Build progressive apps
+598,85,6,Implement push notifications
+599,86,1,Learn supervised learning
+600,86,2,Master regression techniques
+601,86,3,Study classification algorithms
+602,86,4,Work with decision trees
+603,86,5,Build supervised models
+604,86,6,Implement model evaluation
+605,86,7,Deploy supervised learning
+606,86,8,Optimize model accuracy
+607,86,9,Handle class imbalance
+608,87,1,Learn FastAPI basics
+609,87,2,Master async endpoints
+610,87,3,Study Pydantic models
+611,87,4,Build FastAPI services
+612,88,1,Learn deep RL
+613,88,2,Master DQN
+614,88,3,Study actor-critic methods
+615,88,4,Work with policy networks
+616,88,5,Build advanced RL agents
+617,88,6,Implement experience replay
+618,88,7,Deploy RL systems
+619,89,1,Learn Tableau basics
+620,89,2,Master data connections
+621,89,3,Study visual analytics
+622,89,4,Work with calculated fields
+623,89,5,Build interactive dashboards
+624,89,6,Implement storytelling
+625,89,7,Deploy Tableau workbooks
+626,89,8,Optimize dashboard performance
+627,89,9,Share insights
+628,89,10,Practice data blending
+629,90,1,Learn Apache Kafka
+630,90,2,Master event streaming
+631,90,3,Study Kafka Connect
+632,90,4,Work with producers/consumers
+633,90,5,Build streaming pipelines
+634,90,6,Implement exactly-once semantics
+635,90,7,Deploy Kafka clusters
+636,90,8,Monitor Kafka performance
+637,91,1,Learn GitOps principles
+638,91,2,Master ArgoCD
+639,91,3,Study declarative deployment
+640,91,4,Work with Git repositories
+641,91,5,Build GitOps workflows
+642,91,6,Implement continuous delivery
+643,91,7,Deploy with GitOps
+644,91,8,Monitor deployments
+645,91,9,Practice rollback strategies
+646,92,1,Learn application security
+647,92,2,Master OWASP Top 10
+648,92,3,Study secure coding
+649,92,4,Work with security testing
+650,92,5,Build secure applications
+651,92,6,Implement security controls
+652,93,1,Learn Unreal Engine
+653,93,2,Master Blueprints
+654,93,3,Study C++ for Unreal
+655,93,4,Work with UE materials
+656,93,5,Build Unreal games
+657,93,6,Implement game mechanics
+658,93,7,Deploy Unreal projects
+659,94,1,Learn Android development
+660,94,2,Master Kotlin
+661,94,3,Study Android SDK
+662,94,4,Work with Android UI
+663,94,5,Build Android apps
+664,94,6,Implement Material Design
+665,94,7,Deploy to Play Store
+666,94,8,Optimize app performance
+667,94,9,Test Android applications
+668,94,10,Handle app lifecycle
+669,95,1,Learn Solidity advanced
+670,95,2,Master smart contract patterns
+671,95,3,Study security best practices
+672,95,4,Work with upgradeable contracts
+673,95,5,Build complex dApps
+674,95,6,Implement access control
+675,95,7,Optimize gas usage
+676,95,8,Audit smart contracts
+677,96,1,Learn R programming
+678,96,2,Master data manipulation
+679,96,3,Study statistical modeling
+680,96,4,Work with ggplot2
+681,96,5,Build R packages
+682,96,6,Implement data analysis
+683,96,7,Create R visualizations
+684,96,8,Deploy R applications
+685,97,1,Learn Azure fundamentals
+686,97,2,Master Azure services
+687,97,3,Study Azure networking
+688,97,4,Work with Azure DevOps
+689,97,5,Build Azure solutions
+690,97,6,Implement Azure security
+691,97,7,Deploy on Azure
+692,97,8,Optimize Azure costs
+693,98,1,Learn Godot Engine
+694,98,2,Master GDScript
+695,98,3,Study Godot scenes
+696,98,4,Work with Godot nodes
+697,98,5,Build 2D games
+698,98,6,Create 3D experiences
+699,98,7,Deploy Godot games
+700,98,8,Optimize game performance
+701,98,9,Implement game logic
+702,98,10,Export to platforms
+703,99,1,Learn Power BI basics
+704,99,2,Master DAX formulas
+705,99,3,Study data modeling
+706,99,4,Work with Power Query
+707,99,5,Build BI reports
+708,100,1,Learn ARM architecture
+709,100,2,Master ARM assembly
+710,100,3,Study ARM peripherals
+711,100,4,Build ARM projects
+712,101,1,Learn Google Cloud Platform
+713,101,2,Master GCP services
+714,101,3,Study GCP networking
+715,101,4,Work with Cloud Functions
+716,101,5,Build GCP solutions
+717,101,6,Implement GCP security
+718,101,7,Deploy on GCP
+719,101,8,Optimize GCP costs
+720,102,1,Learn Pandas advanced
+721,102,2,Master data manipulation
+722,102,3,Study time series
+723,102,4,Work with MultiIndex
+724,102,5,Build data pipelines
+725,102,6,Implement data cleaning
+726,102,7,Optimize Pandas operations
+727,102,8,Create data transformations
+728,102,9,Deploy data workflows
+729,102,10,Handle missing data
+730,103,1,Learn AR development basics
+731,103,2,Master ARKit/ARCore
+732,103,3,Study spatial mapping
+733,103,4,Build AR applications
+734,104,1,Learn multi-cloud strategies
+735,104,2,Master cloud migration
+736,104,3,Study cloud abstraction
+737,104,4,Build portable solutions
+738,105,1,Learn mixed reality concepts
+739,105,2,Master HoloLens development
+740,105,3,Study spatial anchors
+741,105,4,Build MR experiences
+742,105,5,Deploy mixed reality apps
+743,106,1,Learn Jamstack architecture
+744,106,2,Master static site generators
+745,106,3,Study headless CMS
+746,106,4,Work with APIs
+747,106,5,Build Jamstack sites
+748,106,6,Implement CDN strategies
+749,106,7,Optimize site performance
+750,106,8,Deploy static sites
+751,106,9,Practice serverless patterns
+752,107,1,Learn Polygon blockchain
+753,107,2,Master Layer 2 solutions
+754,107,3,Study Polygon bridge
+755,107,4,Build on Polygon
+756,108,1,Learn Keras fundamentals
+757,108,2,Master sequential models
+758,108,3,Study model compilation
+759,108,4,Work with callbacks
+760,108,5,Build Keras networks
+761,108,6,Deploy Keras models
+762,109,1,Learn SQL fundamentals
+763,109,2,Master query optimization
+764,109,3,Study data aggregation
+765,109,4,Work with joins
+766,109,5,Build SQL queries
+767,109,6,Implement stored procedures
+768,110,1,Learn Arduino programming
+769,110,2,Master Arduino libraries
+770,110,3,Study sensors and actuators
+771,110,4,Build Arduino projects
+772,110,5,Implement communication protocols
+773,110,6,Deploy IoT devices
+774,110,7,Optimize power consumption
+775,110,8,Create custom shields
+776,110,9,Debug Arduino code
+777,111,1,Learn Express.js advanced
+778,111,2,Master middleware
+779,111,3,Study routing patterns
+780,111,4,Work with templates
+781,111,5,Build scalable APIs
+782,111,6,Implement error handling
+783,111,7,Deploy Express apps
+784,111,8,Optimize response times
+785,111,9,Practice security measures
+786,111,10,Monitor Express performance
+787,112,1,Learn serverless architecture
+788,112,2,Master Lambda functions
+789,112,3,Study event-driven design
+790,112,4,Work with API Gateway
+791,112,5,Build serverless apps
+792,112,6,Implement DynamoDB
+793,112,7,Deploy serverless solutions
+794,113,1,Learn generative AI
+795,113,2,Master GANs
+796,113,3,Study diffusion models
+797,113,4,Work with transformers
+798,113,5,Build generative models
+799,113,6,Implement text generation
+800,113,7,Create image synthesis
+801,113,8,Deploy generative AI
+802,113,9,Optimize generation quality
+803,114,1,Learn NumPy fundamentals
+804,114,2,Master array operations
+805,114,3,Study broadcasting
+806,114,4,Work with linear algebra
+807,114,5,Build numerical computations
+808,114,6,Implement vectorization
+809,114,7,Optimize NumPy code
+810,115,1,Learn SOC operations
+811,115,2,Master SIEM tools
+812,115,3,Study threat detection
+813,115,4,Work with log analysis
+814,115,5,Build security monitoring
+815,115,6,Implement incident response
+816,116,1,Learn GraphQL fundamentals
+817,116,2,Master schema design
+818,116,3,Study resolvers
+819,116,4,Work with mutations
+820,116,5,Build GraphQL APIs
+821,116,6,Implement subscriptions
+822,116,7,Optimize query performance
+823,116,8,Deploy GraphQL services
+824,116,9,Practice error handling
+825,117,1,Learn Svelte basics
+826,117,2,Master reactivity
+827,117,3,Study Svelte stores
+828,117,4,Work with components
+829,117,5,Build Svelte apps
+830,117,6,Implement animations
+831,117,7,Deploy Svelte projects
+832,118,1,Learn network defense
+833,118,2,Master intrusion detection
+834,118,3,Study defense strategies
+835,118,4,Implement security controls
+836,119,1,Learn statistical analysis
+837,119,2,Master hypothesis testing
+838,119,3,Study regression analysis
+839,119,4,Work with probability
+840,120,1,Learn wireless IoT
+841,120,2,Master WiFi protocols
+842,120,3,Study Bluetooth LE
+843,120,4,Work with wireless sensors
+844,120,5,Build wireless networks
+845,120,6,Implement mesh networking
+846,120,7,Optimize wireless range
+847,120,8,Deploy wireless IoT
+848,120,9,Monitor connectivity
+849,120,10,Handle interference
+850,121,1,Learn microservices architecture
+851,121,2,Master service discovery
+852,121,3,Study API gateway
+853,121,4,Work with containers
+854,121,5,Build microservices
+855,121,6,Implement circuit breakers
+856,121,7,Deploy microservices
+857,121,8,Monitor service health
+858,121,9,Optimize service communication
+859,122,1,Learn WebXR fundamentals
+860,122,2,Master WebXR API
+861,122,3,Study immersive web
+862,122,4,Build WebXR experiences
+863,122,5,Deploy browser-based VR/AR
+864,123,1,Learn PostgreSQL
+865,123,2,Master advanced queries
+866,123,3,Study JSONB operations
+867,123,4,Work with extensions
+868,123,5,Build PostgreSQL schemas
+869,123,6,Implement partitioning
+870,123,7,Optimize query plans
+871,124,1,Learn Cardano blockchain
+872,124,2,Master Plutus
+873,124,3,Study Cardano architecture
+874,124,4,Build Cardano dApps
+875,124,5,Implement smart contracts
+876,124,6,Deploy on Cardano
+877,125,1,Learn serverless cloud
+878,125,2,Master FaaS platforms
+879,125,3,Study event sources
+880,125,4,Work with managed services
+881,125,5,Build serverless architectures
+882,125,6,Implement auto-scaling
+883,125,7,Deploy cloud functions
+884,125,8,Optimize cold starts
+885,126,1,Learn Ansible basics
+886,126,2,Master playbooks
+887,126,3,Study roles and collections
+888,126,4,Work with inventory
+889,126,5,Build automation scripts
+890,126,6,Implement configuration management
+891,126,7,Deploy with Ansible
+892,126,8,Optimize playbook performance
+893,127,1,Learn Binance Smart Chain
+894,127,2,Master BEP-20 tokens
+895,127,3,Study BSC architecture
+896,127,4,Build BSC dApps
+897,127,5,Implement cross-chain
+898,127,6,Deploy on BSC
+899,127,7,Optimize transaction costs
+900,127,8,Practice BSC security
+901,128,1,Learn Avalanche blockchain
+902,128,2,Master Avalanche consensus
+903,128,3,Study subnets
+904,128,4,Build Avalanche dApps
+905,128,5,Deploy on Avalanche
+906,129,1,Learn scikit-learn
+907,129,2,Master model selection
+908,129,3,Study preprocessing
+909,129,4,Work with pipelines
+910,129,5,Build ML models
+911,129,6,Implement cross-validation
+912,129,7,Deploy sklearn models
+913,129,8,Optimize hyperparameters
+914,130,1,Learn Raspberry Pi
+915,130,2,Master GPIO programming
+916,130,3,Study Pi HATs
+917,130,4,Work with sensors
+918,130,5,Build Pi projects
+919,130,6,Implement networking
+920,130,7,Deploy Pi solutions
+921,131,1,Learn microcontroller basics
+922,131,2,Master embedded C
+923,131,3,Study peripheral interfaces
+924,131,4,Work with timers
+925,131,5,Build embedded systems
+926,131,6,Implement interrupts
+927,131,7,Deploy firmware
+928,131,8,Debug embedded code
+929,132,1,Learn hybrid cloud
+930,132,2,Master cloud interconnect
+931,132,3,Study hybrid architectures
+932,132,4,Work with on-premise integration
+933,132,5,Build hybrid solutions
+934,132,6,Implement data synchronization
+935,132,7,Optimize hybrid performance
+936,133,1,Learn React Native
+937,133,2,Master mobile components
+938,133,3,Study navigation
+939,133,4,Work with native modules
+940,133,5,Build cross-platform apps
+941,134,1,Learn cloud infrastructure
+942,134,2,Master IaC tools
+943,134,3,Study infrastructure patterns
+944,134,4,Work with provisioning
+945,134,5,Build cloud infrastructure
+946,134,6,Implement monitoring
+947,134,7,Deploy infrastructure
+948,134,8,Optimize resources
+949,134,9,Practice cost management
+950,134,10,Scale infrastructure
+951,135,1,Learn MQTT protocol
+952,135,2,Master pub/sub patterns
+953,135,3,Study QoS levels
+954,135,4,Work with MQTT brokers
+955,135,5,Build MQTT applications
+956,135,6,Implement retained messages
+957,136,1,Learn spatial computing
+958,136,2,Master 3D interfaces
+959,136,3,Study spatial awareness
+960,136,4,Work with depth sensing
+961,136,5,Build spatial apps
+962,136,6,Implement gesture control
+963,136,7,Deploy spatial experiences
+964,136,8,Optimize spatial performance
+965,136,9,Practice user interaction
+966,136,10,Monitor spatial accuracy
+967,137,1,Learn unsupervised learning
+968,137,2,Master clustering algorithms
+969,137,3,Study dimensionality reduction
+970,137,4,Work with anomaly detection
+971,137,5,Build unsupervised models
+972,137,6,Implement K-means
+973,137,7,Deploy clustering solutions
+974,137,8,Optimize cluster quality
+975,137,9,Practice feature extraction
+976,138,1,Learn Streamlit basics
+977,138,2,Master widgets and layouts
+978,138,3,Study caching
+979,138,4,Work with data visualization
+980,138,5,Build data apps
+981,138,6,Implement interactivity
+982,138,7,Deploy Streamlit apps
+983,138,8,Optimize app performance
+984,139,1,Learn mobile game dev
+985,139,2,Master touch controls
+986,139,3,Study mobile optimization
+987,139,4,Work with monetization
+988,139,5,Build mobile games
+989,139,6,Implement IAP
+990,139,7,Deploy to app stores
+991,140,1,Learn Hyperledger
+992,140,2,Master Fabric
+993,140,3,Study chaincode
+994,140,4,Work with channels
+995,140,5,Build enterprise blockchain
+996,140,6,Implement consensus
+997,140,7,Deploy Hyperledger networks
+998,141,1,Learn HoloLens development
+999,141,2,Master spatial mapping
+1000,141,3,Study hand tracking
+1001,141,4,Build holographic apps
+1002,141,5,Implement voice commands
+1003,141,6,Deploy HoloLens experiences
+1004,141,7,Optimize holographic rendering
+1005,142,1,Learn AWS CloudFormation
+1006,142,2,Master template design
+1007,142,3,Study stack management
+1008,142,4,Work with nested stacks
+1009,142,5,Build infrastructure templates
+1010,142,6,Implement change sets
+1011,142,7,Deploy CloudFormation stacks
+1012,142,8,Optimize template efficiency
+1013,142,9,Practice drift detection
+1014,142,10,Monitor stack resources
+1015,143,1,Learn SIEM fundamentals
+1016,143,2,Master log correlation
+1017,143,3,Study threat hunting
+1018,143,4,Work with security events
+1019,143,5,Build security dashboards
+1020,143,6,Implement alerting
+1021,143,7,Deploy SIEM solutions
+1022,143,8,Optimize detection rules
+1023,143,9,Practice incident analysis
+1024,144,1,Learn web scraping
+1025,144,2,Master BeautifulSoup
+1026,144,3,Study Scrapy framework
+1027,144,4,Work with Selenium
+1028,144,5,Build scrapers
+1029,144,6,Implement data extraction
+1030,144,7,Handle anti-scraping measures
+1031,145,1,Learn Jupyter notebooks
+1032,145,2,Master notebook workflows
+1033,145,3,Study magic commands
+1034,145,4,Work with kernels
+1035,145,5,Build interactive analysis
+1036,145,6,Implement visualization
+1037,145,7,Share notebooks
+1038,146,1,Learn autonomous systems
+1039,146,2,Master sensor fusion
+1040,146,3,Study path planning
+1041,146,4,Work with perception
+1042,146,5,Build autonomous agents
+1043,146,6,Implement control systems
+1044,146,7,Deploy autonomous solutions
+1045,147,1,Learn zero trust architecture
+1046,147,2,Master identity verification
+1047,147,3,Study least privilege
+1048,147,4,Implement zero trust controls
+1049,148,1,Learn TypeScript fundamentals
+1050,148,2,Master type system
+1051,148,3,Study interfaces and generics
+1052,148,4,Work with decorators
+1053,148,5,Build TypeScript apps
+1054,148,6,Implement type guards
+1055,148,7,Deploy TypeScript projects
+1056,148,8,Optimize compilation
+1057,149,1,Learn time series analysis
+1058,149,2,Master LSTM networks
+1059,149,3,Study sequence modeling
+1060,149,4,Work with temporal data
+1061,149,5,Build time series models
+1062,149,6,Implement forecasting
+1063,149,7,Deploy time series solutions
+1064,149,8,Optimize sequence predictions
+1065,149,9,Practice anomaly detection
+1066,149,10,Handle seasonality
+1067,150,1,Learn wireless networking
+1068,150,2,Master WiFi standards
+1069,150,3,Study RF principles
+1070,150,4,Work with access points
+1071,150,5,Build wireless networks
+1072,150,6,Implement roaming
+1073,150,7,Optimize wireless coverage
+1074,150,8,Deploy enterprise WiFi
+1075,150,9,Monitor wireless performance
+1076,151,1,Learn serverless backend
+1077,151,2,Master Lambda patterns
+1078,151,3,Study event processing
+1079,151,4,Work with DynamoDB
+1080,151,5,Build serverless APIs
+1081,151,6,Implement authentication
+1082,151,7,Deploy serverless backends
+1083,151,8,Optimize cold starts
+1084,151,9,Practice error handling
+1085,152,1,Learn LoRaWAN protocol
+1086,152,2,Master LoRa modulation
+1087,152,3,Study network architecture
+1088,152,4,Work with gateways
+1089,152,5,Build LoRaWAN networks
+1090,152,6,Implement device provisioning
+1091,153,1,Learn infrastructure as code
+1092,153,2,Master Terraform
+1093,153,3,Study declarative config
+1094,153,4,Work with state management
+1095,153,5,Build IaC pipelines
+1096,154,1,Learn Java Spring Boot
+1097,154,2,Master dependency injection
+1098,154,3,Study Spring Data
+1099,154,4,Build REST services
+1100,155,1,Learn cloud cost optimization
+1101,155,2,Master resource tagging
+1102,155,3,Study cost allocation
+1103,155,4,Work with reserved instances
+1104,155,5,Build cost dashboards
+1105,155,6,Implement budget alerts
+1106,155,7,Deploy cost controls
+1107,155,8,Optimize resource usage
+1108,155,9,Practice rightsizing
+1109,156,1,Learn ETL fundamentals
+1110,156,2,Master data transformation
+1111,156,3,Study data loading
+1112,156,4,Work with ETL tools
+1113,156,5,Build ETL pipelines
+1114,157,1,Learn incident response
+1115,157,2,Master forensics
+1116,157,3,Study containment strategies
+1117,157,4,Work with IR tools
+1118,157,5,Build response playbooks
+1119,157,6,Implement recovery procedures
+1120,158,1,Learn deep learning CV
+1121,158,2,Master CNNs
+1122,158,3,Study object detection
+1123,158,4,Build vision models
+1124,159,1,Learn Go programming
+1125,159,2,Master goroutines
+1126,159,3,Study channels
+1127,159,4,Work with interfaces
+1128,159,5,Build Go services
+1129,160,1,Learn static site generation
+1130,160,2,Master JAMstack
+1131,160,3,Study SSG frameworks
+1132,160,4,Work with headless CMS
+1133,160,5,Build static sites
+1134,160,6,Implement build optimization
+1135,160,7,Deploy static sites
+1136,160,8,Optimize loading speed
+1137,160,9,Practice SEO techniques
+1138,161,1,Learn Meta Quest development
+1139,161,2,Master Oculus SDK
+1140,161,3,Study VR interactions
+1141,161,4,Work with hand tracking
+1142,161,5,Build Quest apps
+1143,161,6,Implement multiplayer VR
+1144,161,7,Deploy to Quest Store
+1145,162,1,Learn Bluetooth protocols
+1146,162,2,Master BLE
+1147,162,3,Study GATT profiles
+1148,162,4,Work with Bluetooth mesh
+1149,162,5,Build Bluetooth IoT
+1150,162,6,Implement pairing
+1151,162,7,Optimize power consumption
+1152,162,8,Deploy BLE devices
+1153,162,9,Monitor connectivity
+1154,162,10,Handle interference
+1155,163,1,Learn Cosmos blockchain
+1156,163,2,Master Cosmos SDK
+1157,163,3,Study IBC protocol
+1158,163,4,Work with Tendermint
+1159,163,5,Build Cosmos chains
+1160,163,6,Implement validators
+1161,163,7,Deploy Cosmos networks
+1162,163,8,Optimize consensus
+1163,163,9,Practice cross-chain
+1164,163,10,Monitor chain health
+1165,164,1,Learn FPGA programming
+1166,164,2,Master VHDL/Verilog
+1167,164,3,Study logic synthesis
+1168,164,4,Work with FPGA tools
+1169,164,5,Build FPGA designs
+1170,164,6,Implement timing constraints
+1171,164,7,Deploy to FPGA
+1172,164,8,Optimize resource usage
+1173,165,1,Learn SD-WAN technology
+1174,165,2,Master WAN optimization
+1175,165,3,Study overlay networks
+1176,165,4,Implement SD-WAN
+1177,166,1,Learn automotive embedded
+1178,166,2,Master CAN bus
+1179,166,3,Study AUTOSAR
+1180,166,4,Work with ECUs
+1181,166,5,Build automotive systems
+1182,166,6,Implement safety standards
+1183,167,1,Learn Flutter framework
+1184,167,2,Master Dart language
+1185,167,3,Study widgets
+1186,167,4,Work with state management
+1187,167,5,Build Flutter apps
+1188,167,6,Implement navigation
+1189,167,7,Deploy cross-platform
+1190,167,8,Optimize app performance
+1191,167,9,Practice testing
+1192,168,1,Learn Jenkins fundamentals
+1193,168,2,Master pipeline creation
+1194,168,3,Study plugin ecosystem
+1195,168,4,Build CI/CD pipelines
+1196,168,5,Implement automated testing
+1197,169,1,Learn Zigbee protocol
+1198,169,2,Master mesh networking
+1199,169,3,Study Zigbee clusters
+1200,169,4,Work with coordinators
+1201,169,5,Build Zigbee networks
+1202,170,1,Learn Tailwind CSS
+1203,170,2,Master utility classes
+1204,170,3,Study responsive design
+1205,170,4,Work with custom themes
+1206,170,5,Build Tailwind layouts
+1207,170,6,Implement dark mode
+1208,170,7,Optimize CSS bundle
+1209,171,1,Learn GANs fundamentals
+1210,171,2,Master generator networks
+1211,171,3,Study discriminator training
+1212,171,4,Build GAN models
+1213,172,1,Learn Next.js framework
+1214,172,2,Master SSR and SSG
+1215,172,3,Study API routes
+1216,172,4,Work with routing
+1217,172,5,Build Next.js apps
+1218,172,6,Implement ISR
+1219,173,1,Learn Rust programming
+1220,173,2,Master ownership system
+1221,173,3,Study lifetimes
+1222,173,4,Work with traits
+1223,173,5,Build Rust services
+1224,173,6,Implement error handling
+1225,173,7,Deploy Rust apps
+1226,173,8,Optimize performance
+1227,173,9,Practice async Rust
+1228,174,1,Learn ArgoCD fundamentals
+1229,174,2,Master GitOps workflow
+1230,174,3,Study sync strategies
+1231,174,4,Work with applications
+1232,174,5,Build deployment pipelines
+1233,174,6,Implement rollbacks
+1234,174,7,Deploy with ArgoCD
+1235,174,8,Monitor deployments
+1236,175,1,Learn feature engineering
+1237,175,2,Master feature selection
+1238,175,3,Study feature extraction
+1239,175,4,Work with transformations
+1240,175,5,Build feature pipelines
+1241,175,6,Implement encoding
+1242,175,7,Optimize features
+1243,175,8,Deploy feature stores
+1244,176,1,Learn Bootstrap framework
+1245,176,2,Master grid system
+1246,176,3,Study components
+1247,176,4,Work with utilities
+1248,176,5,Build responsive layouts
+1249,176,6,Implement Bootstrap themes
+1250,176,7,Customize Bootstrap
+1251,176,8,Deploy Bootstrap sites
+1252,176,9,Optimize bundle size
+1253,177,1,Learn NB-IoT technology
+1254,177,2,Master cellular IoT
+1255,177,3,Study LTE-M protocols
+1256,177,4,Work with NB-IoT modules
+1257,177,5,Build cellular IoT solutions
+1258,177,6,Implement power saving
+1259,177,7,Deploy NB-IoT devices
+1260,177,8,Monitor connectivity
+1261,178,1,Learn geospatial analysis
+1262,178,2,Master GIS concepts
+1263,178,3,Study spatial queries
+1264,178,4,Work with PostGIS
+1265,178,5,Build geospatial apps
+1266,178,6,Implement mapping
+1267,178,7,Deploy GIS solutions
+1268,179,1,Learn Swift programming
+1269,179,2,Master Swift syntax
+1270,179,3,Study optionals
+1271,179,4,Build iOS apps with Swift
+1272,180,1,Learn STM32 microcontrollers
+1273,180,2,Master HAL library
+1274,180,3,Study peripherals
+1275,180,4,Work with CubeMX
+1276,180,5,Build STM32 projects
+1277,180,6,Implement interrupts
+1278,180,7,Deploy firmware
+1279,180,8,Optimize performance
+1280,180,9,Debug STM32 code
+1281,180,10,Practice low-power modes
+1282,181,1,Learn cloud architecture
+1283,181,2,Master design patterns
+1284,181,3,Study multi-tier architecture
+1285,181,4,Work with scalability
+1286,181,5,Build cloud solutions
+1287,181,6,Implement high availability
+1288,181,7,Deploy resilient systems
+1289,181,8,Optimize architecture
+1290,181,9,Practice disaster recovery
+1291,182,1,Learn generative AI
+1292,182,2,Master LLMs
+1293,182,3,Study prompt engineering
+1294,182,4,Work with GPT models
+1295,182,5,Build AI applications
+1296,182,6,Implement fine-tuning
+1297,182,7,Deploy generative systems
+1298,182,8,Optimize inference
+1299,183,1,Learn Nuxt.js framework
+1300,183,2,Master Vue SSR
+1301,183,3,Study Nuxt modules
+1302,183,4,Work with middleware
+1303,183,5,Build Nuxt apps
+1304,183,6,Implement static generation
+1305,183,7,Deploy Nuxt projects
+1306,184,1,Learn Kubernetes advanced
+1307,184,2,Master operators
+1308,184,3,Study CRDs
+1309,184,4,Build cloud-native apps
+1310,185,1,Learn transformer models
+1311,185,2,Master attention mechanism
+1312,185,3,Study BERT and GPT
+1313,185,4,Work with transformers
+1314,185,5,Build NLP models
+1315,185,6,Implement fine-tuning
+1316,185,7,Deploy transformer models
+1317,185,8,Optimize inference
+1318,185,9,Practice transfer learning
+1319,186,1,Learn Gatsby framework
+1320,186,2,Master GraphQL data layer
+1321,186,3,Study plugins
+1322,186,4,Work with themes
+1323,186,5,Build Gatsby sites
+1324,186,6,Implement image optimization
+1325,186,7,Deploy static sites
+1326,186,8,Optimize performance
+1327,186,9,Practice SEO
+1328,187,1,Learn ESP32 microcontroller
+1329,187,2,Master ESP-IDF
+1330,187,3,Study WiFi/Bluetooth
+1331,187,4,Build ESP32 projects
+1332,188,1,Learn Spring Boot advanced
+1333,188,2,Master Spring Cloud
+1334,188,3,Study microservices patterns
+1335,188,4,Work with Spring Security
+1336,188,5,Build enterprise apps
+1337,188,6,Implement messaging
+1338,188,7,Deploy Spring apps
+1339,188,8,Optimize performance
+1340,189,1,Learn cellular IoT
+1341,189,2,Master 5G IoT
+1342,189,3,Study CAT-M protocols
+1343,189,4,Work with SIM modules
+1344,189,5,Build cellular solutions
+1345,189,6,Implement remote management
+1346,190,1,Learn cloud migration
+1347,190,2,Master migration strategies
+1348,190,3,Study cloud readiness
+1349,190,4,Work with migration tools
+1350,190,5,Build migration plans
+1351,190,6,Implement data migration
+1352,190,7,Deploy migrated workloads
+1353,190,8,Optimize post-migration
+1354,190,9,Monitor migrated apps
+1355,191,1,Learn cloud automation
+1356,191,2,Master automation tools
+1357,191,3,Study orchestration
+1358,191,4,Build automation workflows
+1359,192,1,Learn MongoDB advanced
+1360,192,2,Master aggregation pipeline
+1361,192,3,Study sharding
+1362,192,4,Work with replication
+1363,192,5,Build MongoDB schemas
+1364,192,6,Implement indexes
+1365,192,7,Deploy MongoDB clusters
+1366,192,8,Optimize queries
+1367,193,1,Learn Linux embedded
+1368,193,2,Master Yocto Project
+1369,193,3,Study kernel configuration
+1370,193,4,Work with device trees
+1371,193,5,Build embedded Linux
+1372,193,6,Implement drivers
+1373,193,7,Deploy Linux systems
+1374,194,1,Learn 6LoWPAN protocol
+1375,194,2,Master IPv6 for IoT
+1376,194,3,Study mesh routing
+1377,194,4,Work with border routers
+1378,194,5,Build 6LoWPAN networks
+1379,194,6,Implement compression
+1380,195,1,Learn safety-critical systems
+1381,195,2,Master IEC 61508
+1382,195,3,Study functional safety
+1383,195,4,Work with MISRA C
+1384,195,5,Build safety systems
+1385,195,6,Implement safety checks
+1386,195,7,Deploy certified systems
+1387,196,1,Learn Material-UI
+1388,196,2,Master theming
+1389,196,3,Study component customization
+1390,196,4,Work with Material Design
+1391,196,5,Build Material apps
+1392,196,6,Implement responsive design
+1393,196,7,Deploy styled apps
+1394,197,1,Learn malware analysis
+1395,197,2,Master reverse engineering
+1396,197,3,Study sandboxing
+1397,197,4,Work with analysis tools
+1398,198,1,Learn AutoML frameworks
+1399,198,2,Master automated tuning
+1400,198,3,Study neural architecture search
+1401,198,4,Work with AutoML tools
+1402,198,5,Build AutoML pipelines
+1403,199,1,Learn Vision Pro development
+1404,199,2,Master visionOS
+1405,199,3,Study spatial computing
+1406,199,4,Work with RealityKit
+1407,199,5,Build Vision Pro apps
+1408,199,6,Implement eye tracking
+1409,199,7,Deploy to Vision Pro
+1410,200,1,Learn 2D game design
+1411,200,2,Master sprite animation
+1412,200,3,Study 2D physics
+1413,200,4,Build 2D games
+1414,200,5,Implement 2D mechanics
+1415,201,1,Learn MLflow fundamentals
+1416,201,2,Master experiment tracking
+1417,201,3,Study model registry
+1418,201,4,Work with MLflow projects
+1419,201,5,Build ML workflows
+1420,201,6,Implement model deployment
+1421,201,7,Monitor ML experiments
+1422,202,1,Learn medical device standards
+1423,202,2,Master IEC 62304
+1424,202,3,Study FDA regulations
+1425,202,4,Work with risk management
+1426,202,5,Build compliant devices
+1427,203,1,Learn causal inference
+1428,203,2,Master DAGs
+1429,203,3,Study counterfactuals
+1430,203,4,Work with causal models
+1431,203,5,Build causal analysis
+1432,204,1,Learn VHDL programming
+1433,204,2,Master digital design
+1434,204,3,Study synthesis
+1435,204,4,Work with testbenches
+1436,204,5,Build FPGA systems
+1437,204,6,Implement state machines
+1438,204,7,Deploy VHDL designs
+1439,204,8,Optimize logic
+1440,205,1,Learn NLP deep learning
+1441,205,2,Master BERT models
+1442,205,3,Study transformers
+1443,205,4,Work with tokenization
+1444,205,5,Build NLP systems
+1445,206,1,Learn digital forensics
+1446,206,2,Master evidence collection
+1447,206,3,Study forensic tools
+1448,206,4,Work with disk imaging
+1449,206,5,Build forensic procedures
+1450,206,6,Implement chain of custody
+1451,206,7,Analyze digital evidence
+1452,206,8,Report findings
+1453,207,1,Learn Unity AR Foundation
+1454,207,2,Master AR tracking
+1455,207,3,Study plane detection
+1456,207,4,Work with AR anchors
+1457,207,5,Build Unity AR apps
+1458,207,6,Implement AR interactions
+1459,207,7,Deploy AR experiences
+1460,207,8,Optimize AR performance
+1461,208,1,Learn threat intelligence
+1462,208,2,Master OSINT
+1463,208,3,Study threat feeds
+1464,208,4,Work with IOCs
+1465,208,5,Build threat analysis
+1466,208,6,Implement threat sharing
+1467,208,7,Deploy TI platforms
+1468,208,8,Monitor threats
+1469,208,9,Practice attribution
+1470,209,1,Learn edge AI
+1471,209,2,Master model optimization
+1472,209,3,Study quantization
+1473,209,4,Work with edge devices
+1474,209,5,Build edge AI systems
+1475,209,6,Implement inference
+1476,209,7,Deploy edge models
+1477,209,8,Optimize latency
+1478,209,9,Monitor edge performance
+1479,209,10,Practice model compression
+1480,210,1,Learn Apache Airflow
+1481,210,2,Master DAG creation
+1482,210,3,Study operators
+1483,210,4,Work with scheduling
+1484,210,5,Build data workflows
+1485,210,6,Implement task dependencies
+1486,210,7,Deploy Airflow pipelines
+1487,211,1,Learn Django REST framework
+1488,211,2,Master serializers
+1489,211,3,Study viewsets
+1490,211,4,Work with authentication
+1491,211,5,Build REST APIs
+1492,211,6,Implement permissions
+1493,211,7,Deploy DRF services
+1494,211,8,Optimize API performance
+1495,212,1,Learn Oracle Cloud
+1496,212,2,Master OCI services
+1497,212,3,Study Oracle networking
+1498,212,4,Work with compute
+1499,212,5,Build OCI solutions
+1500,213,1,Learn ARKit fundamentals
+1501,213,2,Master scene understanding
+1502,213,3,Study face tracking
+1503,213,4,Work with ARKit features
+1504,213,5,Build ARKit apps
+1505,213,6,Implement AR experiences
+1506,213,7,Deploy iOS AR apps
+1507,214,1,Learn time series forecasting
+1508,214,2,Master ARIMA models
+1509,214,3,Study Prophet
+1510,214,4,Work with seasonality
+1511,214,5,Build forecasting systems
+1512,214,6,Implement validation
+1513,215,1,Learn 5G networking
+1514,215,2,Master 5G architecture
+1515,215,3,Study network slicing
+1516,215,4,Work with 5G protocols
+1517,215,5,Build 5G networks
+1518,215,6,Implement edge computing
+1519,215,7,Deploy 5G solutions
+1520,215,8,Optimize 5G performance
+1521,215,9,Monitor 5G networks
+1522,215,10,Practice spectrum management
+1523,216,1,Learn Polkadot blockchain
+1524,216,2,Master Substrate framework
+1525,216,3,Study parachains
+1526,216,4,Build Polkadot chains
+1527,217,1,Learn vulnerability management
+1528,217,2,Master vulnerability scanning
+1529,217,3,Study risk assessment
+1530,217,4,Work with patch management
+1531,217,5,Implement remediation
+1532,218,1,Learn Remix framework
+1533,218,2,Master nested routing
+1534,218,3,Study data loading
+1535,218,4,Build Remix apps
+1536,219,1,Learn motor control
+1537,219,2,Master PWM techniques
+1538,219,3,Study PID control
+1539,219,4,Work with motor drivers
+1540,219,5,Build control systems
+1541,219,6,Implement feedback loops
+1542,219,7,Deploy motor controllers
+1543,219,8,Optimize control algorithms
+1544,220,1,Learn customer analytics
+1545,220,2,Master segmentation
+1546,220,3,Study churn prediction
+1547,220,4,Work with CLV models
+1548,221,1,Learn Tezos blockchain
+1549,221,2,Master Michelson
+1550,221,3,Study Tezos consensus
+1551,221,4,Work with smart contracts
+1552,221,5,Build Tezos dApps
+1553,221,6,Deploy on Tezos
+1554,222,1,Learn large language models
+1555,222,2,Master prompt engineering
+1556,222,3,Study fine-tuning
+1557,222,4,Work with GPT models
+1558,222,5,Build LLM applications
+1559,222,6,Implement RAG
+1560,222,7,Deploy LLM systems
+1561,223,1,Learn CoAP protocol
+1562,223,2,Master constrained devices
+1563,223,3,Study resource discovery
+1564,223,4,Work with CoAP servers
+1565,223,5,Build CoAP applications
+1566,223,6,Implement observe pattern
+1567,223,7,Deploy CoAP networks
+1568,223,8,Optimize message size
+1569,224,1,Learn BGP routing
+1570,224,2,Master route policies
+1571,224,3,Study BGP attributes
+1572,224,4,Work with AS paths
+1573,224,5,Build BGP networks
+1574,224,6,Implement route filtering
+1575,224,7,Deploy BGP routers
+1576,224,8,Optimize routing
+1577,224,9,Monitor BGP sessions
+1578,225,1,Learn Astro framework
+1579,225,2,Master island architecture
+1580,225,3,Study partial hydration
+1581,225,4,Work with components
+1582,225,5,Build Astro sites
+1583,225,6,Implement SSR
+1584,225,7,Deploy static sites
+1585,225,8,Optimize performance
+1586,225,9,Practice content collections
+1587,225,10,Handle dynamic routes
+1588,226,1,Learn MySQL advanced
+1589,226,2,Master query optimization
+1590,226,3,Study replication
+1591,226,4,Work with partitioning
+1592,226,5,Build MySQL clusters
+1593,226,6,Implement backup strategies
+1594,226,7,Deploy MySQL solutions
+1595,226,8,Optimize performance
+1596,226,9,Monitor database health
+1597,226,10,Practice disaster recovery
+1598,227,1,Learn Databricks platform
+1599,227,2,Master Delta Lake
+1600,227,3,Study Spark on Databricks
+1601,227,4,Build data pipelines
+1602,228,1,Learn Thread protocol
+1603,228,2,Master IPv6 mesh
+1604,228,3,Study Thread border routers
+1605,228,4,Work with Thread devices
+1606,228,5,Build Thread networks
+1607,228,6,Implement commissioning
+1608,228,7,Deploy Thread solutions
+1609,228,8,Monitor mesh networks
+1610,229,1,Learn security compliance
+1611,229,2,Master frameworks (ISO, NIST)
+1612,229,3,Study audit procedures
+1613,229,4,Work with controls
+1614,229,5,Build compliance programs
+1615,229,6,Implement policies
+1616,229,7,Conduct assessments
+1617,230,1,Learn Redis advanced
+1618,230,2,Master data structures
+1619,230,3,Study persistence
+1620,230,4,Implement caching strategies
+1621,231,1,Learn Matter protocol
+1622,231,2,Master smart home standard
+1623,231,3,Study Matter devices
+1624,231,4,Work with fabric
+1625,231,5,Build Matter ecosystems
+1626,231,6,Implement commissioning
+1627,231,7,Deploy Matter products
+1628,231,8,Optimize interoperability
+1629,231,9,Practice device certification
+1630,232,1,Learn BERT models
+1631,232,2,Master masked language modeling
+1632,232,3,Study sentence encoding
+1633,232,4,Work with fine-tuning
+1634,232,5,Build BERT applications
+1635,232,6,Implement classification
+1636,232,7,Deploy BERT models
+1637,232,8,Optimize inference
+1638,233,1,Learn SvelteKit framework
+1639,233,2,Master file-based routing
+1640,233,3,Study server-side rendering
+1641,233,4,Work with endpoints
+1642,233,5,Build SvelteKit apps
+1643,233,6,Implement adapters
+1644,233,7,Deploy SvelteKit projects
+1645,234,1,Learn Near Protocol
+1646,234,2,Master NEAR SDK
+1647,234,3,Study sharding
+1648,234,4,Work with NEAR contracts
+1649,234,5,Build NEAR dApps
+1650,235,1,Learn indie game development
+1651,235,2,Master game design
+1652,235,3,Study asset creation
+1653,235,4,Work with game engines
+1654,235,5,Build indie games
+1655,236,1,Learn PyTorch Lightning
+1656,236,2,Master training loops
+1657,236,3,Study callbacks
+1658,236,4,Work with loggers
+1659,236,5,Build Lightning modules
+1660,236,6,Implement distributed training
+1661,237,1,Learn sensor networks
+1662,237,2,Master WSN protocols
+1663,237,3,Study energy harvesting
+1664,237,4,Work with sensor nodes
+1665,237,5,Build sensor networks
+1666,237,6,Implement data aggregation
+1667,237,7,Deploy sensor systems
+1668,237,8,Optimize power consumption
+1669,237,9,Monitor network health
+1670,238,1,Learn Chakra UI
+1671,238,2,Master design system
+1672,238,3,Study component library
+1673,238,4,Work with theming
+1674,238,5,Build Chakra apps
+1675,239,1,Learn power electronics
+1676,239,2,Master converters
+1677,239,3,Study inverters
+1678,239,4,Work with power supplies
+1679,239,5,Build power systems
+1680,239,6,Implement protection
+1681,239,7,Deploy power solutions
+1682,239,8,Optimize efficiency
+1683,240,1,Learn Plotly visualization
+1684,240,2,Master interactive plots
+1685,240,3,Study Dash framework
+1686,240,4,Work with 3D plotting
+1687,240,5,Build data visualizations
+1688,241,1,Learn Xamarin development
+1689,241,2,Master Xamarin.Forms
+1690,241,3,Study cross-platform UI
+1691,241,4,Work with MVVM
+1692,241,5,Build Xamarin apps
+1693,241,6,Deploy mobile apps
+1694,242,1,Learn smart city IoT
+1695,242,2,Master urban sensors
+1696,242,3,Study traffic management
+1697,242,4,Work with city platforms
+1698,242,5,Build smart city solutions
+1699,242,6,Implement data analytics
+1700,242,7,Deploy IoT infrastructure
+1701,243,1,Learn Snowflake platform
+1702,243,2,Master data warehousing
+1703,243,3,Study virtual warehouses
+1704,243,4,Work with Snowflake SQL
+1705,243,5,Build data pipelines
+1706,243,6,Implement data sharing
+1707,244,1,Learn Web Components
+1708,244,2,Master custom elements
+1709,244,3,Study shadow DOM
+1710,244,4,Work with templates
+1711,244,5,Build reusable components
+1712,244,6,Implement component libraries
+1713,244,7,Deploy web components
+1714,244,8,Optimize performance
+1715,245,1,Learn agriculture IoT
+1716,245,2,Master precision farming
+1717,245,3,Study crop monitoring
+1718,245,4,Work with agri-sensors
+1719,245,5,Build smart farming systems
+1720,246,1,Learn FastAPI advanced
+1721,246,2,Master dependency injection
+1722,246,3,Study background tasks
+1723,246,4,Work with WebSockets
+1724,246,5,Build production APIs
+1725,246,6,Implement authentication
+1726,246,7,Deploy FastAPI services
+1727,247,1,Learn Hugo static generator
+1728,247,2,Master content management
+1729,247,3,Study templating
+1730,247,4,Build Hugo sites
+1731,248,1,Learn Jekyll framework
+1732,248,2,Master Liquid templates
+1733,248,3,Study collections
+1734,248,4,Work with plugins
+1735,248,5,Build Jekyll sites
+1736,248,6,Implement blog features
+1737,248,7,Deploy static sites
+1738,249,1,Learn diffusion models
+1739,249,2,Master denoising
+1740,249,3,Study sampling methods
+1741,249,4,Work with Stable Diffusion
+1742,249,5,Build generative systems
+1743,250,1,Learn Kotlin for Android
+1744,250,2,Master coroutines
+1745,250,3,Study Jetpack Compose
+1746,250,4,Work with Kotlin DSL
+1747,250,5,Build Kotlin apps
+1748,250,6,Implement modern Android
+1749,250,7,Deploy Kotlin apps
+1750,250,8,Optimize Kotlin code
+1751,250,9,Practice testing
+1752,251,1,Learn Algorand blockchain
+1753,251,2,Master Algorand SDK
+1754,251,3,Study Pure Proof of Stake
+1755,251,4,Work with ASAs
+1756,251,5,Build Algorand dApps
+1757,251,6,Implement smart contracts
+1758,251,7,Deploy on Algorand
+1759,252,1,Learn 3D game development
+1760,252,2,Master 3D modeling
+1761,252,3,Study 3D physics
+1762,252,4,Work with lighting
+1763,252,5,Build 3D games
+1764,252,6,Implement 3D mechanics
+1765,252,7,Deploy 3D experiences
+1766,252,8,Optimize 3D performance
+1767,253,1,Learn Apache Cassandra
+1768,253,2,Master NoSQL design
+1769,253,3,Study distributed architecture
+1770,253,4,Work with CQL
+1771,253,5,Build Cassandra schemas
+1772,253,6,Implement data modeling
+1773,253,7,Deploy Cassandra clusters
+1774,253,8,Optimize queries
+1775,253,9,Monitor cluster health
+1776,254,1,Learn Kubeflow platform
+1777,254,2,Master ML pipelines
+1778,254,3,Study Katib
+1779,254,4,Work with KServe
+1780,254,5,Build ML workflows
+1781,254,6,Implement training jobs
+1782,254,7,Deploy ML models
+1783,254,8,Optimize resource usage
+1784,254,9,Monitor ML systems
+1785,254,10,Practice experiment tracking
+1786,255,1,Learn Stellar blockchain
+1787,255,2,Master Stellar SDK
+1788,255,3,Study consensus protocol
+1789,255,4,Work with assets
+1790,255,5,Build payment systems
+1791,255,6,Implement anchors
+1792,255,7,Deploy Stellar apps
+1793,255,8,Optimize transactions
+1794,256,1,Learn FinOps practices
+1795,256,2,Master cost allocation
+1796,256,3,Study optimization strategies
+1797,256,4,Work with cost tools
+1798,256,5,Build cost dashboards
+1799,256,6,Implement governance
+1800,256,7,Deploy FinOps framework
+1801,256,8,Optimize cloud spend
+1802,256,9,Monitor cost trends
+1803,256,10,Practice showback/chargeback
+1804,257,1,Learn DynamoDB advanced
+1805,257,2,Master single-table design
+1806,257,3,Study GSI/LSI
+1807,257,4,Work with streams
+1808,257,5,Implement access patterns
+1809,258,1,Learn Koa.js framework
+1810,258,2,Master middleware composition
+1811,258,3,Study async/await
+1812,258,4,Work with context
+1813,258,5,Build Koa APIs
+1814,258,6,Deploy Koa services
+1815,259,1,Learn NestJS framework
+1816,259,2,Master dependency injection
+1817,259,3,Study decorators
+1818,259,4,Work with modules
+1819,259,5,Build enterprise apps
+1820,259,6,Implement microservices
+1821,260,1,Learn Apache Flink
+1822,260,2,Master stream processing
+1823,260,3,Study stateful computations
+1824,260,4,Work with windows
+1825,260,5,Build Flink pipelines
+1826,260,6,Implement CEP
+1827,260,7,Deploy Flink jobs
+1828,260,8,Optimize streaming
+1829,260,9,Monitor Flink clusters
+1830,261,1,Learn healthcare IoT
+1831,261,2,Master medical devices
+1832,261,3,Study remote monitoring
+1833,261,4,Implement HIPAA compliance
+1834,262,1,Learn recommender systems
+1835,262,2,Master collaborative filtering
+1836,262,3,Study content-based filtering
+1837,262,4,Build recommendation engines
+1838,263,1,Learn Pulumi IaC
+1839,263,2,Master multi-language support
+1840,263,3,Study component model
+1841,263,4,Work with stacks
+1842,263,5,Build infrastructure
+1843,263,6,Implement automation
+1844,263,7,Deploy with Pulumi
+1845,263,8,Optimize infrastructure
+1846,263,9,Practice policy as code
+1847,264,1,Learn Eleventy SSG
+1848,264,2,Master data cascade
+1849,264,3,Study templating
+1850,264,4,Build Eleventy sites
+1851,265,1,Learn Laravel framework
+1852,265,2,Master Eloquent ORM
+1853,265,3,Study Blade templates
+1854,265,4,Work with routing
+1855,265,5,Build Laravel apps
+1856,266,1,Learn communication protocols
+1857,266,2,Master SPI and I2C
+1858,266,3,Study UART and CAN
+1859,266,4,Work with USB
+1860,266,5,Build protocol implementations
+1861,266,6,Implement drivers
+1862,266,7,Optimize communication
+1863,267,1,Learn MPLS networking
+1864,267,2,Master label switching
+1865,267,3,Study traffic engineering
+1866,267,4,Work with VPNs
+1867,267,5,Build MPLS networks
+1868,267,6,Implement QoS
+1869,267,7,Deploy MPLS solutions
+1870,267,8,Optimize routing
+1871,267,9,Monitor MPLS performance
+1872,267,10,Practice troubleshooting
+1873,268,1,Learn PWA mobile development
+1874,268,2,Master app manifest
+1875,268,3,Study installability
+1876,268,4,Work with offline mode
+1877,268,5,Build progressive apps
+1878,268,6,Implement app shell
+1879,268,7,Deploy PWAs
+1880,268,8,Optimize mobile experience
+1881,268,9,Practice app-like features
+1882,269,1,Learn energy management IoT
+1883,269,2,Master smart meters
+1884,269,3,Study demand response
+1885,269,4,Work with energy systems
+1886,269,5,Build energy solutions
+1887,269,6,Implement analytics
+1888,269,7,Optimize energy usage
+1889,270,1,Learn ARCore development
+1890,270,2,Master motion tracking
+1891,270,3,Study environmental understanding
+1892,270,4,Work with light estimation
+1893,270,5,Build ARCore apps
+1894,270,6,Implement AR features
+1895,270,7,Deploy Android AR
+1896,271,1,Learn Stable Diffusion
+1897,271,2,Master text-to-image
+1898,271,3,Study LoRA training
+1899,271,4,Build generative apps
+1900,272,1,Learn IAM fundamentals
+1901,272,2,Master access control
+1902,272,3,Study authentication
+1903,272,4,Work with authorization
+1904,272,5,Build IAM systems
+1905,272,6,Implement SSO
+1906,272,7,Deploy identity solutions
+1907,272,8,Monitor access
+1908,273,1,Learn signal processing
+1909,273,2,Master DSP algorithms
+1910,273,3,Study filters
+1911,273,4,Work with FFT
+1912,273,5,Build signal processing systems
+1913,273,6,Implement real-time DSP
+1914,273,7,Optimize processing
+1915,274,1,Learn Flow blockchain
+1916,274,2,Master Cadence language
+1917,274,3,Study resource-oriented programming
+1918,274,4,Work with Flow SDK
+1919,274,5,Build Flow dApps
+1920,274,6,Implement NFTs
+1921,274,7,Deploy on Flow
+1922,275,1,Learn Slim PHP
+1923,275,2,Master routing
+1924,275,3,Study middleware
+1925,275,4,Work with PSR standards
+1926,275,5,Build Slim APIs
+1927,275,6,Implement dependency injection
+1928,275,7,Deploy Slim apps
+1929,275,8,Optimize PHP performance
+1930,275,9,Practice testing
+1931,275,10,Monitor API health
+1932,276,1,Learn Qwik framework
+1933,276,2,Master resumability
+1934,276,3,Study lazy loading
+1935,276,4,Work with components
+1936,276,5,Build Qwik apps
+1937,276,6,Implement SSR
+1938,276,7,Deploy Qwik projects
+1939,276,8,Optimize performance
+1940,277,1,Learn wearable IoT
+1941,277,2,Master fitness trackers
+1942,277,3,Study health monitoring
+1943,277,4,Work with wearable sensors
+1944,277,5,Build wearable apps
+1945,277,6,Implement data sync
+1946,277,7,Deploy wearable solutions
+1947,277,8,Optimize battery life
+1948,277,9,Practice data privacy
+1949,278,1,Learn Preact framework
+1950,278,2,Master lightweight React alternative
+1951,278,3,Study virtual DOM
+1952,278,4,Work with hooks
+1953,278,5,Build Preact apps
+1954,278,6,Implement components
+1955,278,7,Deploy optimized apps
+1956,278,8,Optimize bundle size

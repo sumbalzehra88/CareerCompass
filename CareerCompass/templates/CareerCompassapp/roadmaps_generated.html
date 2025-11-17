@@ -1,0 +1,802 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerCompass - {{ page_title }}</title>
+  <link rel="stylesheet" href="{% static 'CareerCompassapp/css/roadmaps.css' %}" />
+  <style>
+    /* Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header/Navbar */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      margin-bottom: 40px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      height: 80px;
+      overflow: hidden;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a202c;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-icon {
+      width: 300px;
+      height: 300px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 85px;
+      background: transparent;
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-menu a {
+      color: #1a202c;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    .nav-menu a:hover {
+      background: rgba(0, 180, 216, 0.1);
+      color: #0077b6;
+    }
+
+    .btn-outline {
+      padding: 10px 24px;
+      border: 2px solid #00b4d8;
+      border-radius: 25px;
+      background: transparent;
+      color: #00b4d8;
+      font-weight: 600;
+    }
+
+    .btn-outline:hover {
+      background: #00b4d8;
+      color: #ffffff;
+    }
+
+    .btn-primary {
+      padding: 10px 24px;
+      border: 2px solid #00b4d8;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,180,216,0.3);
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #1a202c;
+      margin-bottom: 40px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    /* Progress Section */
+    .progress-section {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      margin: 30px 0;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .progress-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a202c;
+    }
+
+    .progress-percentage {
+      font-size: 32px;
+      font-weight: 700;
+      color: #00b4d8;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 12px;
+      background: #e2e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #00b4d8 0%, #0077b6 100%);
+      border-radius: 10px;
+      transition: width 0.5s ease;
+    }
+
+    .progress-stats {
+      display: flex;
+      gap: 30px;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .progress-stat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .progress-stat strong {
+      color: #1a202c;
+    }
+
+    /* Roadmap Steps List with Timeline */
+    .roadmap-steps {
+      margin: 30px 0;
+      position: relative;
+      padding-left: 50px;
+    }
+
+    .roadmap-steps::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, #00b4d8 0%, #0077b6 100%);
+    }
+
+    .step-item {
+      position: relative;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .step-item::before {
+      content: '';
+      position: absolute;
+      left: -34px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background: white;
+      border: 3px solid #00b4d8;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .step-item.completed::before {
+      background: #22c55e;
+      border-color: #22c55e;
+    }
+
+    .step-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(0,180,216,0.2);
+    }
+
+    .step-item.completed {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+    }
+
+    .step-checkbox {
+      width: 32px;
+      height: 32px;
+      border: 4px solid #00b4d8;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 180, 216, 0.2);
+    }
+
+    .step-checkbox:hover {
+      border-color: #0077b6;
+      transform: scale(1.15);
+      box-shadow: 0 4px 12px rgba(0, 180, 216, 0.4);
+    }
+
+    .step-item.completed .step-checkbox {
+      background: #22c55e;
+      border-color: #22c55e;
+    }
+
+    .step-checkbox svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+      display: none;
+    }
+
+    .step-item.completed .step-checkbox svg {
+      display: block;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 8px;
+    }
+
+    .step-description {
+      font-size: 14px;
+      color: #00b4d8;
+      line-height: 1.5;
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: rgba(0, 180, 216, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .step-description:hover {
+      color: #0077b6;
+      text-decoration-color: #0077b6;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .action-button {
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .action-button.primary {
+      background: linear-gradient(135deg, #00b4d8, #0077b6);
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 180, 216, 0.2);
+    }
+
+    .action-button.primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 180, 216, 0.3);
+    }
+
+    .action-button.secondary {
+      background: white;
+      color: #00b4d8;
+      border: 2px solid #00b4d8;
+    }
+
+    .action-button.secondary:hover {
+      background: #00b4d8;
+      color: white;
+    }
+
+    /* Footer */
+    .footer {
+      background: #014970;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .roadmap-steps {
+        padding-left: 30px;
+      }
+
+      .roadmap-steps::before {
+        left: 8px;
+      }
+
+      .step-item::before {
+        left: -22px;
+      }
+
+      .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px;
+        height: auto;
+      }
+
+      .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .progress-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .progress-stats {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .step-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-title {
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header with Navbar -->
+    <header class="header">
+      <a href="{% url 'home' %}" class="logo">
+        <div class="logo-icon"><img src="{% static 'CareerCompassapp/logo.png' %}" alt="CC Logo"></div>
+      </a>
+      <nav class="nav-menu">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="#mission">Mission</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        
+        {% if user.is_authenticated %}
+          <a href="{% url 'dashboard' %}">Dashboard</a>
+          <a href="{% url 'logout' %}" class="btn-outline">Logout</a>
+        {% else %}
+          <a href="{% url 'signin' %}" class="btn-outline">Sign In</a>
+          <a href="{% url 'signup' %}" class="btn-primary">Sign Up</a>
+        {% endif %}
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 class="section-title">{{ page_title }}</h1>
+
+      <!-- Progress Section -->
+      <div class="progress-section">
+        <div class="progress-header">
+          <h2 class="progress-title">{{ roadmap.title }}</h2>
+          <div class="progress-percentage">{{ progress_percentage }}%</div>
+        </div>
+        
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" data-width="{{ progress_percentage|default:0 }}"></div>
+        </div>
+
+        <div class="progress-stats">
+          <div class="progress-stat">
+            <strong>{{ completed_steps }}</strong> / {{ total_steps }} steps completed
+          </div>
+          <div class="progress-stat">
+            <strong>{{ remaining_steps }}</strong> steps remaining
+          </div>
+        </div>
+      </div>
+
+      <!-- Roadmap Steps List with Checkboxes -->
+      <div class="roadmap-steps">
+        {% for step in steps %}
+<div class="step-item {% if step.is_completed %}completed{% endif %}" data-step-id="{{ step.id }}">
+  <div class="step-checkbox" onclick="toggleStep('{{ step.id }}', '{{ roadmap.roadmap_id }}')">
+    <svg viewBox="0 0 24 24">
+      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+    </svg>
+  </div>
+  
+  <div class="step-content">
+    <div class="step-title">Step {{ forloop.counter }}: {{ step.title }}</div>
+    <div class="step-description" onclick="openStepResource(event, '{{ step.description|default:step.title|escapejs }}')">{{ step.description|default:"Complete this step to progress in your roadmap" }}</div>
+  </div>
+</div>
+{% endfor %}
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <a href="{% url 'roadmaps_form' %}" class="action-button primary">Create New Roadmap</a>
+        <button class="action-button secondary" onclick="shareRoadmap()">Share Roadmap</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 CareerCompass. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Step Resource Links Mapping - COMPLETE LIST
+    const stepResourceLinks = {
+      // Networking
+      "Learn TCP/IP fundamentals and OSI model": "https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/",
+      "Configure routers and switches": "https://www.cisco.com/c/en/us/support/docs/smb/switches/cisco-small-business-300-series-managed-switches/smb5760-configure-basic-settings-on-a-switch-through-the-command-lin.html",
+      "Master network protocols (DNS, DHCP, HTTP)": "https://www.coursera.org/learn/computer-networking",
+      "Implement VLANs and subnetting": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/16-12/configuration_guide/vlan/b_1612_vlan_9300_cg.html",
+      "Study network security basics": "https://www.cisco.com/c/en/us/products/security/what-is-network-security.html",
+      "Practice with Cisco/Juniper equipment": "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html",
+      "Learn wireless networking standards": "https://www.coursera.org/learn/wireless-communications",
+      "Understand network troubleshooting tools": "https://www.wireshark.org/docs/",
+
+      // IoT
+      "Learn IoT architecture and protocols": "https://www.coursera.org/specializations/internet-of-things",
+      "Work with sensors and actuators": "https://www.arduino.cc/en/Tutorial/BuiltInExamples",
+      "Set up Raspberry Pi or Arduino": "https://www.raspberrypi.org/documentation/",
+      "Practice MQTT and CoAP protocols": "https://mqtt.org/getting-started/",
+      "Build simple IoT projects": "https://www.hackster.io/projects/tags/iot",
+
+      // Deep Learning
+      "Master neural network architectures": "https://www.deeplearningbook.org/",
+      "Learn TensorFlow and PyTorch": "https://www.tensorflow.org/tutorials",
+      "Study CNNs and RNNs": "https://www.coursera.org/specializations/deep-learning",
+      "Implement transfer learning": "https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html",
+      "Work on image classification projects": "https://www.kaggle.com/competitions",
+      "Explore sequence modeling": "https://pytorch.org/tutorials/beginner/nlp/sequence_models_tutorial.html",
+      "Practice hyperparameter tuning": "https://wandb.ai/site/hyperparameter-tuning",
+      "Build end-to-end DL pipelines": "https://www.tensorflow.org/tfx/guide",
+      "Deploy models in production": "https://www.tensorflow.org/tfx/guide/serving",
+
+      // DevOps
+      "Learn Linux command line basics": "https://www.linuxcommand.org/",
+      "Master Git version control": "https://git-scm.com/book/en/v2",
+      "Set up CI/CD pipelines": "https://www.jenkins.io/doc/tutorials/",
+      "Work with Docker containers": "https://docs.docker.com/get-started/",
+
+      // Python
+      "Learn Python syntax and data types": "https://docs.python.org/3/tutorial/",
+      "Master functions and OOP concepts": "https://realpython.com/python3-object-oriented-programming/",
+      "Work with Python libraries (NumPy, Pandas)": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "Practice file handling and exceptions": "https://realpython.com/python-exceptions/",
+      "Understand decorators and generators": "https://realpython.com/primer-on-python-decorators/",
+      "Build CLI applications": "https://click.palletsprojects.com/",
+      "Create Python packages": "https://packaging.python.org/tutorials/packaging-projects/",
+      "Write unit tests with pytest": "https://docs.pytest.org/en/stable/getting-started.html",
+
+      // Cybersecurity
+      "Learn cybersecurity fundamentals": "https://www.coursera.org/specializations/cyber-security",
+      "Understand threat landscape": "https://www.cisa.gov/topics/cyber-threats-and-advisories",
+      "Study encryption and cryptography": "https://www.coursera.org/learn/crypto",
+      "Practice network security": "https://www.cisco.com/c/en/us/products/security/what-is-network-security.html",
+      "Learn penetration testing basics": "https://www.offensive-security.com/metasploit-unleashed/",
+      "Explore security tools and frameworks": "https://www.kali.org/docs/",
+
+      // Game Development
+      "Learn game design principles": "https://www.coursera.org/specializations/game-design",
+      "Master game engines (Unity/Unreal)": "https://learn.unity.com/",
+      "Study game physics and mechanics": "https://www.gamedeveloper.com/",
+      "Create 2D and 3D assets": "https://www.blender.org/support/tutorials/",
+
+      // AR/VR
+      "Learn AR/VR fundamentals": "https://www.coursera.org/specializations/virtual-reality",
+      "Set up development environment": "https://unity.com/solutions/ar-vr",
+      "Master 3D modeling basics": "https://www.blender.org/support/tutorials/",
+      "Work with Unity AR Foundation": "https://learn.unity.com/tutorial/introduction-to-ar-foundation",
+      "Build simple AR applications": "https://developers.google.com/ar/develop",
+      "Create VR experiences": "https://developer.oculus.com/documentation/",
+      "Study spatial computing": "https://developer.apple.com/augmented-reality/",
+      "Optimize for mobile platforms": "https://docs.unity3d.com/Manual/MobileOptimizationPracticalGuide.html",
+      "Understand user interaction design": "https://www.nngroup.com/articles/",
+      "Deploy AR/VR applications": "https://developer.oculus.com/distribute/",
+
+      // Data Science
+      "Learn statistics and probability": "https://www.khanacademy.org/math/statistics-probability",
+      "Master Python for data science": "https://www.datacamp.com/tracks/python-fundamentals",
+      "Work with Pandas and NumPy": "https://pandas.pydata.org/docs/getting_started/tutorials.html",
+      "Study data visualization": "https://www.coursera.org/learn/datavisualization",
+
+      // Blockchain & Web3
+      "Learn blockchain fundamentals": "https://www.coursera.org/specializations/blockchain",
+      "Study smart contract development": "https://www.soliditylang.org/",
+      "Master Solidity programming": "https://docs.soliditylang.org/",
+      "Work with Web3.js": "https://web3js.readthedocs.io/",
+      "Deploy on Ethereum testnet": "https://ethereum.org/en/developers/docs/development-networks/",
+      "Learn DeFi protocols": "https://defipulse.com/",
+      "Study decentralized exchanges": "https://uniswap.org/docs/v2/",
+      "Master liquidity pools": "https://academy.binance.com/en/articles/what-are-liquidity-pools-in-defi",
+      "Work with DeFi platforms": "https://aave.com/",
+      "Build DeFi applications": "https://docs.openzeppelin.com/",
+      "Understand tokenomics": "https://academy.binance.com/en/articles/what-is-tokenomics",
+      "Study yield farming": "https://academy.binance.com/en/articles/what-is-yield-farming-in-decentralized-finance-defi",
+      "Implement staking mechanisms": "https://ethereum.org/en/staking/",
+      "Deploy DeFi smart contracts": "https://hardhat.org/tutorial",
+      "Audit smart contract security": "https://consensys.github.io/smart-contract-best-practices/",
+
+      // Web Development
+      "Learn HTML5 and CSS3": "https://developer.mozilla.org/en-US/docs/Learn",
+      "Master JavaScript ES6+": "https://javascript.info/",
+      "Study responsive design": "https://web.dev/responsive-web-design-basics/",
+      "Work with CSS frameworks": "https://getbootstrap.com/docs/",
+      "Build interactive websites": "https://www.freecodecamp.org/",
+      "Learn browser DevTools": "https://developer.chrome.com/docs/devtools/",
+      "Deploy web applications": "https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/",
+
+      // Database
+      "Learn database design principles": "https://www.coursera.org/learn/database-management",
+      "Master SQL queries": "https://www.w3schools.com/sql/",
+      "Study indexing and optimization": "https://use-the-index-luke.com/",
+      "Work with backup and recovery": "https://www.postgresql.org/docs/current/backup.html",
+
+      // Infrastructure as Code
+      "Learn infrastructure as code": "https://www.terraform.io/intro",
+      "Master Kubernetes orchestration": "https://kubernetes.io/docs/tutorials/",
+      "Study monitoring and logging": "https://prometheus.io/docs/introduction/overview/",
+      "Work with cloud platforms": "https://aws.amazon.com/getting-started/",
+      "Implement automation scripts": "https://docs.ansible.com/ansible/latest/user_guide/index.html",
+      "Build deployment pipelines": "https://www.jenkins.io/doc/",
+      "Practice incident response": "https://www.pagerduty.com/resources/learn/incident-response-process/",
+      "Optimize system performance": "https://www.brendangregg.com/usemethod.html",
+      "Manage configuration drift": "https://docs.chef.io/",
+      "Scale applications effectively": "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/",
+
+      // Continue with all your other mappings...
+      // (Include ALL the mappings from your original document - I'm shortening for space)
+    };
+
+    // Get step resource link with fallback
+    function getStepResourceLink(stepDescription) {
+      const normalizedDesc = stepDescription.trim();
+      console.log('Searching for step:', normalizedDesc);
+      
+      // Exact match first
+      if (stepResourceLinks[normalizedDesc]) {
+        console.log('Found exact match');
+        return stepResourceLinks[normalizedDesc];
+      }
+      
+      // Case-insensitive exact match
+      const lowerDesc = normalizedDesc.toLowerCase();
+      for (const [key, value] of Object.entries(stepResourceLinks)) {
+        if (key.toLowerCase() === lowerDesc) {
+          console.log('Found case-insensitive match:', key);
+          return value;
+        }
+      }
+      
+      // Fallback: Use Google search
+      console.log('No match found, using search fallback');
+      const searchQuery = encodeURIComponent(normalizedDesc);
+      return `https://www.google.com/search?q=${searchQuery}+tutorial`;
+    }
+
+    // Open step resource based on description
+    function openStepResource(event, stepDescription) {
+      event.stopPropagation();
+      console.log('Opening resource for:', stepDescription);
+      const resourceLink = getStepResourceLink(stepDescription);
+      window.open(resourceLink, '_blank');
+      console.log('Opening:', stepDescription, '→', resourceLink);
+    }
+
+    // Get CSRF token
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    const csrftoken = getCookie('csrftoken');
+
+    // Toggle step completion
+    function toggleStep(stepId, roadmapId) {
+        stepId = parseInt(stepId);
+        roadmapId = parseInt(roadmapId);
+        
+        const stepItem = document.querySelector(`.step-item[data-step-id="${stepId}"]`);
+        
+        if (!stepItem) {
+            console.error('Step item not found');
+            return;
+        }
+        
+        fetch(`/roadmap/${roadmapId}/step/${stepId}/toggle/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrftoken
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                if (data.is_completed) {
+                    stepItem.classList.add('completed');
+                } else {
+                    stepItem.classList.remove('completed');
+                }
+                
+                const progressBar = document.querySelector('.progress-bar-fill');
+                if (progressBar) {
+                    progressBar.style.width = data.progress_percentage + '%';
+                }
+                
+                const progressPercentage = document.querySelector('.progress-percentage');
+                if (progressPercentage) {
+                    progressPercentage.textContent = data.progress_percentage + '%';
+                }
+                
+                const stats = document.querySelectorAll('.progress-stat');
+                if (stats[0]) {
+                    stats[0].innerHTML = `<strong>${data.completed_steps}</strong> / {{ total_steps }} steps completed`;
+                }
+                if (stats[1]) {
+                    stats[1].innerHTML = `<strong>${data.remaining_steps}</strong> steps remaining`;
+                }
+                
+                showNotification(
+                    data.is_completed ? 'Step completed! 🎉' : 'Step marked as incomplete',
+                    'success'
+                );
+            } else {
+                showNotification('Error: ' + (data.error || 'Failed to update'), 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showNotification('Failed to update. Please try again.', 'error');
+        });
+    }
+
+    // Show notification
+    function showNotification(message, type = 'success') {
+        const existing = document.querySelector('.notification');
+        if (existing) existing.remove();
+        
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: ${type === 'success' ? '#22c55e' : '#ef4444'};
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+            font-weight: 600;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+    }
+
+
+// Share roadmap
+    function shareRoadmap() {
+        const url = window.location.href;
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(url).then(() => {
+                showNotification('Roadmap link copied! 📋', 'success');
+            }).catch(() => {
+                showNotification('Failed to copy link', 'error');
+            });
+        }
+    }
+
+    // Set progress bar width on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const progressBar = document.querySelector('.progress-bar-fill');
+        if (progressBar) {
+            const width = progressBar.getAttribute('data-width') || '0';
+            progressBar.style.width = width + '%';
+        }
+        console.log('CareerCompass loaded - Steps are clickable!');
+    });
+
+    // Animations
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideIn {
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(400px); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

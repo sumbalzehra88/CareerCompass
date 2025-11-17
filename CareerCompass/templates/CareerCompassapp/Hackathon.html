@@ -1,0 +1,985 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CareerCompass – Dashboard</title>
+
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <style>
+    /* ------------------------------
+       Colors & tokens (light + dark) - MATCHING FIRST CODE
+       ------------------------------ */
+    :root{
+      --primary-blue: #00b4d8;
+      --primary-dark: #0077b6;
+      --primary-darker: #005577;
+      --accent-blue: #014970;
+      --background-light: #CDFCFF;
+      --background-medium: #B2FAFF;
+      --text-dark: #1a202c;
+      --text-medium: #2d3748;
+      --text-light: #4a5568;
+      --white: #ffffff;
+      --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+      --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+      --shadow-blue: 0 8px 25px rgba(0,180,216,0.3);
+    }
+
+    /* dark mode tokens */
+    body.dark-mode {
+      --background-light: #1E1E1E;
+      --background-medium: #111111;
+      --text-dark: #E8E8E8;
+      --text-medium: #AAB1B8;
+      --text-light: #AAB1B8;
+      --white: #2B2B2B;
+      --primary-blue: #00b4d8;
+      --primary-dark: #0077b6;
+    }
+
+    /* ------------------------------
+       Reset & layout
+       ------------------------------ */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--background-light) 0%, var(--background-medium) 100%);
+      color:var(--text-dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .app {
+      display:flex;
+      min-height:100vh;
+      gap:0;
+      max-width: 1800px;
+      margin: 0 auto;
+    }
+
+    /* ------------------------------
+       Sidebar
+       ------------------------------ */
+    .sidebar {
+      width:280px;
+      background:var(--white);
+      padding:30px 24px;
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+      border-right: 1px solid rgba(0,0,0,0.04);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sidebar .brand {
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom: 8px;
+    }
+
+    .sidebar .brand .logo {
+      width:48px;
+      height:48px;
+      border-radius:12px;
+      background:linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      box-shadow:var(--shadow-sm);
+      font-size:20px;
+    }
+
+    .sidebar .brand h2{
+      font-size:20px;
+      color:var(--text-dark);
+      letter-spacing:0.2px;
+      font-weight: 700;
+    }
+
+    .sidebar .sidebar-title {
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+      color:white;
+      text-align:center;
+      padding:16px;
+      border-radius:12px;
+      font-weight:700;
+      box-shadow: var(--shadow-sm);
+      font-size: 16px;
+      letter-spacing: 0.3px;
+    }
+
+    .sidebar .nav {
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:8px;
+    }
+
+    .nav button {
+      background:transparent;
+      border:none;
+      text-align:left;
+      padding:14px 20px;
+      border-radius:20px;
+      font-weight:600;
+      color:var(--text-dark);
+      cursor:pointer;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    .nav button:hover { 
+      background: rgba(0, 180, 216, 0.1);
+      color: var(--primary-dark);
+      transform: translateX(4px);
+    }
+
+    .nav button.active { 
+      background: rgba(0, 180, 216, 0.15);
+      color: var(--primary-dark);
+    }
+
+    .sidebar .controls {
+      margin-top:auto;
+      padding-top: 24px;
+      border-top: 2px solid rgba(0,0,0,0.06);
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .mode-toggle {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+      color:var(--text-dark);
+      font-size: 15px;
+    }
+
+    .control-row { 
+      display:flex; 
+      gap:8px; 
+      align-items:center; 
+      font-weight:600; 
+      color:var(--text-dark); 
+    }
+
+    .controls-label {
+      font-size:12px;
+      color:var(--text-medium);
+      font-weight:700;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* ------------------------------
+       Main content
+       ------------------------------ */
+    .main {
+      flex:1;
+      padding: 40px 60px;
+      display:flex;
+      flex-direction:column;
+      gap:40px;
+    }
+
+    .page-title {
+      text-align:center;
+      font-size:48px;
+      font-weight:800;
+      margin-bottom:12px;
+      color: var(--text-dark);
+      line-height: 1.2;
+    }
+
+    .subtle { 
+      color: var(--text-medium); 
+      font-weight:500; 
+      font-size:20px; 
+      text-align:center; 
+      margin-bottom:20px;
+      line-height: 1.7;
+    }
+
+    /* cards grid */
+    .row { 
+      display:flex; 
+      gap:30px; 
+      flex-wrap:wrap;
+      margin-bottom: 20px;
+    }
+    
+    .col { 
+      flex:1; 
+      min-width:280px; 
+    }
+    
+    .card {
+      background:var(--white);
+      border-radius:24px;
+      padding:40px;
+      box-shadow:var(--shadow-md);
+      border:2px solid transparent;
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-blue);
+    }
+
+    .card h4 { 
+      margin-bottom:28px; 
+      font-size:24px; 
+      color:var(--text-dark);
+      font-weight: 700;
+    }
+
+    .card .btn { 
+      width:100%; 
+      border-radius:50px; 
+      border:none; 
+      padding:16px 32px; 
+      font-weight:700; 
+      cursor:pointer; 
+      margin-bottom:16px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+      color:white; 
+      transition: all 0.3s ease;
+      font-size: 16px;
+      box-shadow: var(--shadow-sm);
+      letter-spacing: 0.3px;
+    }
+
+    .card .btn:last-child {
+      margin-bottom: 0;
+    }
+
+    .card .btn:hover { 
+      transform:translateY(-3px); 
+      box-shadow: var(--shadow-blue);
+    }
+
+    .card p {
+      color: var(--text-medium);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Chart area */
+    #metricsChart { 
+      width:100%; 
+      height:320px; 
+      margin-top: 10px;
+    }
+
+    /* activity icons */
+    .activity-icons { 
+      display:flex; 
+      gap:12px; 
+      flex-wrap:wrap; 
+      justify-content:center; 
+      align-items:center;
+      margin: 20px 0;
+    }
+    
+    .activity-icons img { 
+      width:52px;
+      height:52px; 
+      border-radius:50%; 
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease;
+    }
+
+    .activity-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    /* progress bars */
+    .progress-wrap { 
+      display:flex; 
+      flex-direction:column; 
+      gap:16px;
+      margin-top: 24px;
+    }
+    
+    .progress-label { 
+      font-weight:700; 
+      color:var(--text-dark);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    
+    .progress { 
+      background: rgba(0, 180, 216, 0.1); 
+      border-radius:50px; 
+      height:28px; 
+      overflow:hidden; 
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+    }
+    
+    .progress > span { 
+      display:block; 
+      height:100%; 
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+      color:white; 
+      font-size:13px; 
+      text-align:center; 
+      line-height:28px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      transition: width 0.3s ease;
+    }
+
+    .activity-subtitle {
+      margin: 16px 0 8px 0;
+      font-weight:700;
+      color:var(--text-medium);
+      font-size: 15px;
+    }
+
+    /* leaderboard table */
+    table { 
+      width:100%; 
+      border-collapse:collapse; 
+      font-weight:600;
+      margin-top: 8px;
+    }
+    
+    th,td { 
+      padding:20px 16px; 
+      text-align:left; 
+      border-bottom:2px solid rgba(0,0,0,0.06); 
+    }
+    
+    th { 
+      background:transparent; 
+      color:var(--text-dark); 
+      font-size: 18px;
+      font-weight: 700;
+    }
+    
+    td { 
+      color: var(--text-medium); 
+      font-size: 16px; 
+    }
+
+    tr:hover td {
+      background: rgba(0, 180, 216, 0.05);
+    }
+
+    /* footer */
+    .footer { 
+      margin-top:60px; 
+      padding:30px 20px; 
+      text-align:center; 
+      color:var(--white); 
+      background:var(--accent-blue); 
+      border-radius:20px;
+      box-shadow: var(--shadow-md);
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    /* Quick form button styling */
+    #quickForm {
+      background: var(--white) !important;
+      color: var(--text-dark) !important;
+      border: 2px solid var(--text-dark) !important;
+      padding: 14px 28px !important;
+      width: 100% !important;
+      margin-bottom: 0 !important;
+    }
+
+    #quickForm:hover {
+      background: var(--text-dark) !important;
+      color: var(--white) !important;
+    }
+
+    /* Info cards for contact/about */
+    .info-card {
+      background:var(--white);
+      border-radius:24px;
+      padding:32px;
+      box-shadow:var(--shadow-md);
+      border:2px solid transparent;
+      transition: all 0.4s ease;
+      margin-bottom: 24px;
+      font-size: 18px;
+      color: var(--text-medium);
+      line-height: 1.8;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-blue);
+    }
+
+    /* Settings checkboxes */
+    .settings-option {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-top:20px;
+      font-size: 16px;
+      color: var(--text-dark);
+    }
+
+    .settings-option input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+/* Filter form styling */
+.filter-form {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-form p {
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.filter-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.filter-form input,
+.filter-form select {
+  width: 100%;
+  max-width: 100%;
+  padding: 14px 20px;
+  border: 2px solid rgba(0, 180, 216, 0.2);
+  border-radius: 12px;
+  font-size: 15px;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.filter-form input:focus,
+.filter-form select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+}
+
+/* Filter form button styling */
+.filter-form .btn {
+  width: 100%;
+  border-radius: 50px;
+  border: none;
+  padding: 16px 40px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.3px;
+  margin-top: 20px;
+}
+
+.filter-form .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-blue);
+}
+
+    .recommendations-section {
+      margin-top: 40px;
+    }
+
+    .recommendations-section h3 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 30px;
+    }
+
+    /* Form in hackathon cards */
+    .card form {
+      width: 100%;
+      margin: 0;
+    }
+
+    .card form .btn {
+      text-align: center;
+    }
+
+    /* responsive */
+    @media (max-width:1200px){
+      .main {
+        padding: 32px 40px;
+      }
+    }
+
+    @media (max-width:900px){
+      .sidebar { 
+        width:80px; 
+        padding:16px 12px; 
+      }
+      .sidebar .brand h2 { display:none; }
+      .sidebar .sidebar-title { 
+        font-size:10px; 
+        padding:10px 8px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+      .nav button {
+        font-size: 12px;
+        padding: 12px 8px;
+      }
+      .controls-label { font-size: 10px; }
+      .mode-toggle span { display: none; }
+      .card .btn { padding:14px 24px; }
+      .page-title { font-size: 36px; }
+      .subtle { font-size: 16px; }
+      .main {
+        padding: 24px 20px;
+      }
+    }
+
+    @media (max-width:768px){
+      .row {
+        gap: 20px;
+      }
+      .col {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation" aria-label="sidebar">
+      <div class="brand">
+        <div class="logo">CC</div>
+        <h2>CareerCompass</h2>
+      </div>
+
+      <a href="{% url 'dashboard' %}" style="text-decoration:none;">
+  <div class="sidebar-title" style="cursor:pointer;">
+    Dashboard
+  </div>
+</a>
+
+
+      <div class="nav" id="navButtons">
+        <button data-page="home" class="active">Home</button>
+        <button data-page="leaderboard">Leaderboard</button>
+        <button data-page="contact">Contact us</button>
+        <button data-page="about">About us</button>
+        <button data-page="settings">Settings</button>
+        <a href="{% url 'home' %}" 
+   style="
+     text-decoration: none;
+     margin-top: 8px;
+     display: block;
+   ">
+  <button 
+    style="
+      width: 100%;
+      background: transparent;
+      border: none;
+      text-align: left;
+      padding: 14px 20px;
+      border-radius: 20px;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    "
+    onmouseover="this.style.background='rgba(0,180,216,0.1)'; this.style.color='var(--primary-dark)'; this.style.transform='translateX(4px)';"
+    onmouseout="this.style.background='transparent'; this.style.color='var(--text-dark)'; this.style.transform='none';">
+    ← Back to Home Page
+  </button>
+</a>
+
+      </div>
+
+      <div class="controls">
+        <div class="mode-toggle">
+          <label for="modeCheck">🌙</label>
+          <input id="modeCheck" type="checkbox" aria-label="Dark mode toggle">
+          <span>Dark Mode</span>
+        </div>
+
+        <div class="controls-label">Quick Actions</div>
+        <div class="control-row">
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main" role="main">
+      <!-- HOME PAGE -->
+      <section id="home" class="page">
+        <div>
+          <div class="page-title">Hackathon Dashboard</div>
+          <div class="subtle">Welcome – view upcoming contests, discussions, submissions and metrics</div>
+        </div>
+
+        <!-- Filter Form for Recommendations -->
+        <form method="get" action="{% url 'dashboard' %}" class="filter-form">
+          {{ filter_form.as_p }}
+          <button class="btn" type="submit">Get Recommendations</button>
+        </form>
+
+        <!-- Top cards -->
+        <div class="row" style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; align-items:stretch; margin-bottom:20px;">
+  <!-- Upcoming Hackathons -->
+  <div class="col" style="flex:1; min-width:300px; max-width:360px;">
+    <div class="card" style="padding:25px 25px;">
+      <h4 style="font-size:20px; text-align:center; margin-bottom:18px;">Upcoming Hackathons</h4>
+
+      {% if not selected_hackathon %}
+        <div class="hackathon-buttons" style="display:flex; flex-direction:column; gap:12px;">
+          {% for h in hackathons %}
+            {% if h.hackathon_id %}
+              <a href="{% url 'hackathon_detail' h.hackathon_id %}" style="text-decoration:none;">
+                <button style="
+                  width:100%;
+                  border:none;
+                  padding:12px 0;
+                  font-weight:700;
+                  border-radius:40px;
+                  background:linear-gradient(135deg, #00b4d8, #0077b6);
+                  color:white;
+                  cursor:pointer;
+                  transition:transform 0.3s ease, box-shadow 0.3s ease;
+                  box-shadow:0 3px 8px rgba(0,0,0,0.1);
+                "
+                onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,180,216,0.4)';"
+                onmouseout="this.style.transform='none'; this.style.boxShadow='0 3px 8px rgba(0,0,0,0.1)';">
+                  {{ h.name }}
+                </button>
+              </a>
+            {% else %}
+              <button disabled style="
+                width:100%;
+                border:none;
+                padding:12px 0;
+                font-weight:700;
+                border-radius:40px;
+                background:rgba(0,180,216,0.3);
+                color:#ccc;
+                cursor:not-allowed;
+              ">
+                {{ h.name }}
+              </button>
+            {% endif %}
+          {% empty %}
+            <p style="text-align:center;color:#2d3748;font-weight:600;">No upcoming hackathons available.</p>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div style="padding:15px;">
+          <h2 style="color:var(--text-dark);margin-bottom:10px;font-size:22px;">{{ selected_hackathon.name }}</h2>
+          <p style="margin:8px 0;color:var(--text-medium);"><strong>Start Date:</strong> {{ selected_hackathon.start_date }}</p>
+          <p style="margin:8px 0;color:var(--text-medium);"><strong>End Date:</strong> {{ selected_hackathon.end_date }}</p>
+          <p style="margin:8px 0;color:var(--text-medium);line-height:1.6;"><strong>Details:</strong> {{ selected_hackathon.details }}</p>
+          
+          <!-- Enrollment Form -->
+          <a href="{% url 'enroll_hackathon' selected_hackathon.hackathon_id %}" 
+   style="
+      display:block;
+      text-align:center;
+      width:100%;
+      text-decoration:none;
+      padding:14px 0;
+      font-weight:700;
+      border-radius:40px;
+      background:linear-gradient(135deg, #28a745, #20c997);
+      color:white;
+      cursor:pointer;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow:0 3px 8px rgba(0,0,0,0.1);
+      font-size:16px;
+      margin-bottom:15px;"
+   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(40,167,69,0.4)';"
+   onmouseout="this.style.transform='none'; this.style.boxShadow='0 3px 8px rgba(0,0,0,0.1)';">
+   ✓ Enroll Now
+</a>
+
+          
+          <div style="margin-top:15px;">
+            <a href="{% url 'hackathon' %}" style="
+              display:inline-block;
+              padding:8px 18px;
+              background:linear-gradient(135deg,#00b4d8,#0077b6);
+              color:white;
+              border-radius:25px;
+              text-decoration:none;
+              font-weight:600;
+              box-shadow:0 3px 8px rgba(0,0,0,0.1);
+              transition:all 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 12px rgba(0,180,216,0.4)';"
+            onmouseout="this.style.transform='none';this.style.boxShadow='0 3px 8px rgba(0,0,0,0.1)';">
+              ← Back to all hackathons
+            </a>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Discussions -->
+  <div class="col" style="flex:1; min-width:300px; max-width:360px;">
+    <div class="card" style="padding:25px 25px;">
+      <h4 style="font-size:20px; text-align:center; margin-bottom:18px;">Discussions & Q&A</h4>
+      <button class="btn" style="margin-bottom:10px;">Stacks</button>
+      <button class="btn" style="margin-bottom:10px;">Queues</button>
+      <button class="btn">Linked list</button>
+    </div>
+  </div>
+
+  <!-- Submissions -->
+  <div class="col" style="flex:1; min-width:300px; max-width:360px;">
+    <div class="card" style="padding:25px 25px;">
+      <h4 style="font-size:20px; text-align:center; margin-bottom:18px;">Submissions Portal</h4>
+      <button class="btn" style="margin-bottom:10px;">Enroll Now</button>
+      <button class="btn" style="margin-bottom:10px;">Hackathons list</button>
+      <button class="btn">Deadlines</button>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Recommended Hackathons Section -->
+        {% if recommendations %}
+        <div class="recommendations-section">
+          <h3>Recommended Hackathons</h3>
+          <div class="row">
+            {% for rec in recommendations %}
+              <div class="col">
+                <div class="card">
+                  <h4>{{ rec.name }}</h4>
+                  <p>{{ rec.details|truncatechars:120 }}</p>
+                  <a href="{% url 'hackathon_detail' rec.hackathon_id %}" class="btn">View & Register</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Metrics + Activity -->
+        <div class="row" style="align-items:stretch;">
+          <div style="flex:2; min-width:320px;">
+            <div class="card">
+              <h4>Hackathon Metrics</h4>
+              <div id="metricsChart" aria-hidden="false"></div>
+            </div>
+          </div>
+
+          <div style="flex:1; min-width:280px;">
+            <div class="card">
+              <h4>Activity</h4>
+              <div class="activity-subtitle">Recent Participant Activity</div>
+              <div class="activity-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/921/921071.png" alt="user">
+                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="user">
+                <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="user">
+                <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" alt="user">
+                <img src="https://cdn-icons-png.flaticon.com/512/1999/1999625.png" alt="user">
+              </div>
+
+              <div class="progress-wrap">
+                <div>
+                  <div class="progress-label">Progress This Month</div>
+                  <div class="progress"><span style="width:60%">60%</span></div>
+                </div>
+                <div>
+                  <div class="progress-label">Goal Completion</div>
+                  <div class="progress"><span style="width:30%">30%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEADERBOARD -->
+      <section id="leaderboard" class="page" style="display:none;">
+        <div class="page-title">Leaderboard</div>
+        <div class="subtle">Top participants across all hackathons</div>
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>Rank</th><th>Name</th><th>Score</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>🥇</td><td>Alice</td><td>1200</td></tr>
+              <tr><td>🥈</td><td>Bob</td><td>1100</td></tr>
+              <tr><td>🥉</td><td>Charlie</td><td>1000</td></tr>
+              <tr><td>4</td><td>David</td><td>950</td></tr>
+              <tr><td>5</td><td>Emma</td><td>900</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="page" style="display:none;">
+        <div class="page-title">Contact Us</div>
+        <div class="subtle">We'd love to hear from you</div>
+        <div class="info-card">📧 <strong>Email:</strong> support@careercompass.com</div>
+        <div class="info-card">📞 <strong>Phone:</strong> +92-300-0000000</div>
+        <div class="info-card">📍 <strong>Address:</strong> Karachi, Pakistan</div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="page" style="display:none;">
+        <div class="page-title">About Us</div>
+        <div class="subtle">Who we are and what we do</div>
+        <div class="info-card">
+          <strong>Our Vision:</strong> CareerCompass helps students participate in hackathons, enhance their skills and collaborate with peers to build amazing projects.
+        </div>
+        <div class="info-card">
+          🚀 <strong>Our Mission:</strong> We provide students with opportunities to learn, compete and grow in the tech ecosystem through hands-on experience and mentorship.
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="settings" class="page" style="display:none;">
+        <div class="page-title">Settings</div>
+        <div class="subtle">Customize your dashboard experience</div>
+        <div class="card">
+          <h4>Preferences</h4>
+          <label class="settings-option">
+            <input id="settingsDark" type="checkbox"> 
+            <span>Enable Dark Mode</span>
+          </label>
+          <label class="settings-option">
+            <input id="notifCheck" type="checkbox"> 
+            <span>Enable Notifications</span>
+          </label>
+          <label class="settings-option">
+            <input id="autoSave" type="checkbox"> 
+            <span>Auto-Save Progress</span>
+          </label>
+        </div>
+      </section>
+
+      <div class="footer">© 2025 CareerCompass. All rights reserved.</div>
+    </main>
+  </div>
+
+  <script>
+    // ---------- Page navigation ----------
+    const navButtons = document.querySelectorAll('.nav button');
+    const pages = document.querySelectorAll('.page');
+
+    function showPage(id){
+      pages.forEach(p => p.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      navButtons.forEach(b => b.classList.toggle('active', b.dataset.page === id));
+      try { localStorage.setItem('cc_last_page', id); } catch(e){}
+    }
+
+    navButtons.forEach(b => b.addEventListener('click', () => showPage(b.dataset.page)));
+
+    const last = (localStorage.getItem('cc_last_page')) || 'home';
+    showPage(last);
+
+    // ---------- Dark mode toggle ----------
+    const modeCheck = document.getElementById('modeCheck');
+    const settingsDark = document.getElementById('settingsDark');
+
+    function applyDarkMode(checked){
+      document.body.classList.toggle('dark-mode', checked);
+      modeCheck.checked = checked;
+      settingsDark.checked = checked;
+      try { localStorage.setItem('cc_dark', checked ? '1' : '0'); } catch(e){}
+    }
+
+    const savedDark = localStorage.getItem('cc_dark');
+    applyDarkMode(savedDark === '1');
+
+    modeCheck.addEventListener('change', (e) => applyDarkMode(e.target.checked));
+    settingsDark.addEventListener('change', (e) => applyDarkMode(e.target.checked));
+
+    
+
+    // ---------- Settings ----------
+    const notifCheck = document.getElementById('notifCheck');
+    const autoSaveCheck = document.getElementById('autoSave');
+
+    notifCheck.addEventListener('change', () => {
+      if(notifCheck.checked) alert('🔔 Notifications Enabled (demo)');
+    });
+    autoSaveCheck.addEventListener('change', () => {
+      if(autoSaveCheck.checked) {
+        setTimeout(()=> alert('✅ Auto-save enabled (demo)'), 600);
+      }
+    });
+
+    // ---------- Plotly chart ----------
+    const trace = {
+      x: ["Contest 101","Contest 102","Contest 103","Contest 104","Contest 105"],
+      y: [5,3,4,2,5],
+      type: 'bar',
+      marker: {
+        color: ['#00b4d8','#0077b6','#00b4d8','#0077b6','#00b4d8']
+      }
+    };
+    const layout = {
+      title: {
+        text: 'Hackathon Metrics Overview',
+        font: { size: 18, color: '#1a202c', family: 'Segoe UI' }
+      },
+      margin: {t:50, l:50, r:30, b:50},
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      xaxis: { 
+        tickangle: -10,
+        tickfont: { size: 12 }
+      },
+      yaxis: {
+        tickfont: { size: 12 }
+      }
+    };
+    Plotly.newPlot('metricsChart', [trace], layout, {responsive:true});
+
+    // ---------- Keyboard navigation ----------
+    document.addEventListener('keydown', (e) => {
+      if(e.key === '1') showPage('home');
+      if(e.key === '2') showPage('leaderboard');
+      if(e.key === '3') showPage('contact');
+      if(e.key === '4') showPage('about');
+      if(e.key === '5') showPage('settings');
+    });
+  </script>
+</body>
+</html>

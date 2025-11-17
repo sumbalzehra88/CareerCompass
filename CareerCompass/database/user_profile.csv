@@ -1,0 +1,201 @@
+profile_id,user_id,username,education,degree,skills,country,work_experience,user_interest,industry,career_goals,time_frame
+1,77,Taha Siddiqui,Bachelor's,Computer Science,"Networking, Security, Linux",UK,3 years of experience in Computer Science,Web Development,Cybersecurity,Work in AI Research,Before Master's
+2,18,Mehak Riaz,Master's,Information Technology,"Data Analysis, Pandas, NumPy",Germany,1 years of experience in Information Technology,Cloud Computing,Mobile App Development,Become a Data Scientist,2 years
+3,49,Maryam Iqbal,Intermediate,Software Engineering,"React, Node.js, Express",India,0 years of experience in Software Engineering,Game Development,Mobile App Development,Develop Innovative Apps,After Graduation
+4,62,Noor Fatima,Matric,Information Technology,"C++, Java, SQL",UK,4 years of experience in Information Technology,Cloud Computing,Web Development,Pursue Higher Studies,Soon
+5,10,Mehak Riaz,Bachelor's,AI & Data Science,"Data Analysis, Pandas, NumPy",Pakistan,1 years of experience in AI & Data Science,Game Development,Cybersecurity,Start a Tech Startup,Next semester
+6,55,Ayesha Khan,Bachelor's,AI & Data Science,"Cloud Computing, Docker, AWS",UK,4 years of experience in AI & Data Science,Cybersecurity,Data Analytics,Contribute to Open Source,1 year
+7,38,Noor Fatima,PhD,AI & Data Science,"C++, Java, SQL",UK,3 years of experience in AI & Data Science,Data Science,Education Technology,Start a Tech Startup,After gaining experience
+8,73,Waleed Khan,Matric,Cybersecurity,"Flask, Django, REST APIs",Australia,3 years of experience in Cybersecurity,Cybersecurity,Mobile App Development,Work Abroad,2 years
+9,93,Ayesha Khan,Intermediate,Computer Science,"Data Analysis, Pandas, NumPy",UK,3 years of experience in Computer Science,Game Development,Mobile App Development,Get a Software Engineer Role,After Graduation
+10,56,Mehak Riaz,Master's,Software Engineering,"Data Analysis, Pandas, NumPy",USA,3 years of experience in Software Engineering,Cybersecurity,Digital Marketing,Develop Innovative Apps,2 years
+11,69,Laiba Noor,Intermediate,Information Technology,"C++, Java, SQL",UK,5 years of experience in Information Technology,Data Science,Software Development,Contribute to Open Source,Next semester
+12,31,Usman Tariq,Matric,Cybersecurity,"Cloud Computing, Docker, AWS",Germany,0 years of experience in Cybersecurity,Game Development,Cybersecurity,Get a Software Engineer Role,Soon
+13,2,Usman Tariq,Bachelor's,Cybersecurity,"Data Analysis, Pandas, NumPy",USA,1 years of experience in Cybersecurity,Game Development,Software Development,Pursue Higher Studies,After Graduation
+14,41,Laiba Noor,Intermediate,AI & Data Science,"Python, HTML, CSS, JavaScript",USA,4 years of experience in AI & Data Science,Mobile App Development,Digital Marketing,Work in AI Research,After Graduation
+15,39,Hira Qureshi,PhD,AI & Data Science,"C++, Java, SQL",Germany,2 years of experience in AI & Data Science,Cybersecurity,Artificial Intelligence,Contribute to Open Source,3 years
+16,97,Imran Zafar,Matric,Information Technology,"Flask, Django, REST APIs",Pakistan,,Cloud Computing,Data Analytics,Get a Software Engineer Role,Next semester
+17,64,Usman Tariq,Matric,Computer Science,"Networking, Security, Linux",India,0 years of experience in Computer Science,Web Development,Artificial Intelligence,Get a Software Engineer Role,Before Master's
+18,94,Ahmed Hassan,Master's,Software Engineering,"Cloud Computing, Docker, AWS",USA,4 years of experience in Software Engineering,Web Development,Cloud Computing,Lead a Product Team,Next semester
+19,33,Maryam Iqbal,Intermediate,Cybersecurity,"Networking, Security, Linux",UK,3 years of experience in Cybersecurity,AI Development,Mobile App Development,Start a Tech Startup,1 year
+20,29,Fatima Mushtaq,Matric,Software Engineering,"React, Node.js, Express",India,3 years of experience in Software Engineering,Web Development,Cybersecurity,Develop Innovative Apps,After Graduation
+21,97,Usman Tariq,Master's,Computer Science,"Networking, Security, Linux",India,2 years of experience in Computer Science,Cybersecurity,Mobile App Development,Lead a Product Team,After Graduation
+22,10,Ahmed Hassan,Intermediate,AI & Data Science,"Networking, Security, Linux",Canada,1 years of experience in AI & Data Science,Cybersecurity,Cybersecurity,Become a Data Analyst,3 years
+23,78,Hira Qureshi,Master's,Information Technology,"C++, Java, SQL",Germany,3 years of experience in Information Technology,Mobile App Development,Digital Marketing,Work in AI Research,Before Master's
+24,24,Usman Tariq,Master's,Software Engineering,"React, Node.js, Express",Germany,0 years of experience in Software Engineering,Cybersecurity,Cybersecurity,Get a Software Engineer Role,5 years
+25,44,Maryam Iqbal,Intermediate,Cybersecurity,"Flask, Django, REST APIs",Pakistan,4 years of experience in Cybersecurity,AI Development,Mobile App Development,Pursue Higher Studies,Next semester
+26,41,Noor Fatima,PhD,Cybersecurity,"C++, Java, SQL",Australia,3 years of experience in Cybersecurity,Data Science,Education Technology,Pursue Higher Studies,After gaining experience
+27,50,Hamza Nadeem,Matric,Cybersecurity,"C++, Java, SQL",Australia,2 years of experience in Cybersecurity,Data Science,Data Analytics,Develop Innovative Apps,After gaining experience
+28,20,Usman Tariq,Intermediate,Computer Science,"Flask, Django, REST APIs",Germany,1 years of experience in Computer Science,AI Development,Machine Learning,Contribute to Open Source,5 years
+29,65,Noor Fatima,Matric,Information Technology,"Python, HTML, CSS, JavaScript",Germany,2 years of experience in Information Technology,AI Development,Web Development,Start a Tech Startup,After gaining experience
+30,87,Zainab Shah,Bachelor's,Computer Science,"React, Node.js, Express",Australia,2 years of experience in Computer Science,Cybersecurity,Web Development,Get a Software Engineer Role,After Graduation
+31,68,Sana Javed,Matric,Information Technology,"C++, Java, SQL",Germany,,Cloud Computing,Data Analytics,Develop Innovative Apps,1 year
+32,60,Laiba Noor,Matric,Information Technology,"Data Analysis, Pandas, NumPy",UK,2 years of experience in Information Technology,Cloud Computing,Digital Marketing,Work Abroad,After gaining experience
+33,13,Zainab Shah,Matric,AI & Data Science,"React, Node.js, Express",Canada,0 years of experience in AI & Data Science,Mobile App Development,Digital Marketing,Get a Software Engineer Role,Within 6 months
+34,33,Taha Siddiqui,Matric,AI & Data Science,"C++, Java, SQL",Australia,3 years of experience in AI & Data Science,Data Science,Software Development,Work Abroad,After Graduation
+35,49,Noor Fatima,PhD,Information Technology,"Flask, Django, REST APIs",India,2 years of experience in Information Technology,Mobile App Development,Digital Marketing,Work in AI Research,1 year
+36,90,Saad Ali,Master's,Cybersecurity,"Cloud Computing, Docker, AWS",USA,4 years of experience in Cybersecurity,Cybersecurity,Education Technology,Develop Innovative Apps,After gaining experience
+37,75,Mehak Riaz,Master's,Information Technology,"React, Node.js, Express",Pakistan,3 years of experience in Information Technology,Web Development,Education Technology,Work Abroad,Next semester
+38,15,Maryam Iqbal,PhD,AI & Data Science,"Flask, Django, REST APIs",Canada,0 years of experience in AI & Data Science,Cybersecurity,Education Technology,Contribute to Open Source,3 years
+39,6,Hira Qureshi,Master's,Cybersecurity,"Flask, Django, REST APIs",Germany,0 years of experience in Cybersecurity,Data Science,Software Development,Start a Tech Startup,After gaining experience
+40,18,Noor Fatima,Matric,Software Engineering,"Machine Learning, Deep Learning",USA,0 years of experience in Software Engineering,Data Science,Cybersecurity,Pursue Higher Studies,2 years
+41,69,Zainab Shah,Matric,Software Engineering,"Data Analysis, Pandas, NumPy",Germany,5 years of experience in Software Engineering,AI Development,Education Technology,Develop Innovative Apps,After Graduation
+42,79,Saad Ali,Master's,Computer Science,"Python, HTML, CSS, JavaScript",Germany,4 years of experience in Computer Science,Data Science,Machine Learning,Become a Data Scientist,Within 6 months
+43,53,Mehak Riaz,Intermediate,Cybersecurity,"C++, Java, SQL",Pakistan,4 years of experience in Cybersecurity,Game Development,Web Development,Become a Data Analyst,Before Master's
+44,87,Noor Fatima,PhD,AI & Data Science,"Flask, Django, REST APIs",India,0 years of experience in AI & Data Science,Game Development,Digital Marketing,Lead a Product Team,2 years
+45,28,Laiba Noor,Master's,AI & Data Science,"C++, Java, SQL",Australia,5 years of experience in AI & Data Science,AI Development,Data Analytics,Work in AI Research,Within 6 months
+46,76,Hamza Nadeem,Bachelor's,Software Engineering,"Networking, Security, Linux",Germany,,AI Development,Education Technology,Become a Data Scientist,Before Master's
+47,11,Saad Ali,Intermediate,Information Technology,"Flask, Django, REST APIs",India,4 years of experience in Information Technology,AI Development,Mobile App Development,Work Abroad,Soon
+48,88,Hina Aslam,Matric,Software Engineering,"Data Analysis, Pandas, NumPy",Germany,3 years of experience in Software Engineering,Data Science,Mobile App Development,Pursue Higher Studies,Before Master's
+49,29,Ahmed Hassan,Bachelor's,Information Technology,"Data Analysis, Pandas, NumPy",UK,3 years of experience in Information Technology,AI Development,Machine Learning,Get a Software Engineer Role,After gaining experience
+50,51,Hamza Nadeem,Bachelor's,Software Engineering,"React, Node.js, Express",Australia,0 years of experience in Software Engineering,Mobile App Development,Cloud Computing,Work Abroad,1 year
+51,31,Waleed Khan,Master's,AI & Data Science,"React, Node.js, Express",Pakistan,2 years of experience in AI & Data Science,Web Development,Data Analytics,Contribute to Open Source,3 years
+52,3,Sana Javed,Bachelor's,Information Technology,"Flask, Django, REST APIs",India,1 years of experience in Information Technology,Mobile App Development,Digital Marketing,Get a Software Engineer Role,Within 6 months
+53,50,Ali Raza,Bachelor's,Computer Science,"C++, Java, SQL",USA,1 years of experience in Computer Science,Game Development,Machine Learning,Become a Data Analyst,After Graduation
+54,83,Zara Malik,Bachelor's,Software Engineering,"Flask, Django, REST APIs",UK,1 years of experience in Software Engineering,Mobile App Development,Mobile App Development,Develop Innovative Apps,Soon
+55,44,Mehak Riaz,Matric,Information Technology,"Networking, Security, Linux",USA,5 years of experience in Information Technology,Cybersecurity,Digital Marketing,Develop Innovative Apps,Soon
+56,61,Usman Tariq,Bachelor's,Software Engineering,"Machine Learning, Deep Learning",USA,0 years of experience in Software Engineering,Cloud Computing,Artificial Intelligence,Get a Software Engineer Role,5 years
+57,28,Noor Fatima,Bachelor's,Cybersecurity,"Cloud Computing, Docker, AWS",UK,,AI Development,Digital Marketing,Start a Tech Startup,Soon
+58,72,Fatima Mushtaq,Master's,Information Technology,"C++, Java, SQL",Canada,4 years of experience in Information Technology,Web Development,Web Development,Work Abroad,After gaining experience
+59,91,Hira Qureshi,PhD,AI & Data Science,"Python, HTML, CSS, JavaScript",Pakistan,2 years of experience in AI & Data Science,Cloud Computing,Education Technology,Work in AI Research,Soon
+60,46,Fatima Mushtaq,Intermediate,Information Technology,"Cloud Computing, Docker, AWS",Canada,3 years of experience in Information Technology,Web Development,Digital Marketing,Pursue Higher Studies,After Graduation
+61,94,Usman Tariq,Intermediate,AI & Data Science,"C++, Java, SQL",Canada,3 years of experience in AI & Data Science,Cybersecurity,Digital Marketing,Work Abroad,Soon
+62,28,Fatima Mushtaq,PhD,AI & Data Science,"Machine Learning, Deep Learning",Australia,0 years of experience in AI & Data Science,Web Development,Cybersecurity,Develop Innovative Apps,Before Master's
+63,67,Laiba Noor,Matric,Computer Science,"Flask, Django, REST APIs",India,2 years of experience in Computer Science,Cybersecurity,Digital Marketing,Lead a Product Team,1 year
+64,99,Imran Zafar,Master's,Information Technology,"Flask, Django, REST APIs",UK,4 years of experience in Information Technology,Cloud Computing,Artificial Intelligence,Start a Tech Startup,Before Master's
+65,69,Zainab Shah,PhD,Cybersecurity,"Machine Learning, Deep Learning",Germany,3 years of experience in Cybersecurity,Data Science,Cloud Computing,Work Abroad,Within 6 months
+66,62,Hira Qureshi,Bachelor's,AI & Data Science,"Data Analysis, Pandas, NumPy",UK,3 years of experience in AI & Data Science,Cybersecurity,Data Analytics,Work Abroad,After Graduation
+67,83,Saad Ali,Master's,AI & Data Science,"Cloud Computing, Docker, AWS",Canada,,Web Development,Software Development,Start a Tech Startup,Next semester
+68,40,Ayesha Khan,Matric,AI & Data Science,"Python, HTML, CSS, JavaScript",Pakistan,4 years of experience in AI & Data Science,Web Development,Cloud Computing,Become a Data Scientist,After Graduation
+69,91,Zara Malik,PhD,Computer Science,"Networking, Security, Linux",Australia,,AI Development,Web Development,Become a Data Scientist,Soon
+70,42,Waleed Khan,Bachelor's,Computer Science,"Flask, Django, REST APIs",Germany,,Web Development,Web Development,Start a Tech Startup,Next semester
+71,31,Taha Siddiqui,Master's,AI & Data Science,"Data Analysis, Pandas, NumPy",Pakistan,0 years of experience in AI & Data Science,Data Science,Digital Marketing,Develop Innovative Apps,5 years
+72,5,Maryam Iqbal,Bachelor's,Software Engineering,"Networking, Security, Linux",Germany,0 years of experience in Software Engineering,Web Development,Software Development,Develop Innovative Apps,After Graduation
+73,33,Ahmed Hassan,Master's,Information Technology,"Flask, Django, REST APIs",UK,2 years of experience in Information Technology,AI Development,Software Development,Start a Tech Startup,1 year
+74,89,Saad Ali,PhD,Computer Science,"Python, HTML, CSS, JavaScript",Pakistan,4 years of experience in Computer Science,Data Science,Cloud Computing,Lead a Product Team,Within 6 months
+75,93,Mehak Riaz,Intermediate,Information Technology,"Cloud Computing, Docker, AWS",Pakistan,0 years of experience in Information Technology,Mobile App Development,Web Development,Develop Innovative Apps,3 years
+76,37,Imran Zafar,PhD,Cybersecurity,"Data Analysis, Pandas, NumPy",Germany,5 years of experience in Cybersecurity,Mobile App Development,Web Development,Work Abroad,2 years
+77,2,Maryam Iqbal,Matric,Software Engineering,"Data Analysis, Pandas, NumPy",Canada,2 years of experience in Software Engineering,Web Development,Cloud Computing,Pursue Higher Studies,Within 6 months
+78,80,Sana Javed,Intermediate,Information Technology,"Flask, Django, REST APIs",Germany,3 years of experience in Information Technology,Data Science,Education Technology,Work Abroad,3 years
+79,97,Taha Siddiqui,Intermediate,Information Technology,"Data Analysis, Pandas, NumPy",USA,,Mobile App Development,Artificial Intelligence,Work Abroad,3 years
+80,72,Zara Malik,Master's,Information Technology,"Python, HTML, CSS, JavaScript",USA,4 years of experience in Information Technology,Web Development,Data Analytics,Develop Innovative Apps,Soon
+81,40,Bilal Ahmed,Matric,Software Engineering,"C++, Java, SQL",India,4 years of experience in Software Engineering,Cybersecurity,Software Development,Lead a Product Team,Next semester
+82,92,Hina Aslam,PhD,AI & Data Science,"React, Node.js, Express",India,5 years of experience in AI & Data Science,Game Development,Mobile App Development,Lead a Product Team,After gaining experience
+83,7,Hira Qureshi,Intermediate,Computer Science,"Networking, Security, Linux",USA,,Cloud Computing,Software Development,Become a Data Scientist,2 years
+84,32,Maryam Iqbal,Intermediate,Software Engineering,"React, Node.js, Express",UK,4 years of experience in Software Engineering,Game Development,Cybersecurity,Lead a Product Team,3 years
+85,45,Mehak Riaz,Intermediate,Computer Science,"React, Node.js, Express",Pakistan,5 years of experience in Computer Science,Game Development,Software Development,Lead a Product Team,Before Master's
+86,63,Laiba Noor,PhD,Information Technology,"Machine Learning, Deep Learning",USA,3 years of experience in Information Technology,Cloud Computing,Machine Learning,Lead a Product Team,5 years
+87,74,Maryam Iqbal,Intermediate,Computer Science,"Machine Learning, Deep Learning",Pakistan,4 years of experience in Computer Science,Cybersecurity,Data Analytics,Work Abroad,Soon
+88,55,Maryam Iqbal,Matric,Software Engineering,"Cloud Computing, Docker, AWS",Australia,3 years of experience in Software Engineering,Mobile App Development,Data Analytics,Pursue Higher Studies,Next semester
+89,10,Ali Raza,Matric,Software Engineering,"React, Node.js, Express",Pakistan,1 years of experience in Software Engineering,Cloud Computing,Web Development,Become a Data Scientist,Before Master's
+90,63,Ahmed Hassan,Master's,Information Technology,"Flask, Django, REST APIs",UK,1 years of experience in Information Technology,Data Science,Software Development,Become a Data Analyst,Within 6 months
+91,88,Waleed Khan,PhD,Information Technology,"Data Analysis, Pandas, NumPy",Canada,4 years of experience in Information Technology,Web Development,Artificial Intelligence,Start a Tech Startup,Before Master's
+92,32,Hina Aslam,Master's,Software Engineering,"Cloud Computing, Docker, AWS",USA,2 years of experience in Software Engineering,Cybersecurity,Cloud Computing,Contribute to Open Source,Next semester
+93,22,Usman Tariq,Matric,Information Technology,"Python, HTML, CSS, JavaScript",Pakistan,0 years of experience in Information Technology,Cloud Computing,Software Development,Lead a Product Team,Next semester
+94,7,Maryam Iqbal,Master's,Software Engineering,"Python, HTML, CSS, JavaScript",Australia,5 years of experience in Software Engineering,Web Development,Artificial Intelligence,Work in AI Research,Within 6 months
+95,38,Maryam Iqbal,Intermediate,Information Technology,"Flask, Django, REST APIs",USA,2 years of experience in Information Technology,Data Science,Data Analytics,Contribute to Open Source,Next semester
+96,13,Mehak Riaz,Intermediate,Information Technology,"Data Analysis, Pandas, NumPy",Australia,,Web Development,Data Analytics,Get a Software Engineer Role,After Graduation
+97,23,Hamza Nadeem,Master's,Software Engineering,"Flask, Django, REST APIs",Canada,5 years of experience in Software Engineering,Mobile App Development,Cybersecurity,Pursue Higher Studies,3 years
+98,24,Waleed Khan,Master's,AI & Data Science,"Machine Learning, Deep Learning",Pakistan,1 years of experience in AI & Data Science,AI Development,Digital Marketing,Start a Tech Startup,3 years
+99,98,Hina Aslam,Intermediate,Computer Science,"Flask, Django, REST APIs",UK,0 years of experience in Computer Science,Cloud Computing,Cloud Computing,Become a Data Scientist,After Graduation
+100,89,Mehak Riaz,Intermediate,Software Engineering,"Cloud Computing, Docker, AWS",Germany,3 years of experience in Software Engineering,Cybersecurity,Digital Marketing,Work in AI Research,5 years
+101,45,Hira Qureshi,Bachelor's,Software Engineering,"Machine Learning, Deep Learning",USA,1 years of experience in Software Engineering,Web Development,Education Technology,Contribute to Open Source,5 years
+102,56,Fatima Mushtaq,Intermediate,AI & Data Science,"Python, HTML, CSS, JavaScript",USA,4 years of experience in AI & Data Science,Web Development,Software Development,Develop Innovative Apps,Within 6 months
+103,41,Hina Aslam,Bachelor's,Information Technology,"Networking, Security, Linux",Canada,2 years of experience in Information Technology,AI Development,Digital Marketing,Become a Data Analyst,Next semester
+104,90,Zara Malik,Intermediate,Software Engineering,"C++, Java, SQL",UK,0 years of experience in Software Engineering,Cloud Computing,Web Development,Start a Tech Startup,3 years
+105,5,Taha Siddiqui,Matric,AI & Data Science,"Python, HTML, CSS, JavaScript",Germany,1 years of experience in AI & Data Science,Mobile App Development,Education Technology,Become a Data Analyst,Soon
+106,55,Imran Zafar,Bachelor's,Computer Science,"Python, HTML, CSS, JavaScript",Pakistan,5 years of experience in Computer Science,Game Development,Machine Learning,Become a Data Scientist,Within 6 months
+107,66,Zara Malik,Bachelor's,Information Technology,"Flask, Django, REST APIs",Pakistan,5 years of experience in Information Technology,Game Development,Cloud Computing,Get a Software Engineer Role,Soon
+108,99,Zara Malik,PhD,AI & Data Science,"Data Analysis, Pandas, NumPy",Germany,5 years of experience in AI & Data Science,Data Science,Education Technology,Work in AI Research,3 years
+109,79,Noor Fatima,Matric,AI & Data Science,"React, Node.js, Express",Pakistan,3 years of experience in AI & Data Science,Data Science,Digital Marketing,Develop Innovative Apps,Soon
+110,40,Hira Qureshi,Master's,AI & Data Science,"Machine Learning, Deep Learning",Australia,4 years of experience in AI & Data Science,Game Development,Machine Learning,Pursue Higher Studies,2 years
+111,2,Imran Zafar,PhD,Cybersecurity,"Cloud Computing, Docker, AWS",Germany,2 years of experience in Cybersecurity,Web Development,Education Technology,Become a Data Scientist,2 years
+112,86,Mehak Riaz,Matric,Information Technology,"Data Analysis, Pandas, NumPy",UK,0 years of experience in Information Technology,Cybersecurity,Data Analytics,Become a Data Analyst,After Graduation
+113,40,Zara Malik,Bachelor's,AI & Data Science,"Python, HTML, CSS, JavaScript",USA,4 years of experience in AI & Data Science,Cybersecurity,Cloud Computing,Lead a Product Team,1 year
+114,98,Laiba Noor,Bachelor's,AI & Data Science,"Machine Learning, Deep Learning",Germany,5 years of experience in AI & Data Science,Data Science,Cybersecurity,Become a Data Scientist,After gaining experience
+115,23,Imran Zafar,Matric,Information Technology,"Data Analysis, Pandas, NumPy",Australia,5 years of experience in Information Technology,Mobile App Development,Machine Learning,Get a Software Engineer Role,2 years
+116,64,Zainab Shah,Master's,Software Engineering,"Networking, Security, Linux",India,,Data Science,Mobile App Development,Become a Data Scientist,1 year
+117,80,Hira Qureshi,Intermediate,Cybersecurity,"React, Node.js, Express",UK,4 years of experience in Cybersecurity,Cybersecurity,Cybersecurity,Get a Software Engineer Role,2 years
+118,61,Ayesha Khan,PhD,Computer Science,"Networking, Security, Linux",Pakistan,2 years of experience in Computer Science,AI Development,Data Analytics,Work in AI Research,After gaining experience
+119,79,Ahmed Hassan,Matric,Cybersecurity,"Data Analysis, Pandas, NumPy",Australia,1 years of experience in Cybersecurity,Cybersecurity,Software Development,Become a Data Scientist,Soon
+120,34,Saad Ali,PhD,Cybersecurity,"Data Analysis, Pandas, NumPy",India,1 years of experience in Cybersecurity,Mobile App Development,Web Development,Start a Tech Startup,2 years
+121,36,Laiba Noor,PhD,AI & Data Science,"Machine Learning, Deep Learning",Pakistan,4 years of experience in AI & Data Science,Web Development,Mobile App Development,Contribute to Open Source,After gaining experience
+122,3,Ayesha Khan,Master's,Computer Science,"Flask, Django, REST APIs",Canada,2 years of experience in Computer Science,Cybersecurity,Mobile App Development,Become a Data Scientist,Before Master's
+123,22,Sana Javed,Intermediate,Software Engineering,"Machine Learning, Deep Learning",UK,3 years of experience in Software Engineering,Data Science,Cybersecurity,Become a Data Analyst,Before Master's
+124,34,Imran Zafar,Master's,Cybersecurity,"React, Node.js, Express",Pakistan,2 years of experience in Cybersecurity,Mobile App Development,Cloud Computing,Develop Innovative Apps,After gaining experience
+125,98,Hina Aslam,Intermediate,Cybersecurity,"Flask, Django, REST APIs",USA,0 years of experience in Cybersecurity,Data Science,Web Development,Develop Innovative Apps,Next semester
+126,53,Hina Aslam,Matric,AI & Data Science,"Machine Learning, Deep Learning",Australia,5 years of experience in AI & Data Science,Data Science,Digital Marketing,Pursue Higher Studies,After Graduation
+127,69,Noor Fatima,Intermediate,Software Engineering,"C++, Java, SQL",Germany,2 years of experience in Software Engineering,Cybersecurity,Software Development,Work in AI Research,2 years
+128,62,Noor Fatima,Master's,Cybersecurity,"React, Node.js, Express",Germany,5 years of experience in Cybersecurity,Data Science,Data Analytics,Work in AI Research,Before Master's
+129,24,Taha Siddiqui,Intermediate,Cybersecurity,"Networking, Security, Linux",Pakistan,,Data Science,Machine Learning,Lead a Product Team,After Graduation
+130,45,Hina Aslam,Bachelor's,Cybersecurity,"React, Node.js, Express",UK,1 years of experience in Cybersecurity,Game Development,Web Development,Work in AI Research,2 years
+131,53,Ayesha Khan,Bachelor's,Computer Science,"Data Analysis, Pandas, NumPy",India,3 years of experience in Computer Science,Game Development,Digital Marketing,Start a Tech Startup,1 year
+132,85,Zainab Shah,PhD,Cybersecurity,"Cloud Computing, Docker, AWS",Pakistan,1 years of experience in Cybersecurity,Mobile App Development,Web Development,Get a Software Engineer Role,Soon
+133,74,Zainab Shah,Intermediate,Computer Science,"Flask, Django, REST APIs",Germany,2 years of experience in Computer Science,Web Development,Education Technology,Contribute to Open Source,Soon
+134,73,Zainab Shah,PhD,Cybersecurity,"C++, Java, SQL",USA,0 years of experience in Cybersecurity,Web Development,Cybersecurity,Contribute to Open Source,Soon
+135,69,Saad Ali,PhD,Computer Science,"Data Analysis, Pandas, NumPy",Canada,2 years of experience in Computer Science,Cloud Computing,Education Technology,Get a Software Engineer Role,1 year
+136,8,Taha Siddiqui,Intermediate,Cybersecurity,"Machine Learning, Deep Learning",Pakistan,0 years of experience in Cybersecurity,Mobile App Development,Cloud Computing,Work Abroad,After Graduation
+137,12,Laiba Noor,PhD,Information Technology,"Flask, Django, REST APIs",India,3 years of experience in Information Technology,Data Science,Web Development,Become a Data Scientist,Before Master's
+138,23,Ayesha Khan,Bachelor's,Cybersecurity,"Cloud Computing, Docker, AWS",USA,0 years of experience in Cybersecurity,Game Development,Machine Learning,Contribute to Open Source,3 years
+139,26,Hira Qureshi,Bachelor's,Computer Science,"Python, HTML, CSS, JavaScript",USA,2 years of experience in Computer Science,Game Development,Digital Marketing,Pursue Higher Studies,Soon
+140,15,Hina Aslam,PhD,Software Engineering,"Flask, Django, REST APIs",Germany,1 years of experience in Software Engineering,Mobile App Development,Cloud Computing,Lead a Product Team,Soon
+141,96,Saad Ali,Master's,Software Engineering,"React, Node.js, Express",India,3 years of experience in Software Engineering,Game Development,Mobile App Development,Develop Innovative Apps,Within 6 months
+142,86,Bilal Ahmed,PhD,Computer Science,"React, Node.js, Express",Pakistan,1 years of experience in Computer Science,Mobile App Development,Software Development,Become a Data Analyst,Next semester
+143,23,Ahmed Hassan,PhD,AI & Data Science,"Machine Learning, Deep Learning",UK,3 years of experience in AI & Data Science,Cloud Computing,Data Analytics,Lead a Product Team,Before Master's
+144,11,Sana Javed,PhD,AI & Data Science,"C++, Java, SQL",India,0 years of experience in AI & Data Science,Game Development,Cloud Computing,Contribute to Open Source,Soon
+145,87,Mehak Riaz,Intermediate,AI & Data Science,"Flask, Django, REST APIs",USA,3 years of experience in AI & Data Science,Data Science,Digital Marketing,Develop Innovative Apps,Before Master's
+146,84,Sana Javed,Matric,Software Engineering,"React, Node.js, Express",Australia,5 years of experience in Software Engineering,Mobile App Development,Software Development,Develop Innovative Apps,Soon
+147,69,Ahmed Hassan,Master's,Software Engineering,"Data Analysis, Pandas, NumPy",Canada,5 years of experience in Software Engineering,Cybersecurity,Digital Marketing,Become a Data Scientist,5 years
+148,87,Zainab Shah,Matric,AI & Data Science,"Flask, Django, REST APIs",Pakistan,5 years of experience in AI & Data Science,Game Development,Artificial Intelligence,Get a Software Engineer Role,Within 6 months
+149,81,Ahmed Hassan,Bachelor's,AI & Data Science,"Python, HTML, CSS, JavaScript",Australia,4 years of experience in AI & Data Science,AI Development,Artificial Intelligence,Work in AI Research,After Graduation
+150,32,Zara Malik,Master's,AI & Data Science,"React, Node.js, Express",Australia,1 years of experience in AI & Data Science,Cloud Computing,Artificial Intelligence,Work Abroad,2 years
+151,72,Hamza Nadeem,Matric,AI & Data Science,"Data Analysis, Pandas, NumPy",Australia,3 years of experience in AI & Data Science,Data Science,Digital Marketing,Pursue Higher Studies,Next semester
+152,4,Taha Siddiqui,PhD,AI & Data Science,"Networking, Security, Linux",USA,5 years of experience in AI & Data Science,Data Science,Web Development,Develop Innovative Apps,1 year
+153,18,Ali Raza,Bachelor's,Software Engineering,"Python, HTML, CSS, JavaScript",USA,,Cloud Computing,Digital Marketing,Become a Data Analyst,Next semester
+154,43,Sana Javed,Master's,Computer Science,"Networking, Security, Linux",Canada,2 years of experience in Computer Science,Data Science,Web Development,Lead a Product Team,Before Master's
+155,7,Hamza Nadeem,Matric,AI & Data Science,"React, Node.js, Express",Germany,5 years of experience in AI & Data Science,Game Development,Data Analytics,Contribute to Open Source,2 years
+156,70,Hina Aslam,Intermediate,Software Engineering,"Python, HTML, CSS, JavaScript",USA,3 years of experience in Software Engineering,Web Development,Artificial Intelligence,Work Abroad,After gaining experience
+157,43,Ayesha Khan,Intermediate,Software Engineering,"Data Analysis, Pandas, NumPy",USA,5 years of experience in Software Engineering,Game Development,Mobile App Development,Start a Tech Startup,2 years
+158,15,Waleed Khan,Bachelor's,Information Technology,"React, Node.js, Express",USA,0 years of experience in Information Technology,Web Development,Web Development,Start a Tech Startup,After gaining experience
+159,53,Zainab Shah,Matric,Information Technology,"Flask, Django, REST APIs",India,,Cybersecurity,Cloud Computing,Contribute to Open Source,Within 6 months
+160,48,Waleed Khan,Master's,Computer Science,"Data Analysis, Pandas, NumPy",Canada,2 years of experience in Computer Science,Mobile App Development,Digital Marketing,Start a Tech Startup,Next semester
+161,54,Waleed Khan,Bachelor's,Cybersecurity,"Python, HTML, CSS, JavaScript",Germany,0 years of experience in Cybersecurity,Game Development,Digital Marketing,Lead a Product Team,3 years
+162,92,Mehak Riaz,Matric,Cybersecurity,"Cloud Computing, Docker, AWS",Germany,0 years of experience in Cybersecurity,AI Development,Software Development,Work in AI Research,3 years
+163,26,Bilal Ahmed,Matric,Cybersecurity,"React, Node.js, Express",India,0 years of experience in Cybersecurity,Data Science,Artificial Intelligence,Become a Data Analyst,2 years
+164,26,Laiba Noor,Bachelor's,Cybersecurity,"Cloud Computing, Docker, AWS",Australia,0 years of experience in Cybersecurity,Game Development,Software Development,Pursue Higher Studies,Next semester
+165,52,Hira Qureshi,Master's,Cybersecurity,"Machine Learning, Deep Learning",Australia,4 years of experience in Cybersecurity,Mobile App Development,Machine Learning,Get a Software Engineer Role,After gaining experience
+166,92,Usman Tariq,Matric,AI & Data Science,"Python, HTML, CSS, JavaScript",Canada,,Mobile App Development,Artificial Intelligence,Contribute to Open Source,Within 6 months
+167,18,Waleed Khan,PhD,Cybersecurity,"C++, Java, SQL",Germany,5 years of experience in Cybersecurity,Mobile App Development,Cybersecurity,Develop Innovative Apps,2 years
+168,72,Zara Malik,Master's,Information Technology,"Cloud Computing, Docker, AWS",Australia,4 years of experience in Information Technology,Data Science,Digital Marketing,Pursue Higher Studies,After gaining experience
+169,23,Hina Aslam,Bachelor's,Information Technology,"Machine Learning, Deep Learning",UK,5 years of experience in Information Technology,Mobile App Development,Mobile App Development,Pursue Higher Studies,After Graduation
+170,83,Mehak Riaz,Intermediate,Information Technology,"Cloud Computing, Docker, AWS",Canada,1 years of experience in Information Technology,AI Development,Cloud Computing,Work in AI Research,After gaining experience
+171,56,Imran Zafar,PhD,Information Technology,"Cloud Computing, Docker, AWS",USA,,Game Development,Artificial Intelligence,Work Abroad,After Graduation
+172,84,Hamza Nadeem,Bachelor's,Software Engineering,"Flask, Django, REST APIs",Australia,2 years of experience in Software Engineering,Game Development,Cloud Computing,Become a Data Scientist,Within 6 months
+173,49,Hira Qureshi,PhD,Information Technology,"Networking, Security, Linux",USA,1 years of experience in Information Technology,Cybersecurity,Data Analytics,Develop Innovative Apps,2 years
+174,85,Hamza Nadeem,PhD,Computer Science,"Cloud Computing, Docker, AWS",Germany,0 years of experience in Computer Science,Game Development,Cloud Computing,Develop Innovative Apps,Before Master's
+175,22,Maryam Iqbal,Bachelor's,Information Technology,"C++, Java, SQL",Australia,,AI Development,Artificial Intelligence,Become a Data Analyst,Within 6 months
+176,17,Maryam Iqbal,Intermediate,Information Technology,"Machine Learning, Deep Learning",India,4 years of experience in Information Technology,Game Development,Cloud Computing,Work Abroad,5 years
+177,36,Hamza Nadeem,Matric,AI & Data Science,"Cloud Computing, Docker, AWS",USA,1 years of experience in AI & Data Science,Web Development,Data Analytics,Get a Software Engineer Role,Soon
+178,18,Sana Javed,Matric,AI & Data Science,"React, Node.js, Express",UK,,Data Science,Artificial Intelligence,Lead a Product Team,After gaining experience
+179,86,Imran Zafar,PhD,Computer Science,"React, Node.js, Express",USA,0 years of experience in Computer Science,Cybersecurity,Data Analytics,Become a Data Scientist,After gaining experience
+180,79,Hina Aslam,Master's,Cybersecurity,"Cloud Computing, Docker, AWS",Australia,5 years of experience in Cybersecurity,Cloud Computing,Artificial Intelligence,Lead a Product Team,3 years
+181,58,Imran Zafar,Matric,Information Technology,"Python, HTML, CSS, JavaScript",Germany,2 years of experience in Information Technology,Cloud Computing,Cloud Computing,Work Abroad,1 year
+182,52,Maryam Iqbal,Matric,Computer Science,"C++, Java, SQL",Canada,0 years of experience in Computer Science,Cloud Computing,Cybersecurity,Start a Tech Startup,1 year
+183,34,Mehak Riaz,Matric,Computer Science,"Flask, Django, REST APIs",UK,,AI Development,Web Development,Pursue Higher Studies,Soon
+184,49,Zara Malik,Bachelor's,Software Engineering,"Flask, Django, REST APIs",Australia,4 years of experience in Software Engineering,AI Development,Web Development,Work Abroad,After Graduation
+185,9,Saad Ali,PhD,Cybersecurity,"Machine Learning, Deep Learning",USA,1 years of experience in Cybersecurity,Cybersecurity,Cloud Computing,Work in AI Research,After Graduation
+186,100,Maryam Iqbal,PhD,AI & Data Science,"Networking, Security, Linux",Australia,1 years of experience in AI & Data Science,Cybersecurity,Cloud Computing,Pursue Higher Studies,3 years
+187,8,Hina Aslam,PhD,Cybersecurity,"Machine Learning, Deep Learning",Germany,,Web Development,Cybersecurity,Start a Tech Startup,After gaining experience
+188,83,Zara Malik,Matric,Information Technology,"Flask, Django, REST APIs",USA,2 years of experience in Information Technology,AI Development,Web Development,Work Abroad,Next semester
+189,50,Hamza Nadeem,Master's,AI & Data Science,"Flask, Django, REST APIs",UK,1 years of experience in AI & Data Science,Cybersecurity,Data Analytics,Get a Software Engineer Role,Within 6 months
+190,79,Hina Aslam,Matric,Computer Science,"Data Analysis, Pandas, NumPy",Germany,5 years of experience in Computer Science,Web Development,Machine Learning,Develop Innovative Apps,Within 6 months
+191,15,Usman Tariq,Master's,Cybersecurity,"React, Node.js, Express",Pakistan,1 years of experience in Cybersecurity,Data Science,Web Development,Develop Innovative Apps,After gaining experience
+192,43,Hira Qureshi,Master's,AI & Data Science,"Data Analysis, Pandas, NumPy",USA,5 years of experience in AI & Data Science,Web Development,Education Technology,Pursue Higher Studies,After gaining experience
+193,9,Hamza Nadeem,Bachelor's,Computer Science,"Python, HTML, CSS, JavaScript",Australia,1 years of experience in Computer Science,Mobile App Development,Software Development,Work in AI Research,2 years
+194,29,Taha Siddiqui,PhD,Computer Science,"C++, Java, SQL",UK,5 years of experience in Computer Science,Cybersecurity,Software Development,Lead a Product Team,Within 6 months
+195,88,Taha Siddiqui,Master's,Cybersecurity,"Networking, Security, Linux",UK,2 years of experience in Cybersecurity,AI Development,Cloud Computing,Pursue Higher Studies,5 years
+196,65,Zara Malik,PhD,AI & Data Science,"Python, HTML, CSS, JavaScript",Canada,2 years of experience in AI & Data Science,Cybersecurity,Education Technology,Work in AI Research,Within 6 months
+197,17,Hira Qureshi,Bachelor's,Cybersecurity,"Networking, Security, Linux",UK,2 years of experience in Cybersecurity,Cloud Computing,Artificial Intelligence,Become a Data Analyst,3 years
+198,42,Hamza Nadeem,Bachelor's,Cybersecurity,"Data Analysis, Pandas, NumPy",Pakistan,5 years of experience in Cybersecurity,Data Science,Artificial Intelligence,Contribute to Open Source,After gaining experience
+199,20,Fatima Mushtaq,Intermediate,Cybersecurity,"Networking, Security, Linux",Germany,3 years of experience in Cybersecurity,AI Development,Digital Marketing,Start a Tech Startup,After gaining experience
+200,66,Hira Qureshi,Intermediate,Information Technology,"Python, HTML, CSS, JavaScript",Australia,1 years of experience in Information Technology,Web Development,Web Development,Work Abroad,After gaining experience

@@ -1,0 +1,641 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Career Credentials</title>
+    <style>
+        /* =========================
+           CSS VARIABLES
+           ========================= */
+        :root {
+            --primary-blue: #00b4d8;
+            --primary-dark: #0077b6;
+            --primary-darker: #005577;
+            --accent-blue: #014970;
+            --background-light: #CDFCFF;
+            --background-medium: #B2FAFF;
+            --text-dark: #1a202c;
+            --text-medium: #2d3748;
+            --text-light: #4a5568;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+            --shadow-blue: 0 8px 25px rgba(0,180,216,0.3);
+        }
+
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--background-medium) 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            margin-bottom: 0;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            width: 300px;
+            height: 300px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 85px;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(0, 180, 216, 0.1);
+            color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            padding: 10px 24px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            background: transparent;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary {
+            padding: 10px 24px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        /* Main Content */
+        .main-content {
+            background: rgba(178, 250, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg), 
+                        0 0 0 1px rgba(255,255,255,0.3),
+                        inset 0 1px 0 rgba(255,255,255,0.4);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 40px;
+        }
+
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark), var(--primary-darker));
+            border-radius: 24px 24px 0 0;
+        }
+
+        /* Form Container */
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+            margin-bottom: 40px;
+            margin-top: 150px;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark), var(--primary-darker));
+            border-radius: 24px 24px 0 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: var(--text-dark);
+            margin-bottom: 35px;
+            text-align: center;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-blue), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark));
+            border-radius: 2px;
+            transform: translateX(-50%);
+        }
+
+        /* Form Grid */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-field.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            padding: 14px 18px;
+            border: 2px solid rgba(0, 180, 216, 0.2);
+            border-radius: 12px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+            background: var(--white);
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: var(--text-light);
+            opacity: 0.7;
+        }
+
+        /* Buttons */
+        .action-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 160px;
+            box-shadow: var(--shadow-sm);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .action-button.primary,
+        .generate-button {
+            background: var(--accent-blue);
+            color: var(--white);
+        }
+
+        .action-button.primary:hover,
+        .generate-button:hover {
+            background: linear-gradient(135deg, #0096c7 0%, var(--primary-darker) 100%);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .action-button.secondary,
+        .clear-button {
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--text-medium);
+            border: 2px solid rgba(0, 180, 216, 0.3);
+        }
+
+        .action-button.secondary:hover,
+        .clear-button:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-3px);
+            border-color: var(--primary-blue);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--accent-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 20px;
+                height: auto;
+            }
+
+            .nav-menu {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .form-container {
+                padding: 25px 20px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .form-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .action-button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            .form-container {
+                padding: 20px 15px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .action-button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <a href="{% url 'home' %}" class="logo">
+                <div class="logo-icon"><img src="{% static 'CareerCompassapp/logo.png' %}" alt="CC Logo"></div>
+            </a>
+            <nav class="nav-menu">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="#mission">Mission</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                
+                {% if user.is_authenticated %}
+                    <a href="{% url 'dashboard' %}">Dashboard</a>
+                    <a href="{% url 'logout' %}" class="btn-outline">Logout</a>
+                {% else %}
+                    <a href="{% url 'signin' %}" class="btn-outline">Sign In</a>
+                    <a href="{% url 'signup' %}" class="btn-primary">Sign Up</a>
+                {% endif %}
+            </nav>
+        </header>
+
+        <!-- Main Form Container -->
+        <div class="form-container">
+            <h1 class="section-title">Career Credentials</h1>
+            
+            <form id="careerForm" method="POST" action="{% url 'option_roadmaps' %}">
+                {% csrf_token %}
+                <div class="form-grid">
+                    <div class="form-field">
+    <label for="currentRole">Current Role *</label>
+    <input 
+        type="text" 
+        id="currentRole" 
+        name="current_role" 
+        placeholder="e.g., Software Engineer"
+        value="{{ profile.work_experience|default:'' }}"
+        required
+    />
+</div>
+
+<div class="form-field">
+    <label for="experience">Years of Experience *</label>
+    <input 
+        type="text" 
+        id="experience" 
+        name="experience" 
+        placeholder="e.g., 3"
+        value="{{ profile.work_experience|default:'' }}"
+        required
+    />
+</div>
+
+<div class="form-field">
+    <label for="educationLevel">Education Level *</label>
+    <input 
+        type="text" 
+        id="educationLevel" 
+        name="education_level" 
+        placeholder="e.g., Bachelor's"
+        value="{{ profile.education|default:'' }}"
+        required
+    />
+</div>
+
+<div class="form-field">
+    <label for="preferredIndustry">Preferred Industry *</label>
+    <input 
+        type="text" 
+        id="preferredIndustry" 
+        name="preferred_industry" 
+        placeholder="e.g., Technology, Healthcare"
+        value="{{ profile.industry|default:'' }}"
+        required
+    />
+</div>
+
+        <div class="form-field full-width">
+            <label for="currentSkills">Current Skills *</label>
+            <input 
+                type="text" 
+                id="currentSkills" 
+                name="current_skills" 
+                placeholder="e.g., JavaScript, React, Node.js"
+                value="{{ profile.skills|default:'' }}"
+                required
+            />
+        </div>
+
+        <div class="form-field full-width">
+            <label for="targetSkills">Target Skills *</label>
+            <input 
+                type="text" 
+                id="targetSkills" 
+                name="target_skills" 
+                placeholder="e.g., Machine Learning, Cloud"
+                value="{{ profile.user_interest|default:'' }}"
+                required
+            />
+        </div>
+
+        <div class="form-field">
+            <label for="careerGoals">Career Goals</label>
+            <input 
+                type="text" 
+                id="careerGoals" 
+                name="career_goals" 
+                placeholder="e.g., Become a Senior Developer"
+                value="{{ profile.career_goals|default:'' }}"
+            />
+        </div>
+
+        <div class="form-field">
+            <label for="timeframe">Desired Timeframe</label>
+            <input 
+                type="text" 
+                id="timeframe" 
+                name="timeframe" 
+                placeholder="e.g., 1-2 years"
+                value="{% if profile.time_frame %}{{ profile.time_frame }} years{% endif %}"
+            />
+        </div>
+
+        <div class="form-field">
+            <label for="degree">Degree *</label>
+            <input 
+                type="text" 
+                id="degree" 
+                name="degree" 
+                placeholder="e.g., Bachelor's in CS"
+                value="{{ profile.degree|default:'' }}"
+                required
+            />
+        </div>
+
+        <div class="form-field">
+            <label for="country">Region (country) *</label>
+            <input 
+                type="text" 
+                id="country" 
+                name="country" 
+                placeholder="e.g., Pakistan"
+                value="{{ profile.country|default:'' }}"
+                required
+            />
+        </div>
+
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="action-button generate-button">
+                        Submit Form
+                    </button>
+                    <button type="button" class="action-button clear-button" onclick="clearForm()">
+                        Clear Form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <p>&copy; 2025 CareerCompass. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="{% url 'home' %}">Home</a>
+        </div>
+    </footer>
+
+    <script>
+        function clearForm() {
+            document.getElementById('careerForm').reset();
+        }
+    </script>
+</body>
+</html>
