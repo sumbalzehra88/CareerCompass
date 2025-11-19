@@ -31,6 +31,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'CareerCompass.urls'
@@ -105,6 +106,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'  # This is for production (collectstatic)
 STATICFILES_DIRS = [
     BASE_DIR / 'static',  # This is correct - your development static files
 ]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Session settings
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
