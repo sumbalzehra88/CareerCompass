@@ -1528,7 +1528,7 @@ def safe_parse_datetime(value):
 def hackathon_detail(request, hackathon_id):
     selected_hackathon = get_object_or_404(Hackathon, hackathon_id = hackathon_id)
     hackathons = Hackathon.objects.order_by('-created_at')[:5]
-    return render(request, 'CareerCompassapp/hackathon.html', {
+    return render(request, 'CareerCompassapp/Hackathon.html', {
         'hackathons': hackathons,
         'selected_hackathon': selected_hackathon
     })
@@ -1608,7 +1608,7 @@ def hackathon(request, hackathon_id=None):
             # Anonymous user - show recent hackathons
             hackathons = Hackathon.objects.exclude(hackathon_id=hackathon_id).order_by('-start_date')[:5]
         
-        return render(request, 'CareerCompassapp/hackathon.html', {
+        return render(request, 'CareerCompassapp/Hackathon.html', {
             'selected_hackathon': selected_hackathon,
             'hackathons': hackathons
         })
@@ -1681,7 +1681,7 @@ def hackathon(request, hackathon_id=None):
             # Anonymous user - show recent hackathons (limit 5)
             hackathons = Hackathon.objects.all().order_by('-start_date')[:5]
         
-        return render(request, 'CareerCompassapp/hackathon.html', {
+        return render(request, 'CareerCompassapp/Hackathon.html', {
             'hackathons': hackathons
         })
         

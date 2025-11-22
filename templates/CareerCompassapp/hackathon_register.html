@@ -1,0 +1,767 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Hackathon Registration</title>
+    <style>
+        /* =========================
+           CSS VARIABLES
+           ========================= */
+        :root {
+            --primary-blue: #00b4d8;
+            --primary-dark: #0077b6;
+            --primary-darker: #005577;
+            --accent-blue: #014970;
+            --background-light: #CDFCFF;
+            --background-medium: #B2FAFF;
+            --text-dark: #1a202c;
+            --text-medium: #2d3748;
+            --text-light: #4a5568;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+            --shadow-blue: 0 8px 25px rgba(0,180,216,0.3);
+        }
+
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--background-medium) 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            margin-bottom: 0;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .logo-icon {
+            width: 300px;
+            height: 300px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 85px;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(0, 180, 216, 0.1);
+            color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            padding: 10px 24px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            background: transparent;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary {
+            padding: 10px 24px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        /* Registration Type Selector */
+        .registration-type {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .registration-type h2 {
+            font-size: 24px;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .type-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .type-btn {
+            padding: 15px 40px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50px;
+            background: var(--white);
+            color: var(--primary-blue);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .type-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .type-btn.active {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            border-color: var(--primary-dark);
+        }
+
+        /* Form Container */
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+            margin-bottom: 40px;
+            display: none;
+        }
+
+        .form-container.active {
+            display: block;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark), var(--primary-darker));
+            border-radius: 24px 24px 0 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: var(--text-dark);
+            margin-bottom: 35px;
+            text-align: center;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-blue), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark));
+            border-radius: 2px;
+            transform: translateX(-50%);
+        }
+
+        /* Form Grid */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-field.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            padding: 14px 18px;
+            border: 2px solid rgba(0, 180, 216, 0.2);
+            border-radius: 12px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+        }
+
+        .form-field textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+            background: var(--white);
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: var(--text-light);
+            opacity: 0.7;
+        }
+
+        /* Team Members Section */
+        .team-members-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(0, 180, 216, 0.2);
+        }
+
+        .team-member-entry {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 15px;
+            margin-bottom: 15px;
+            align-items: end;
+        }
+
+        .remove-member-btn {
+            padding: 14px 20px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .remove-member-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        .add-member-btn {
+            padding: 12px 24px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .add-member-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Buttons */
+        .action-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 160px;
+            box-shadow: var(--shadow-sm);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .action-button.primary {
+            background: var(--accent-blue);
+            color: var(--white);
+        }
+
+        .action-button.primary:hover {
+            background: linear-gradient(135deg, #0096c7 0%, var(--primary-darker) 100%);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .action-button.secondary {
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--text-medium);
+            border: 2px solid rgba(0, 180, 216, 0.3);
+        }
+
+        .action-button.secondary:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-3px);
+            border-color: var(--primary-blue);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--accent-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 20px;
+                height: auto;
+            }
+
+            .nav-menu {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .form-container {
+                padding: 25px 20px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .team-member-entry {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .form-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .action-button {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .type-buttons {
+                flex-direction: column;
+            }
+
+            .type-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            .form-container {
+                padding: 20px 15px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .action-button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <a href="{% url 'home' %}" class="logo">
+                <div class="logo-icon"><img src="{% static 'CareerCompassapp/logo.png' %}" alt="CC Logo"></div>
+            </a>
+            <nav class="nav-menu">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="#mission">Mission</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                
+                {% if user.is_authenticated %}
+                    <a href="{% url 'dashboard' %}">Dashboard</a>
+                    <a href="{% url 'logout' %}" class="btn-outline">Logout</a>
+                {% endif %}
+            </nav>
+        </header>
+
+        <!-- Registration Type Selector -->
+        <div class="registration-type">
+            <h2>Select Registration Type</h2>
+            <div class="type-buttons">
+                <button class="type-btn active" onclick="showForm('solo')">Solo Participation</button>
+                <button class="type-btn" onclick="showForm('team')">Team Participation</button>
+            </div>
+        </div>
+
+<!-- Solo Form -->
+<div class="form-container active" id="soloForm">
+    <h1 class="section-title">Solo Hackathon Registration</h1>
+    
+    <form method="POST" action="{% url 'hackathon_register' %}">
+        {% csrf_token %}
+        <input type="hidden" name="registration_type" value="solo">
+        <input type="hidden" name="hackathon_id" value="{{ hackathon.hackathon_id }}">
+        
+        <div class="form-grid">
+            <div class="form-field full-width">
+                <label for="soloName">Full Name *</label>
+                <input 
+                    type="text" 
+                    id="soloName" 
+                    name="name" 
+                    placeholder="Enter your full name"
+                    required
+                />
+            </div>
+
+            <div class="form-field full-width">
+                <label for="soloSkills">Your Skills *</label>
+                <textarea 
+                    id="soloSkills" 
+                    name="skills" 
+                    placeholder="e.g., Python, JavaScript, React, Machine Learning, UI/UX Design"
+                    required
+                ></textarea>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="action-button primary">
+                Register as Solo
+            </button>
+            <button type="button" class="action-button secondary" onclick="clearCurrentForm('soloForm')">
+                Clear Form
+            </button>
+        </div>
+    </form>
+</div>
+
+
+        <!-- Team Form -->
+        <div class="form-container" id="teamForm">
+            <h1 class="section-title">Team Hackathon Registration</h1>
+            
+            <form method="POST" action="{% url 'hackathon_register' %}">
+                {% csrf_token %}
+                <input type="hidden" name="registration_type" value="team">
+                
+                <div class="form-grid">
+                    <div class="form-field full-width">
+                        <label for="teamName">Team Name *</label>
+                        <input 
+                            type="text" 
+                            id="teamName" 
+                            name="team_name" 
+                            placeholder="Enter your team name"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="teamLeaderName">Team Leader Name *</label>
+                        <input 
+                            type="text" 
+                            id="teamLeaderName" 
+                            name="team_leader_name" 
+                            placeholder="Team leader's full name"
+                            required
+                        />
+                    </div>
+
+
+
+                    <div class="form-field full-width">
+                        <label for="teamSkills">Team Skills *</label>
+                        <textarea 
+                            id="teamSkills" 
+                            name="team_skills" 
+                            placeholder="e.g., Full Stack Development, Mobile Apps, Cloud Computing, Data Science"
+                            required
+                        ></textarea>
+                    </div>
+                </div>
+
+                <!-- Team Members Section -->
+                <div class="team-members-section">
+                    <h3 style="margin-bottom: 20px; color: var(--text-dark);">Team Members (Optional)</h3>
+                    <div id="teamMembersContainer">
+                        <div class="team-member-entry">
+                            <div class="form-field">
+                                <label>Member Name</label>
+                                <input 
+                                    type="text" 
+                                    name="member_names[]" 
+                                    placeholder="Member's full name"
+                                />
+                            </div>
+                            <div class="form-field">
+                                <label>Member Skills</label>
+                                <input 
+                                    type="text" 
+                                    name="member_skills[]" 
+                                    placeholder="e.g., Backend, Frontend, Design"
+                                />
+                            </div>
+                            <button type="button" class="remove-member-btn" onclick="removeMember(this)">Remove</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-member-btn" onclick="addTeamMember()">+ Add Team Member</button>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="action-button primary">
+                        Register Team
+                    </button>
+                    <button type="button" class="action-button secondary" onclick="clearCurrentForm('teamForm')">
+                        Clear Form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <p>&copy; 2025 CareerCompass. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="{% url 'home' %}">Home</a>
+        </div>
+    </footer>
+
+    <script>
+        function showForm(type) {
+            // Update buttons
+            const buttons = document.querySelectorAll('.type-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Show/hide forms
+            const soloForm = document.getElementById('soloForm');
+            const teamForm = document.getElementById('teamForm');
+
+            if (type === 'solo') {
+                soloForm.classList.add('active');
+                teamForm.classList.remove('active');
+            } else {
+                teamForm.classList.add('active');
+                soloForm.classList.remove('active');
+            }
+        }
+
+        function clearCurrentForm(formId) {
+            const form = document.querySelector(`#${formId} form`);
+            form.reset();
+        }
+
+        function addTeamMember() {
+            const container = document.getElementById('teamMembersContainer');
+            const newMember = document.createElement('div');
+            newMember.className = 'team-member-entry';
+            newMember.innerHTML = `
+                <div class="form-field">
+                    <label>Member Name</label>
+                    <input 
+                        type="text" 
+                        name="member_names[]" 
+                        placeholder="Member's full name"
+                    />
+                </div>
+                <div class="form-field">
+                    <label>Member Skills</label>
+                    <input 
+                        type="text" 
+                        name="member_skills[]" 
+                        placeholder="e.g., Backend, Frontend, Design"
+                    />
+                </div>
+                <button type="button" class="remove-member-btn" onclick="removeMember(this)">Remove</button>
+            `;
+            container.appendChild(newMember);
+        }
+
+        function removeMember(button) {
+            const container = document.getElementById('teamMembersContainer');
+            if (container.children.length > 1) {
+                button.parentElement.remove();
+            } else {
+                alert('At least one team member entry must remain.');
+            }
+        }
+    </script>
+</body>
+</html>

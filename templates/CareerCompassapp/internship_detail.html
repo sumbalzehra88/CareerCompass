@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ internship.title }} – {{ internship.company_name }}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #E0F7FA, #B2EBF2);
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+    h1 { color: #0077b6; font-size: 28px; margin-bottom: 8px; }
+    .company { font-size: 18px; color: #555; margin-bottom: 10px; }
+    .meta { color: #444; font-size: 15px; margin-bottom: 20px; }
+    .desc { font-size: 16px; color: #333; margin-bottom: 30px; line-height: 1.6; }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px 15px;
+      border: 1.8px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      width: 100%;
+    }
+    input:focus, textarea:focus {
+      border-color: #00b4d8;
+      outline: none;
+      box-shadow: 0 0 4px rgba(0,180,216,0.2);
+    }
+    .submit-btn {
+      background: linear-gradient(135deg, #00b4d8, #0077b6);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,180,216,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{ internship.title }}</h1>
+    <p class="company">{{ internship.company_name }}</p>
+    <p class="meta"><strong>Location:</strong> {{ internship.location }} | <strong>Stipend:</strong> ${{ internship.stipend }}/month</p>
+    <p class="meta"><strong>Deadline:</strong> {{ internship.deadline }} | <strong>Duration:</strong> {{ internship.duration }}</p>
+    <p class="desc">{{ internship.description }}</p>
+
+    <h2 style="color:#0077b6; margin-top:30px;">Apply for this Internship</h2>
+
+      <form action="{% url 'apply_internship' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="hidden" name="internship_title" value="{{ internship.title }}">
+      <input type="text" name="fullname" placeholder="Full Name *" required>
+      <input type="email" name="email" placeholder="Email Address *" required>
+      <input type="tel" name="phone" placeholder="Phone Number *" required>
+      <input type="text" name="linkedin" placeholder="LinkedIn Profile (optional)">
+      <input type="text" name="portfolio" placeholder="Portfolio / GitHub (optional)">
+<div style="margin-top: 10px;">
+  <input type="file" name="cv" id="cvInput" required>
+  <small id="cvError" style="color:red; display:none;">⚠️ File too large! Please upload a file smaller than 5 MB.</small>
+  <small style="color:gray;">(Max file size: 5 MB)</small>
+</div>
+
+<script>
+document.getElementById('cvInput').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  const errorMsg = document.getElementById('cvError');
+
+  if (file && file.size > 5 * 1024 * 1024) { // 5 MB limit
+    errorMsg.style.display = 'block';
+    e.target.value = ''; // clear the selected file
+  } else {
+    errorMsg.style.display = 'none';
+  }
+});
+</script>
+
+      <textarea name="cover_letter" rows="5" placeholder="Cover Letter *" required></textarea>
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,516 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Enrollment - CareerCompass</title>
+    <style>
+        :root {
+            --primary-blue: #00b4d8;
+            --primary-dark: #0077b6;
+            --primary-darker: #005577;
+            --accent-blue: #014970;
+            --background-light: #CDFCFF;
+            --background-medium: #B2FAFF;
+            --text-dark: #1a202c;
+            --text-medium: #2d3748;
+            --text-light: #4a5568;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+            --shadow-blue: 0 8px 25px rgba(0,180,216,0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--background-medium) 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .enrollment-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enrollment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-dark), var(--primary-darker));
+            border-radius: 24px 24px 0 0;
+        }
+
+        .hackathon-info {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(0, 180, 216, 0.1);
+        }
+
+        .hackathon-info h1 {
+            font-size: 32px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hackathon-info p {
+            color: var(--text-medium);
+            font-size: 16px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .type-selector {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .type-btn {
+            padding: 15px 40px;
+            border: 2px solid var(--primary-blue);
+            border-radius: 50px;
+            background: var(--white);
+            color: var(--primary-blue);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .type-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-blue);
+        }
+
+        .type-btn.active {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            border-color: var(--primary-dark);
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+        .form-field label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(0, 180, 216, 0.2);
+            border-radius: 12px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+            background: var(--white);
+        }
+
+        .form-field textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .team-members-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(0, 180, 216, 0.1);
+        }
+
+        .team-member-entry {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: end;
+        }
+
+        .team-member-entry .form-field {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .remove-member-btn {
+            padding: 14px 20px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .remove-member-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        .add-member-btn {
+            padding: 12px 24px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .add-member-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .submit-btn {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+        }
+
+        .cancel-btn {
+            padding: 15px 40px;
+            border: 2px solid var(--text-medium);
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            background: var(--white);
+            color: var(--text-medium);
+        }
+
+        .cancel-btn:hover {
+            background: var(--text-medium);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .alert {
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .alert-error {
+            background: #fee;
+            color: #c33;
+            border: 2px solid #fcc;
+        }
+
+        .alert-success {
+            background: #efe;
+            color: #3c3;
+            border: 2px solid #cfc;
+        }
+
+        @media (max-width: 768px) {
+            .enrollment-card {
+                padding: 30px 20px;
+            }
+
+            .type-selector {
+                flex-direction: column;
+            }
+
+            .type-btn {
+                width: 100%;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .submit-btn,
+            .cancel-btn {
+                width: 100%;
+            }
+
+            .team-member-entry {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="enrollment-card">
+            <div class="hackathon-info">
+                <h1>{{ hackathon.name }}</h1>
+                <p>Enroll now to participate in this amazing hackathon!</p>
+            </div>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="section-title">Select Participation Type</div>
+
+            <div class="type-selector">
+                <button class="type-btn active" onclick="showType('solo')">Solo</button>
+                <button class="type-btn" onclick="showType('team')">Team</button>
+            </div>
+
+            <form method="POST" id="enrollmentForm">
+                {% csrf_token %}
+                <input type="hidden" name="participation_type" id="participationType" value="solo">
+                <input type="hidden" name="hackathon_id" value="{{ hackathon.hackathon_id }}">
+
+                <!-- Solo Form -->
+                <div class="form-section active" id="soloSection">
+                    <div class="form-field">
+                        <label for="soloName">Your Name *</label>
+                        <input 
+                            type="text" 
+                            id="soloName" 
+                            name="solo_name" 
+                            placeholder="Enter your full name"
+                            required
+                        />
+                        <div class="error-message" id="soloNameError"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="soloSkills">Your Skills *</label>
+                        <textarea 
+                            id="soloSkills" 
+                            name="solo_skills" 
+                            placeholder="e.g., Python, JavaScript, React, Machine Learning"
+                            required
+                        ></textarea>
+                    </div>
+                </div>
+
+                <!-- Team Form -->
+                <div class="form-section" id="teamSection">
+                    <div class="form-field">
+                        <label for="teamName">Team Name *</label>
+                        <input 
+                            type="text" 
+                            id="teamName" 
+                            name="team_name" 
+                            placeholder="Enter your team name"
+                        />
+                        <div class="error-message" id="teamNameError"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="teamLeaderName">Team Leader Name *</label>
+                        <input 
+                            type="text" 
+                            id="teamLeaderName" 
+                            name="team_leader_name" 
+                            placeholder="Team leader's full name"
+                        />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="teamSkills">Team Skills *</label>
+                        <textarea 
+                            id="teamSkills" 
+                            name="team_skills" 
+                            placeholder="e.g., Full Stack Development, Mobile Apps, Cloud Computing"
+                        ></textarea>
+                    </div>
+
+                    <div class="team-members-section">
+                        <label style="display: block; margin-bottom: 15px; font-weight: 700;">Team Members (Optional)</label>
+                        <div id="teamMembersContainer">
+                            <div class="team-member-entry">
+                                <div class="form-field">
+                                    <input 
+                                        type="text" 
+                                        name="member_names[]" 
+                                        placeholder="Member name"
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <input 
+                                        type="text" 
+                                        name="member_skills[]" 
+                                        placeholder="Member skills"
+                                    />
+                                </div>
+                                <button type="button" class="remove-member-btn" onclick="removeMember(this)">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" class="add-member-btn" onclick="addTeamMember()">+ Add Team Member</button>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Enroll Now</button>
+                    <a href="{% url 'hackathon_detail' hackathon.hackathon_id %}" class="cancel-btn" style="text-decoration: none; display: inline-block; text-align: center;">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showType(type) {
+            // Update buttons
+            const buttons = document.querySelectorAll('.type-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update sections
+            document.getElementById('soloSection').classList.remove('active');
+            document.getElementById('teamSection').classList.remove('active');
+            
+            if (type === 'solo') {
+                document.getElementById('soloSection').classList.add('active');
+                document.getElementById('participationType').value = 'solo';
+                // Make solo fields required
+                document.getElementById('soloName').required = true;
+                document.getElementById('soloSkills').required = true;
+                document.getElementById('teamName').required = false;
+                document.getElementById('teamLeaderName').required = false;
+                document.getElementById('teamSkills').required = false;
+            } else {
+                document.getElementById('teamSection').classList.add('active');
+                document.getElementById('participationType').value = 'team';
+                // Make team fields required
+                document.getElementById('soloName').required = false;
+                document.getElementById('soloSkills').required = false;
+                document.getElementById('teamName').required = true;
+                document.getElementById('teamLeaderName').required = true;
+                document.getElementById('teamSkills').required = true;
+            }
+        }
+
+        function addTeamMember() {
+            const container = document.getElementById('teamMembersContainer');
+            const newMember = document.createElement('div');
+            newMember.className = 'team-member-entry';
+            newMember.innerHTML = `
+                <div class="form-field">
+                    <input 
+                        type="text" 
+                        name="member_names[]" 
+                        placeholder="Member name"
+                    />
+                </div>
+                <div class="form-field">
+                    <input 
+                        type="text" 
+                        name="member_skills[]" 
+                        placeholder="Member skills"
+                    />
+                </div>
+                <button type="button" class="remove-member-btn" onclick="removeMember(this)">Remove</button>
+            `;
+            container.appendChild(newMember);
+        }
+
+        function removeMember(button) {
+            const container = document.getElementById('teamMembersContainer');
+            if (container.children.length > 1) {
+                button.parentElement.remove();
+            } else {
+                alert('At least one team member entry must remain.');
+            }
+        }
+    </script>
+</body>
+</html>
