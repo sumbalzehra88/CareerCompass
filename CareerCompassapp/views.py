@@ -1687,10 +1687,10 @@ def hackathon(request, hackathon_id=None):
         
 # Enrollment view
 
+@login_required  # ✅ Make sure this is here
 def enroll_hackathon(request, hackathon_id):
-    # Get hackathon directly from hackathons table
     try:
-        table_name = Hackathon._meta.db_table  # ✅ Safely get actual table name
+        table_name = Hackathon._meta.db_table
         with connection.cursor() as cursor:
             query = f"SELECT * FROM {table_name} WHERE hackathon_id = %s"
             cursor.execute(query, [hackathon_id])
@@ -1715,42 +1715,41 @@ def enroll_hackathon(request, hackathon_id):
         participation_type = request.POST.get('participation_type')
         
         try:
+            hackathon_obj = Hackathon.objects.get(hackathon_id=hackathon_id)
+            
+            # ✅ Check if user already enrolled (either solo or team)
+            existing = HackathonEnrollment.objects.filter(
+                hackathon_id=hackathon_id,
+                user=request.user
+            ).first()
+            
+            if existing:
+                messages.error(request, f'You are already enrolled in this hackathon as {existing.participation_type}!')
+                return render(request, 'CareerCompassapp/enrollment_form.html', {
+                    'hackathon': hackathon_data
+                })
+            
             if participation_type == 'solo':
                 solo_name = request.POST.get('solo_name', '').strip()
                 solo_skills = request.POST.get('solo_skills', '').strip()
                 
-                # Validation
                 if not solo_name or not solo_skills:
                     messages.error(request, 'Please fill all required fields!')
                     return render(request, 'CareerCompassapp/enrollment_form.html', {
                         'hackathon': hackathon_data
                     })
 
-                # Check if name already exists for this hackathon
-                existing = HackathonEnrollment.objects.filter(
-                    hackathon_id=hackathon_id,
-                    participant_name=solo_name,
-                    participation_type='solo'
-                ).first()
-                
-                if existing:
-                    messages.error(request, f'Name "{solo_name}" is already registered for this hackathon!')
-                    return render(request, 'CareerCompassapp/enrollment_form.html', {
-                        'hackathon': hackathon_data
-                    })
-
-                # Create solo enrollment - USE hackathon_id
-                hackathon_obj = Hackathon.objects.get(hackathon_id=hackathon_id)
+                # ✅ Create solo enrollment with user
                 enrollment = HackathonEnrollment.objects.create(
-                  hackathon=hackathon_obj,
-                  participant_name=solo_name,
-                  skills=solo_skills,
-                  participation_type='solo',
-                  team_name=''
+                    hackathon=hackathon_obj,
+                    user=request.user,  # ✅ Link to user
+                    participant_name=solo_name,
+                    skills=solo_skills,
+                    participation_type='solo',
+                    team_name=''
                 )
 
-
-                messages.success(request, f'Successfully enrolled as solo participant! Your ID: {enrollment.enrollment_id}')
+                messages.success(request, f'Successfully enrolled as solo participant!')
                 return redirect('hackathon_detail', hackathon_id=hackathon_id)
                 
             elif participation_type == 'team':
@@ -1760,66 +1759,43 @@ def enroll_hackathon(request, hackathon_id):
                 member_names = request.POST.getlist('member_names[]')
                 member_skills = request.POST.getlist('member_skills[]')
                 
-                # Validation
                 if not team_name or not team_leader or not team_skills:
                     messages.error(request, 'Please fill all required team fields!')
                     return render(request, 'CareerCompassapp/enrollment_form.html', {
                         'hackathon': hackathon_data
                     })
                 
-                # Check if team name already exists for this hackathon
-                existing = HackathonEnrollment.objects.filter(
-                    hackathon_id=hackathon_id,
-                    team_name=team_name,
-                    participation_type='team'
-                ).first()
-                
-                if existing:
-                    messages.error(request, f'Team name "{team_name}" is already registered for this hackathon!')
-                    return render(request, 'CareerCompassapp/enrollment_form.html', {
-                        'hackathon': hackathon_data
-                    })
-                
-                # Create team enrollment - USE hackathon_id
-                hackathon_obj = Hackathon.objects.get(pk=hackathon_id)
-
+                # ✅ Create team enrollment with user
                 enrollment = HackathonEnrollment.objects.create(
-                  hackathon=hackathon_obj,
-                  participation_type='team',
-                  participant_name=member_names,
-                  team_name=team_name,
-                  skills=team_skills
-)
-
+                    hackathon=hackathon_obj,
+                    user=request.user,  # ✅ Link to user
+                    participation_type='team',
+                    participant_name=team_leader,  # Store team leader name
+                    team_name=team_name,
+                    skills=team_skills
+                )
                 
                 # Save team members
                 for name, skills in zip(member_names, member_skills):
                     if name and name.strip():
                         TeamMember.objects.create(
-                            enrollment_id=enrollment.enrollment_id,
+                            enrollment=enrollment,  # Use enrollment object directly
                             member_name=name.strip(),
                             member_skills=skills.strip() if skills else ''
                         )
                 
-                messages.success(request, f'Successfully enrolled as team! Your Team ID: {enrollment.enrollment_id}')
+                messages.success(request, f'Successfully enrolled as team "{team_name}"!')
                 return redirect('hackathon_detail', hackathon_id=hackathon_id)
             
-        except IntegrityError as e:
-            print(f"IntegrityError: {e}")
-            print(traceback.format_exc())
-            messages.error(request, f'Database error: {e}')
-            return render(request, 'CareerCompassapp/enrollment_form.html', {
-                'hackathon': hackathon_data
-            })
         except Exception as e:
-            print(f"General Error: {e}")
-            print(traceback.format_exc())
+            print(f"Enrollment Error: {e}")
+            import traceback
+            traceback.print_exc()
             messages.error(request, f'An error occurred: {str(e)}')
             return render(request, 'CareerCompassapp/enrollment_form.html', {
                 'hackathon': hackathon_data
             })
     
-    print("Hackathon ID received:", hackathon_id)
     return render(request, 'CareerCompassapp/enrollment_form.html', {
         'hackathon': hackathon_data
     })
