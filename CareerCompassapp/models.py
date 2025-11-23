@@ -243,9 +243,16 @@ class HackathonTeam(models.Model):
 class HackathonEnrollment(models.Model):
     enrollment_id = models.AutoField(primary_key=True)
     hackathon = models.ForeignKey(
-        'CareerCompassapp.Hackathon',   # Explicit app reference
+        'CareerCompassapp.Hackathon',
         on_delete=models.CASCADE,
         db_column='hackathon_id'
+    )
+    user = models.ForeignKey(  # ✅ ADD THIS FIELD
+        User, 
+        on_delete=models.CASCADE, 
+        db_column='user_id',
+        null=True,  # Temporarily allow null for existing records
+        blank=True
     )
     participation_type = models.CharField(max_length=10, choices=[('solo', 'Solo'), ('team', 'Team')])
     participant_name = models.CharField(max_length=200)
@@ -256,7 +263,10 @@ class HackathonEnrollment(models.Model):
     class Meta:
         db_table = 'hackathon_enrollment'
         app_label = 'CareerCompassapp'
+        managed = True  # ✅ Change to True so Django can create/modify table
 
+    def __str__(self):
+        return f"{self.participant_name} - {self.hackathon.name} ({self.participation_type})"
 
 class TeamMember(models.Model):
     member_id = models.AutoField(primary_key=True)
